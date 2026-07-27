@@ -4,6 +4,153 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    font-family: Arial;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #4b0f30;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0;  
+}
+
+.sidebar h1 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px 0;
+}
+
+.main {
+    flex: 1;
+    background-color: #f8f0f5;
+    padding:20px;
+}
+
+.navbar {
+    width: 100%;
+    background-color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navbar h2 {
+    white-space: nowrap;
+}
+
+.navbar input {
+    flex: 1;              
+    padding: 10px 12px;
+    border: 1px  #ccc;
+    border-radius: 4px;
+}
+
+.navbar button {
+    background-color: #4b0f30;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.card {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card p{
+    color:#4b0f30;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.orders {
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.products {
+    width: 40%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-title button {
+    background-color: #4b0f30;
+    color: white;
+    border: none;
+    padding:  12px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    background-color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px white;
+}
+
+tr:hover {
+    background-color: #a54279;
+}
+
+
+/* Product Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     display: flex;
@@ -11,8 +158,6 @@ body {
     min-height: 100vh;
     background-color: #f8f0f5;
 }
-
-
 
 /* Sidebar */
 
@@ -30,13 +175,11 @@ body {
 
 }
 
-
 .sidebar h1 {
 
     margin-bottom: 25px;
 
 }
-
 
 .sidebar ul {
 
@@ -44,14 +187,11 @@ body {
 
 }
 
-
 .sidebar li {
 
     padding: 12px 0;
 
 }
-
-
 
 /* Main */
 
@@ -62,8 +202,6 @@ body {
     padding: 20px;
 
 }
-
-
 
 /* Navbar */
 
@@ -81,13 +219,11 @@ body {
 
 }
 
-
 .navbar h2 {
 
     white-space: nowrap;
 
 }
-
 
 .navbar input {
 
@@ -100,7 +236,6 @@ body {
     border-radius: 5px;
 
 }
-
 
 .navbar button {
 
@@ -116,8 +251,6 @@ body {
 
 }
 
-
-
 /* Product Heading */
 
 .product-heading {
@@ -132,7 +265,6 @@ body {
 
 }
 
-
 .add-btn {
 
     background-color: #4b0f30;
@@ -146,8 +278,6 @@ body {
     border-radius: 5px;
 
 }
-
-
 
 /* Filters */
 
@@ -165,7 +295,6 @@ body {
 
 }
 
-
 .filters input {
 
     width: 300px;
@@ -176,7 +305,6 @@ body {
 
 }
 
-
 .filters select {
 
     padding: 10px;
@@ -184,8 +312,6 @@ body {
     border: 1px solid #ccc;
 
 }
-
-
 
 /* Table */
 
@@ -199,7 +325,6 @@ body {
 
 }
 
-
 table {
 
     width: 100%;
@@ -207,7 +332,6 @@ table {
     border-collapse: collapse;
 
 }
-
 
 th {
 
@@ -219,7 +343,6 @@ th {
 
 }
 
-
 td {
 
     padding: 15px;
@@ -227,8 +350,6 @@ td {
     border-bottom: 1px solid #eee;
 
 }
-
-
 
 /* Buttons */
 
@@ -243,7 +364,6 @@ td {
     border-radius: 4px;
 
 }
-
 
 .delete {
 
