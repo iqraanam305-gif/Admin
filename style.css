@@ -31,6 +31,16 @@ body {
     padding: 12px 0;
 }
 
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #c77dff;
+    text-decoration: none;
+}
+
 .main {
     flex: 1;
     background-color: #f8f0f5;
@@ -123,6 +133,7 @@ body {
     border-radius: 5px;
 }
 
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -140,11 +151,9 @@ td {
 }
 
 tr:hover {
-    background-color: #a54279;
+    background-color: #e8c7df;
 }
 
-
-/* Product Page */
 
 * {
     margin: 0;
@@ -154,12 +163,11 @@ tr:hover {
 
 body {
     display: flex;
-    font-family: "Times New Roman", serif;
+    font-family: Arial;
     min-height: 100vh;
     background-color: #f8f0f5;
 }
 
-/* Sidebar */
 
 .sidebar {
 
@@ -181,6 +189,10 @@ body {
 
 }
 
+.fa-shirt {
+    color: #4b0f30;
+}
+
 .sidebar ul {
 
     list-style: none;
@@ -193,7 +205,6 @@ body {
 
 }
 
-/* Main */
 
 .main {
 
@@ -203,7 +214,6 @@ body {
 
 }
 
-/* Navbar */
 
 .navbar {
 
@@ -251,7 +261,6 @@ body {
 
 }
 
-/* Product Heading */
 
 .product-heading {
 
@@ -279,7 +288,6 @@ body {
 
 }
 
-/* Filters */
 
 .filters {
 
@@ -313,7 +321,6 @@ body {
 
 }
 
-/* Table */
 
 .product-table {
 
@@ -350,8 +357,6 @@ td {
     border-bottom: 1px solid #eee;
 
 }
-
-/* Buttons */
 
 .edit {
 
