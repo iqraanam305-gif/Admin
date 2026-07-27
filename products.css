@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    font-family: "Times New Roman", serif;
+    min-height: 100vh;
+    background-color: #f8f0f5;
+}
+
+
+
+/* Sidebar */
+
+.sidebar {
+
+    width: 250px;
+
+    min-height: 100vh;
+
+    background-color: #4b0f30;
+
+    color: white;
+
+    padding: 20px;
+
+}
+
+
+.sidebar h1 {
+
+    margin-bottom: 25px;
+
+}
+
+
+.sidebar ul {
+
+    list-style: none;
+
+}
+
+
+.sidebar li {
+
+    padding: 12px 0;
+
+}
+
+
+
+/* Main */
+
+.main {
+
+    flex: 1;
+
+    padding: 20px;
+
+}
+
+
+
+/* Navbar */
+
+.navbar {
+
+    background-color: white;
+
+    padding: 15px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.navbar h2 {
+
+    white-space: nowrap;
+
+}
+
+
+.navbar input {
+
+    flex: 1;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+}
+
+
+.navbar button {
+
+    background-color: #4b0f30;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+}
+
+
+
+/* Product Heading */
+
+.product-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+}
+
+
+.add-btn {
+
+    background-color: #4b0f30;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+
+}
+
+
+
+/* Filters */
+
+.filters {
+
+    background-color: white;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+
+.filters input {
+
+    width: 300px;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+}
+
+
+.filters select {
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+}
+
+
+
+/* Table */
+
+.product-table {
+
+    background-color: white;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+th {
+
+    text-align: left;
+
+    background-color: #f8f0f5;
+
+    padding: 15px;
+
+}
+
+
+td {
+
+    padding: 15px;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+
+
+/* Buttons */
+
+.edit {
+
+    background-color: #eee;
+
+    border: none;
+
+    padding: 7px 12px;
+
+    border-radius: 4px;
+
+}
+
+
+.delete {
+
+    background-color: #4b0f30;
+
+    color: white;
+
+    border: none;
+
+    padding: 7px 12px;
+
+    border-radius: 4px;
+
+}
+
+.form-box {
+    background-color: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.form-box h2 {
+    margin-bottom: 25px;
+}
+
+.form-box label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-box textarea {
+    height: 100px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.row div {
+    width: 50%;
+}
+
+.add-product {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #4b0f30;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
