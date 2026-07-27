@@ -433,16 +433,37 @@ td {
     border: none;
     border-radius: 5px;
 }
-/* RESPONSIVE */
+
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 900px) {
 
+    body {
+        flex-direction: column;
+    }
+
     .sidebar {
-        width: 200px;
+        width: 100%;
+        min-height: auto;
+        height: auto;
+    }
+
+    .sidebar h1 {
+        margin-bottom: 15px;
+    }
+
+    .sidebar li {
+        display: inline-block;
+        padding: 8px;
     }
 
     .main {
-        margin-left: 200px;
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
     }
 
     .cards {
@@ -450,42 +471,68 @@ td {
     }
 
     .card {
-        width: calc(50% - 10px);
+        flex: 1 1 calc(50% - 10px);
     }
 
     .content {
         flex-direction: column;
     }
 
+    .orders,
+    .products {
+        width: 100%;
+    }
+
 }
 
 
+/* MOBILE */
+
 @media (max-width: 600px) {
 
-    /* Sidebar */
+    body {
+        flex-direction: column;
+    }
+
+
+    /* SIDEBAR */
 
     .sidebar {
         width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-
-    /* Main */
-
-    .main {
-        margin-left: 0;
-        width: 100%;
+        min-height: auto;
         padding: 15px;
     }
 
+    .sidebar h1 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
 
-    /* Navbar */
+    .sidebar li {
+        display: block;
+        padding: 8px 0;
+    }
+
+
+    /* MAIN */
+
+    .main {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+
+    /* NAVBAR */
 
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .navbar h2 {
+        font-size: 22px;
     }
 
     .navbar input {
@@ -497,25 +544,25 @@ td {
     }
 
 
-    /* Cards */
+    /* DASHBOARD CARDS */
 
     .cards {
         flex-direction: column;
+        gap: 15px;
     }
 
     .card {
         width: 100%;
+        flex: none;
     }
 
 
-    /* Orders + Products */
+    /* RECENT ORDERS + TOP PRODUCTS */
 
     .content {
         flex-direction: column;
+        gap: 15px;
     }
-
-
-    /* Tables */
 
     .orders,
     .products {
@@ -523,8 +570,53 @@ td {
         overflow-x: auto;
     }
 
+
+    /* TABLE */
+
     table {
         min-width: 600px;
+    }
+
+
+    /* PRODUCT PAGE */
+
+    .product-heading {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+
+
+    .filters {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .filters input,
+    .filters select {
+        width: 100%;
+    }
+
+
+    .product-table {
+        overflow-x: auto;
+        padding: 10px;
+    }
+
+
+    /* ADD PRODUCT FORM */
+
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .row div {
+        width: 100%;
     }
 
 }
