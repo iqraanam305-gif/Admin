@@ -330,6 +330,8 @@ body {
 
     padding: 20px;
 
+     overflow-x: auto;
+
 }
 
 table {
@@ -430,4 +432,99 @@ td {
     color: white;
     border: none;
     border-radius: 5px;
+}
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main {
+        margin-left: 200px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: calc(50% - 10px);
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* Sidebar */
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+
+    /* Main */
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+
+    /* Navbar */
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .navbar input {
+        width: 100%;
+    }
+
+    .navbar button {
+        width: 100%;
+    }
+
+
+    /* Cards */
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+
+    /* Orders + Products */
+
+    .content {
+        flex-direction: column;
+    }
+
+
+    /* Tables */
+
+    .orders,
+    .products {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
 }
