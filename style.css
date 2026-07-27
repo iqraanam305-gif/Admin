@@ -574,7 +574,7 @@ td {
     /* TABLE */
 
     table {
-        min-width: 600px;
+        min-width: 0;
     }
 
 
