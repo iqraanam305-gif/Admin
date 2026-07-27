@@ -566,9 +566,17 @@ td {
 
     .orders,
     .products {
+        min-width: 0;
         width: 100%;
-        overflow-x: auto;
-    }
+      font-size: 12px;
+}
+
+.orders th,
+.orders td,
+.products th,
+.products td {
+    padding: 8px 5px;
+}
 
 
     /* TABLE */
