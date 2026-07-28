@@ -6,7 +6,7 @@
 
 body {
     display: flex;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     min-height: 100vh;
     background-color: #f8f0f5;
 }
@@ -278,60 +278,6 @@ tr:hover {
 
 
 /* =========================
-   ADD PRODUCT FORM
-========================= */
-
-.form-box {
-    background-color: white;
-    padding: 25px;
-    margin-top: 25px;
-    border-radius: 10px;
-}
-
-.form-box h2 {
-    margin-bottom: 25px;
-}
-
-.form-box label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 7px;
-}
-
-.form-box input,
-.form-box select,
-.form-box textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.form-box textarea {
-    height: 100px;
-}
-
-.row {
-    display: flex;
-    gap: 20px;
-}
-
-.row div {
-    width: 50%;
-}
-
-.add-product {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #4b0f30;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-/* =========================
    ORDERS PAGE HEADING
 ========================= */
 
@@ -440,9 +386,8 @@ tr:hover {
 
 .orders-table table {
     width: 100%;
-    min-width: 0;
     border-collapse: collapse;
-    table-layout: fixed;
+    table-layout: auto;
 }
 
 .orders-table th {
@@ -450,14 +395,13 @@ tr:hover {
     padding: 12px 6px;
     text-align: left;
     font-size: 13px;
-    word-break: break-word;
 }
 
 .orders-table td {
     padding: 12px 6px;
     border-bottom: 1px solid #eee;
     font-size: 13px;
-    word-break: break-word;
+    vertical-align: middle;
 }
 
 
@@ -796,25 +740,46 @@ tr:hover {
 
     /* ORDERS TABLE */
 
-    .orders-table {
-        width: 100%;
-        padding: 5px;
-        overflow: hidden;
-    }
+/* ORDERS TABLE - MOBILE */
 
-    .orders-table table {
-        width: 100%;
-        min-width: 0;
-        table-layout: fixed;
-        font-size: 10px;
-    }
+.orders-table {
+    width: 100%;
+    padding: 5px;
+    overflow: hidden;
+}
 
-    .orders-table th,
-    .orders-table td {
-        padding: 6px 3px;
-        word-break: break-word;
-        white-space: normal;
-    }
+.orders-table table {
+    width: 100%;
+    table-layout: auto;
+}
+
+.orders-table th,
+.orders-table td {
+    padding: 7px 4px;
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.orders-table th {
+    font-size: 11px;
+}
+
+.orders-table .paid,
+.orders-table .pending-payment,
+.orders-table .delivered,
+.orders-table .pending,
+.orders-table .shipped,
+.orders-table .cancelled {
+    white-space: nowrap;
+    padding: 4px 5px;
+    font-size: 9px;
+}
+
+.orders-table .view-btn {
+    white-space: nowrap;
+    padding: 6px 8px;
+    font-size: 10px;
+}
 
 }
 
