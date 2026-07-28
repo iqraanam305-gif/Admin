@@ -166,6 +166,8 @@ body {
 
 /* =========================
    GENERAL TABLE
+   (FIX: font-size added so Dashboard table
+   matches Products/Orders table font size)
 ========================= */
 
 table {
@@ -177,11 +179,13 @@ th {
     text-align: left;
     background-color: #f8f0f5;
     padding: 12px;
+    font-size: 13px;
 }
 
 td {
     padding: 12px;
     border-bottom: 1px solid #eee;
+    font-size: 13px;
 }
 
 tr:hover {
@@ -261,11 +265,19 @@ tr:hover {
     word-break: break-word;
 }
 
+/* FIX: action buttons must never break their text,
+   even though the table cells around them do word-break */
+.product-table td .edit,
+.product-table td .delete {
+    white-space: nowrap;
+}
+
 .edit {
     background-color: #eee;
     border: none;
     padding: 7px 12px;
     border-radius: 4px;
+    white-space: nowrap;
 }
 
 .delete {
@@ -274,6 +286,7 @@ tr:hover {
     border: none;
     padding: 7px 12px;
     border-radius: 4px;
+    white-space: nowrap;
 }
 
 
@@ -404,6 +417,11 @@ tr:hover {
     vertical-align: middle;
 }
 
+/* FIX: View button should never break its text either */
+.orders-table td .view-btn {
+    white-space: nowrap;
+}
+
 
 /* =========================
    ORDER STATUS
@@ -469,6 +487,7 @@ tr:hover {
     padding: 7px 12px;
     border-radius: 5px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 
@@ -686,6 +705,14 @@ tr:hover {
         white-space: normal;
     }
 
+    /* FIX: even on mobile, keep Edit/Delete button text intact */
+    .product-table td .edit,
+    .product-table td .delete {
+        white-space: nowrap;
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+
 
     /* ADD PRODUCT FORM */
 
@@ -738,48 +765,45 @@ tr:hover {
     }
 
 
-    /* ORDERS TABLE */
+    /* ORDERS TABLE - MOBILE */
 
-/* ORDERS TABLE - MOBILE */
+    .orders-table {
+        width: 100%;
+        padding: 5px;
+        overflow: hidden;
+    }
 
-.orders-table {
-    width: 100%;
-    padding: 5px;
-    overflow: hidden;
+    .orders-table table {
+        width: 100%;
+        table-layout: auto;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        padding: 7px 4px;
+        font-size: 11px;
+        vertical-align: middle;
+    }
+
+    .orders-table th {
+        font-size: 11px;
+    }
+
+    /* FIX: keep View button text intact on mobile too */
+    .orders-table td .view-btn {
+        white-space: nowrap;
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+
+    .orders-table .paid,
+    .orders-table .pending-payment,
+    .orders-table .delivered,
+    .orders-table .pending,
+    .orders-table .shipped,
+    .orders-table .cancelled {
+        white-space: nowrap;
+        padding: 4px 5px;
+        font-size: 9px;
+    }
 }
-
-.orders-table table {
-    width: 100%;
-    table-layout: auto;
-}
-
-.orders-table th,
-.orders-table td {
-    padding: 7px 4px;
-    font-size: 11px;
-    vertical-align: middle;
-}
-
-.orders-table th {
-    font-size: 11px;
-}
-
-.orders-table .paid,
-.orders-table .pending-payment,
-.orders-table .delivered,
-.orders-table .pending,
-.orders-table .shipped,
-.orders-table .cancelled {
-    white-space: nowrap;
-    padding: 4px 5px;
-    font-size: 9px;
-}
-
-.orders-table .view-btn {
-    white-space: nowrap;
-    padding: 6px 8px;
-    font-size: 10px;
-}
-
-}
-
