@@ -655,10 +655,9 @@ td {
     }
 
     .orders-table {
-         background-color: white;
-         margin-top: 20px;
+        
          padding: 20px;
-         overflow-x: auto;
+         overflow-x: hidden;
     }
 
 }
