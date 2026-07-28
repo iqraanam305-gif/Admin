@@ -11,6 +11,7 @@ body {
     background-color: #f8f0f5;
 }
 
+
 /* =========================
    SIDEBAR
 ========================= */
@@ -123,7 +124,7 @@ body {
 
 
 /* =========================
-   RECENT ORDERS + PRODUCTS
+   DASHBOARD CONTENT
 ========================= */
 
 .content {
@@ -227,30 +228,37 @@ tr:hover {
     border: 1px solid #ccc;
 }
 
+
+/* =========================
+   PRODUCT TABLE
+========================= */
+
 .product-table {
     background-color: white;
     margin-top: 20px;
     padding: 20px;
     width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
 }
 
 .product-table table {
     width: 100%;
-    min-width: 700px;
+    min-width: 0;
+    table-layout: fixed;
 }
 
 .product-table th {
     background-color: #f8f0f5;
-    padding: 15px;
-    white-space: nowrap;
+    padding: 12px 6px;
+    font-size: 13px;
+    word-break: break-word;
 }
 
 .product-table td {
-    padding: 15px;
+    padding: 12px 6px;
     border-bottom: 1px solid #eee;
-    white-space: nowrap;
+    font-size: 13px;
+    word-break: break-word;
 }
 
 .edit {
@@ -324,7 +332,7 @@ tr:hover {
 
 
 /* =========================
-   ORDERS PAGE
+   ORDERS PAGE HEADING
 ========================= */
 
 .orders-heading {
@@ -427,27 +435,29 @@ tr:hover {
     margin-top: 20px;
     padding: 20px;
     width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
 }
 
 .orders-table table {
     width: 100%;
-    min-width: 700px;
+    min-width: 0;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 .orders-table th {
     background-color: #f8f0f5;
-    padding: 14px;
+    padding: 12px 6px;
     text-align: left;
-    white-space: nowrap;
+    font-size: 13px;
+    word-break: break-word;
 }
 
 .orders-table td {
-    padding: 14px;
+    padding: 12px 6px;
     border-bottom: 1px solid #eee;
-    white-space: nowrap;
+    font-size: 13px;
+    word-break: break-word;
 }
 
 
@@ -519,7 +529,7 @@ tr:hover {
 
 
 /* =========================
-   RESPONSIVE - TABLET
+   TABLET RESPONSIVE
 ========================= */
 
 @media (max-width: 900px) {
@@ -577,7 +587,7 @@ tr:hover {
 
 
 /* =========================
-   RESPONSIVE - MOBILE
+   MOBILE RESPONSIVE
 ========================= */
 
 @media (max-width: 600px) {
@@ -649,7 +659,7 @@ tr:hover {
     }
 
 
-    /* RECENT ORDERS + PRODUCTS */
+    /* DASHBOARD CONTENT */
 
     .content {
         flex-direction: column;
@@ -659,32 +669,32 @@ tr:hover {
     .orders,
     .products {
         width: 100%;
+        padding: 10px;
+        overflow: hidden;
     }
 
 
     /* DASHBOARD TABLES */
 
-    .orders,
-    .products {
-        overflow-x: auto;
-    }
-
     .orders table,
     .products table {
-        min-width: 600px;
-        font-size: 11px;
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+        font-size: 10px;
     }
 
     .orders th,
     .orders td,
     .products th,
     .products td {
-        padding: 7px 5px;
-        white-space: nowrap;
+        padding: 6px 3px;
+        word-break: break-word;
+        white-space: normal;
     }
 
 
-    /* PRODUCT PAGE */
+    /* PRODUCT HEADING */
 
     .product-heading {
         flex-direction: column;
@@ -697,7 +707,7 @@ tr:hover {
     }
 
 
-    /* FILTERS */
+    /* PRODUCT FILTERS */
 
     .filters {
         flex-direction: column;
@@ -714,19 +724,22 @@ tr:hover {
 
     .product-table {
         width: 100%;
-        padding: 10px;
-        overflow-x: auto;
+        padding: 5px;
+        overflow: hidden;
     }
 
     .product-table table {
-        min-width: 700px;
-        font-size: 12px;
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+        font-size: 10px;
     }
 
     .product-table th,
     .product-table td {
-        padding: 8px;
-        white-space: nowrap;
+        padding: 6px 3px;
+        word-break: break-word;
+        white-space: normal;
     }
 
 
@@ -785,19 +798,23 @@ tr:hover {
 
     .orders-table {
         width: 100%;
-        padding: 10px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        padding: 5px;
+        overflow: hidden;
     }
 
     .orders-table table {
-        min-width: 700px;
-        font-size: 12px;
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+        font-size: 10px;
     }
 
     .orders-table th,
     .orders-table td {
-        padding: 8px;
-        white-space: nowrap;
+        padding: 6px 3px;
+        word-break: break-word;
+        white-space: normal;
     }
+
 }
+
