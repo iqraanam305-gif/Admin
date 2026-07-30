@@ -14,12 +14,26 @@ html {
 }
 
 body {
-    width: 100%;
+    font-family: Arial, sans-serif;
     min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #f8f0f5;
     color: #333;
     overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: Arial, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -28,87 +42,73 @@ body {
 ========================================= */
 
 .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
     width: 250px;
-    min-height: 100vh;
+    height: 100vh;
+
     background-color: #4b0f30;
     color: white;
+
     padding: 25px 18px;
-    flex-shrink: 0;
+
+    overflow-y: auto;
+    z-index: 1000;
 }
-
-body {
-    display: flex;
-    align-items: flex-start;
-}
-
-
-/* Sidebar Heading */
 
 .sidebar h1 {
     font-size: 22px;
     margin-bottom: 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     white-space: nowrap;
 }
 
 .sidebar h1 i {
-    margin-right: 8px;
+    color: #d8a4c4;
 }
-
-
-/* Sidebar List */
 
 .sidebar ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .sidebar li {
     margin-bottom: 8px;
 }
 
-
-/* Sidebar Links */
-
 .sidebar a {
+    color: white;
+
     display: flex;
     align-items: center;
-    gap: 12px;
 
-    width: 100%;
+    gap: 14px;
+
     padding: 13px 14px;
-
-    color: white;
-    text-decoration: none;
 
     border-radius: 8px;
 
     font-size: 15px;
 
+    white-space: nowrap;
+
     transition: background-color 0.2s ease;
 }
-
-
-/* Icon */
 
 .sidebar a i {
     width: 20px;
     text-align: center;
-    flex-shrink: 0;
 }
 
-
-/* Hover */
-
-.sidebar a:hover {
-    background-color: #64153f;
-}
-
-
-/* Active Link */
-
+.sidebar a:hover,
 .sidebar a.active {
-    background-color: #64153f;
+    background-color: #6d234d;
+    color: white;
 }
 
 
@@ -124,11 +124,12 @@ body {
     display: none;
 
     position: fixed;
+
     top: 15px;
     left: 15px;
 
-    width: 42px;
-    height: 42px;
+    width: 45px;
+    height: 45px;
 
     background-color: #4b0f30;
     color: white;
@@ -138,26 +139,28 @@ body {
     align-items: center;
     justify-content: center;
 
+    font-size: 22px;
+
     cursor: pointer;
 
-    z-index: 1000;
-}
-
-.hamburger i {
-    font-size: 20px;
+    z-index: 2000;
 }
 
 
 /* =========================================
-   MAIN
+   MAIN AREA
 ========================================= */
 
 .main {
-    flex: 1;
-    min-width: 0;
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
     min-height: 100vh;
+
     padding: 20px;
-    background-color: #f8f0f5;
+
+    overflow-x: hidden;
 }
 
 
@@ -168,106 +171,141 @@ body {
 .navbar {
     width: 100%;
 
-    min-height: 70px;
+    min-height: 65px;
 
     background-color: white;
 
-    padding: 15px 22px;
+    padding: 12px 20px;
 
-    display: grid;
-    grid-template-columns: auto minmax(150px, 1fr) auto;
+    display: flex;
 
     align-items: center;
+
     gap: 20px;
 
     border-radius: 10px;
 
     margin-bottom: 25px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
-
-
-/* Navbar Heading */
 
 .navbar h2 {
+    color: #4b0f30;
+
     font-size: 22px;
-    color: #333;
+
     white-space: nowrap;
+
+    flex-shrink: 0;
 }
 
-
-/* Navbar Search */
-
 .navbar input {
-    width: 100%;
-    min-width: 0;
+    flex: 1;
+
+    min-width: 100px;
 
     padding: 11px 14px;
 
     border: 1px solid #ddd;
+
     border-radius: 7px;
 
     outline: none;
-
-    font-size: 14px;
 }
 
 .navbar input:focus {
     border-color: #4b0f30;
 }
 
-
-/* Navbar Admin Button */
-
 .navbar button {
-    border: none;
-
     background-color: #4b0f30;
+
     color: white;
 
-    padding: 11px 18px;
+    border: none;
+
+    padding: 11px 20px;
 
     border-radius: 7px;
 
-    font-size: 14px;
-
-    cursor: pointer;
-
     white-space: nowrap;
+
+    flex-shrink: 0;
+}
+
+.navbar button:hover {
+    background-color: #4b0f30;
 }
 
 
 /* =========================================
-   NAVBAR - REVIEWS PAGE
+   REVIEWS PAGE NAVBAR
 ========================================= */
 
 .navbar-left {
-    min-width: 0;
+    flex-shrink: 0;
 }
 
 .navbar-right {
     display: flex;
+
     align-items: center;
+
     gap: 18px;
 
-    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .navbar-right > i {
     color: #4b0f30;
+
     font-size: 17px;
 }
 
 .admin-info {
     display: flex;
+
     align-items: center;
+
     gap: 8px;
 
     color: #4b0f30;
+
     font-weight: bold;
+
+    white-space: nowrap;
 }
 
 .admin-info i {
     font-size: 17px;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.page {
+    width: 100%;
+
+    padding: 20px;
+
+    overflow-x: hidden;
+}
+
+.page h1 {
+    color: #4b0f30;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777;
+
+    margin-bottom: 25px;
+
+    line-height: 1.5;
 }
 
 
@@ -292,26 +330,27 @@ body {
 
     border-radius: 10px;
 
-    min-width: 0;
-
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    min-width: 0;
 }
 
 .card h4 {
-    color: #777;
-    font-size: 14px;
+    color: #666;
+
     margin-bottom: 10px;
 }
 
 .card h2 {
-    font-size: 26px;
     color: #4b0f30;
+
     margin-bottom: 8px;
 }
 
 .card p {
     color: #777;
-    font-size: 13px;
+
+    font-size: 14px;
 }
 
 
@@ -338,15 +377,18 @@ body {
     border-radius: 10px;
 
     min-width: 0;
+
+    overflow-x: auto;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
-
-
-/* Section title */
 
 .section-title {
     display: flex;
-    align-items: center;
+
     justify-content: space-between;
+
+    align-items: center;
 
     gap: 15px;
 
@@ -354,21 +396,21 @@ body {
 }
 
 .section-title h2 {
-    font-size: 18px;
+    color: #4b0f30;
+
     white-space: nowrap;
 }
 
 .section-title button {
-    border: none;
-
     background-color: #4b0f30;
+
     color: white;
 
-    padding: 9px 13px;
+    border: none;
+
+    padding: 8px 14px;
 
     border-radius: 6px;
-
-    cursor: pointer;
 
     white-space: nowrap;
 }
@@ -381,83 +423,40 @@ body {
 table {
     width: 100%;
 
+    min-width: 650px;
+
     border-collapse: collapse;
 
     background-color: white;
+}
+
+th,
+td {
+    padding: 13px 15px;
+
+    border-bottom: 1px solid #eee;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+th {
+    background-color: #f8f0f5;
+
+    color: #4b0f30;
 
     font-size: 14px;
 }
 
-
-/* Table Header */
-
-th {
-    background-color: #f4e8ef;
-
-    color: #4b0f30;
-
-    font-weight: bold;
-
-    text-align: left;
-
-    padding: 13px 14px;
-
-    white-space: nowrap;
-}
-
-
-/* Table Data */
-
 td {
-    padding: 13px 14px;
+    color: #444;
 
-    border-bottom: 1px solid #eee;
-
-    white-space: nowrap;
+    font-size: 14px;
 }
 
-
-/* Last row */
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-
-/* Table hover */
-
-tbody tr:hover,
-table tr:hover {
-    background-color: #faf6f8;
-}
-
-
-/* =========================================
-   MOBILE TABLE SCROLL
-   ONLY TABLE SCROLLS
-========================================= */
-
-@media (max-width: 768px) {
-
-    table {
-        display: block;
-
-        width: 100%;
-
-        min-width: 650px;
-
-        overflow-x: auto;
-
-        white-space: nowrap;
-
-        -webkit-overflow-scrolling: touch;
-    }
-
-    th,
-    td {
-        white-space: nowrap;
-    }
-
+tr:hover td {
+    background-color: #faf5f8;
 }
 
 
@@ -469,6 +468,7 @@ table tr:hover {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 20px;
@@ -477,35 +477,28 @@ table tr:hover {
 }
 
 .orders-heading h2 {
-    color: #333;
-    margin-bottom: 6px;
+    color: #4b0f30;
 }
 
 .orders-heading p {
     color: #777;
-    font-size: 14px;
-}
 
+    margin-top: 6px;
+}
 
 .export-btn {
     background-color: #4b0f30;
+
     color: white;
 
     border: none;
 
-    padding: 11px 17px;
+    padding: 11px 18px;
 
     border-radius: 7px;
 
-    cursor: pointer;
-
     white-space: nowrap;
 }
-
-
-/* =========================================
-   ORDER CARDS
-========================================= */
 
 .order-cards {
     display: grid;
@@ -531,29 +524,32 @@ table tr:hover {
     gap: 15px;
 
     min-width: 0;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .order-icon {
     width: 45px;
     height: 45px;
 
-    flex-shrink: 0;
+    border-radius: 50%;
 
-    background-color: #f4e8ef;
+    background-color: #f1dce8;
 
     color: #4b0f30;
 
-    border-radius: 50%;
-
     display: flex;
+
     align-items: center;
     justify-content: center;
+
+    flex-shrink: 0;
 }
 
 .order-card p {
     color: #777;
 
-    font-size: 13px;
+    font-size: 14px;
 
     margin-bottom: 5px;
 }
@@ -565,9 +561,9 @@ table tr:hover {
 }
 
 .order-card span {
-    color: #777;
-
     font-size: 12px;
+
+    color: #777;
 }
 
 
@@ -576,12 +572,6 @@ table tr:hover {
 ========================================= */
 
 .order-filter {
-    background-color: white;
-
-    padding: 15px;
-
-    border-radius: 10px;
-
     display: flex;
 
     gap: 12px;
@@ -591,7 +581,7 @@ table tr:hover {
 
 .order-filter input,
 .order-filter select {
-    padding: 11px 12px;
+    padding: 11px 13px;
 
     border: 1px solid #ddd;
 
@@ -599,39 +589,27 @@ table tr:hover {
 
     outline: none;
 
-    font-size: 14px;
+    background-color: white;
 }
 
 .order-filter input {
     flex: 1;
-    min-width: 0;
 }
-
-.order-filter select {
-    width: 180px;
-}
-
-
-/* =========================================
-   ORDERS TABLE
-========================================= */
 
 .orders-table {
     width: 100%;
+
+    overflow-x: auto;
 
     background-color: white;
 
     border-radius: 10px;
 
-    padding: 15px;
-
-    min-width: 0;
-
-    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .orders-table table {
-    width: 100%;
+    min-width: 950px;
 }
 
 
@@ -658,36 +636,32 @@ table tr:hover {
     white-space: nowrap;
 }
 
-.paid {
-    background-color: #e7f7ed;
-    color: #168344;
-}
-
+.paid,
 .delivered,
 .active {
-    background-color: #e7f7ed;
-    color: #168344;
+    background-color: #e8f7ed;
+
+    color: #217a3c;
 }
 
-.pending {
+.pending,
+.pending-payment {
     background-color: #fff4d6;
-    color: #9a7000;
+
+    color: #9a6a00;
 }
 
 .shipped {
-    background-color: #e7f0ff;
-    color: #2865b8;
+    background-color: #e6f0ff;
+
+    color: #245a9c;
 }
 
 .cancelled,
 .inactive {
     background-color: #fde8e8;
-    color: #b42318;
-}
 
-.pending-payment {
-    background-color: #fff4d6;
-    color: #9a7000;
+    color: #a33a3a;
 }
 
 
@@ -706,8 +680,6 @@ table tr:hover {
 
     border-radius: 5px;
 
-    cursor: pointer;
-
     white-space: nowrap;
 }
 
@@ -719,16 +691,17 @@ table tr:hover {
 .product-heading {
     display: flex;
 
-    align-items: center;
     justify-content: space-between;
 
-    gap: 20px;
+    align-items: center;
+
+    gap: 15px;
 
     margin-bottom: 20px;
 }
 
 .product-heading h2 {
-    font-size: 22px;
+    color: #4b0f30;
 }
 
 .add-btn {
@@ -738,19 +711,12 @@ table tr:hover {
 
     border: none;
 
-    padding: 11px 16px;
+    padding: 10px 16px;
 
     border-radius: 7px;
 
-    cursor: pointer;
-
     white-space: nowrap;
 }
-
-
-/* =========================================
-   PRODUCT FILTER
-========================================= */
 
 .filters {
     display: flex;
@@ -768,37 +734,29 @@ table tr:hover {
 
     border-radius: 7px;
 
-    outline: none;
+    background-color: white;
 
-    font-size: 14px;
+    outline: none;
 }
 
 .filters input {
     flex: 1;
-    min-width: 0;
 }
-
-.filters select {
-    width: 200px;
-}
-
-
-/* =========================================
-   PRODUCT TABLE
-========================================= */
 
 .product-table {
     width: 100%;
 
-    background-color: white;
+    overflow-x: auto;
 
-    padding: 15px;
+    background-color: white;
 
     border-radius: 10px;
 
-    min-width: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
 
-    overflow: hidden;
+.product-table table {
+    min-width: 700px;
 }
 
 .edit,
@@ -809,48 +767,19 @@ table tr:hover {
 
     border-radius: 5px;
 
-    cursor: pointer;
-
-    white-space: nowrap;
+    margin-right: 5px;
 }
 
 .edit {
-    background-color: #eee4eb;
+    background-color: #f1dce8;
+
     color: #4b0f30;
 }
 
 .delete {
     background-color: #fde8e8;
-    color: #b42318;
-}
 
-
-/* =========================================
-   PAGE
-========================================= */
-
-.page {
-    flex: 1;
-
-    min-width: 0;
-
-    padding: 25px;
-
-    background-color: #f8f0f5;
-}
-
-.page h1 {
-    color: #333;
-}
-
-.subtitle {
-    color: #777;
-
-    margin-top: 7px;
-
-    margin-bottom: 25px;
-
-    font-size: 14px;
+    color: #a33a3a;
 }
 
 
@@ -871,21 +800,21 @@ table tr:hover {
 .box {
     background-color: white;
 
-    padding: 22px;
+    padding: 20px;
 
     border-radius: 10px;
 
-    min-width: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    min-width: 0;
 }
 
 .box h3 {
-    font-size: 14px;
-
-    color: #777;
+    color: #666;
 
     margin-bottom: 10px;
+
+    font-size: 15px;
 }
 
 .box h2 {
@@ -898,11 +827,69 @@ table tr:hover {
     color: #777;
 
     font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.box-icon {
+    width: 42px;
+    height: 42px;
+
+    background-color: #f1dce8;
+
+    color: #4b0f30;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    margin-bottom: 12px;
 }
 
 
 /* =========================================
-   REVIEWS PAGE
+   SECTION
+========================================= */
+
+.section {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    width: 100%;
+
+    min-width: 0;
+
+    /*
+       IMPORTANT:
+       Sales + Customers tables will scroll
+       inside this section only.
+    */
+    overflow-x: auto;
+}
+
+.section h2 {
+    color: #4b0f30;
+
+    margin-bottom: 18px;
+}
+
+.section table {
+    min-width: 700px;
+}
+
+
+/* =========================================
+   REVIEWS
 ========================================= */
 
 .page-header {
@@ -910,35 +897,12 @@ table tr:hover {
 }
 
 .page-header h1 {
-    margin-bottom: 7px;
+    color: #4b0f30;
 }
 
-
-/* Review section */
-
-.section {
-    width: 100%;
-
-    background-color: white;
-
-    padding: 22px;
-
-    border-radius: 10px;
-
-    margin-bottom: 25px;
-
-    min-width: 0;
+.section-header {
+    margin-bottom: 15px;
 }
-
-.section > h2,
-.section-header h2 {
-    font-size: 20px;
-
-    margin-bottom: 20px;
-}
-
-
-/* Review */
 
 .review {
     border: 1px solid #eee;
@@ -948,27 +912,26 @@ table tr:hover {
     padding: 18px;
 
     margin-bottom: 15px;
-}
 
-.review:last-child {
-    margin-bottom: 0;
+    background-color: #fff;
 }
 
 .review-top {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 15px;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .review-top h3 {
-    font-size: 16px;
+    color: #4b0f30;
 
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .review-top small {
@@ -976,7 +939,7 @@ table tr:hover {
 }
 
 .stars {
-    color: #e5a400;
+    color: #d49a00;
 
     white-space: nowrap;
 }
@@ -986,30 +949,9 @@ table tr:hover {
 
     line-height: 1.6;
 
-    font-size: 14px;
-}
+    overflow-wrap: normal;
 
-
-/* =========================================
-   REVIEW BOX ICON
-========================================= */
-
-.box-icon {
-    width: 42px;
-    height: 42px;
-
-    background-color: #f4e8ef;
-
-    color: #4b0f30;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 12px;
+    word-break: normal;
 }
 
 
@@ -1018,40 +960,40 @@ table tr:hover {
 ========================================= */
 
 .settings-box {
-    width: 100%;
-
-    max-width: 800px;
-
     background-color: white;
 
     padding: 25px;
 
     border-radius: 10px;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    max-width: 800px;
 }
 
 .settings-box h2 {
-    color: #333;
+    color: #4b0f30;
 
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .settings-box label {
     display: inline-block;
 
-    margin-bottom: 7px;
+    margin-bottom: 6px;
+
+    color: #555;
 
     font-weight: bold;
-
-    font-size: 14px;
 }
 
 .settings-box input,
 .settings-box textarea {
     width: 100%;
 
-    padding: 11px 12px;
+    padding: 11px 13px;
 
     border: 1px solid #ddd;
 
@@ -1059,20 +1001,13 @@ table tr:hover {
 
     outline: none;
 
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .settings-box textarea {
     min-height: 100px;
 
     resize: vertical;
-}
-
-.settings-box input:focus,
-.settings-box textarea:focus {
-    border-color: #4b0f30;
 }
 
 .settings-box button {
@@ -1082,11 +1017,9 @@ table tr:hover {
 
     border: none;
 
-    padding: 11px 17px;
+    padding: 11px 18px;
 
     border-radius: 7px;
-
-    cursor: pointer;
 }
 
 
@@ -1096,15 +1029,8 @@ table tr:hover {
 
 @media (max-width: 1100px) {
 
-    .sidebar {
-        width: 220px;
-    }
-
     .cards,
-    .order-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+    .order-cards,
     .stats {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1123,253 +1049,204 @@ table tr:hover {
 @media (max-width: 768px) {
 
     body {
-        display: block;
+        overflow-x: hidden;
     }
 
 
-    /* Hamburger */
+    /* HAMBURGER */
 
     .hamburger {
         display: flex;
     }
 
 
-    /* Sidebar */
+    /* SIDEBAR */
 
     .sidebar {
-        position: fixed;
-
-        top: 0;
         left: -260px;
 
-        width: 250px;
-        height: 100vh;
-
-        z-index: 999;
-
         transition: left 0.3s ease;
-
-        overflow-y: auto;
     }
 
-
-    /* Open sidebar */
 
     #menu-toggle:checked ~ .sidebar {
         left: 0;
     }
 
 
-    /* Main */
+    /* MAIN */
 
     .main {
+        margin-left: 0;
+
         width: 100%;
 
         padding: 15px;
 
-        min-height: 100vh;
+        padding-top: 75px;
     }
 
 
-    /* Page */
+    /* PAGE */
 
     .page {
-        width: 100%;
+        padding: 15px;
 
-        padding: 70px 15px 20px;
+        padding-top: 75px;
     }
 
 
-    /* Navbar */
+    /* NAVBAR */
 
     .navbar {
-        margin-top: 55px;
-
-        display: grid;
-
-        grid-template-columns: 1fr auto;
-
-        gap: 12px;
+        flex-wrap: wrap;
 
         padding: 15px;
 
-        min-height: auto;
+        gap: 12px;
     }
-
 
     .navbar h2 {
-        font-size: 18px;
-    }
+        width: 100%;
 
+        font-size: 20px;
+    }
 
     .navbar input {
-        grid-column: 1 / -1;
-
-        grid-row: 2;
-
         width: 100%;
-    }
 
+        flex: 1 1 100%;
+    }
 
     .navbar button {
-        grid-column: 2;
+        width: auto;
 
-        grid-row: 1;
-
-        padding: 9px 12px;
+        flex-shrink: 0;
     }
 
 
-    /* Reviews navbar */
+    /* REVIEWS NAVBAR */
 
     .navbar-left {
-        grid-column: 1;
-
-        grid-row: 1;
+        width: 100%;
     }
 
     .navbar-right {
-        grid-column: 2;
-
-        grid-row: 1;
-
-        gap: 10px;
-    }
-
-    .navbar-right > i {
-        display: none;
-    }
-
-    .admin-info span {
-        display: inline;
+        margin-left: auto;
     }
 
 
-    /* Dashboard cards */
+    /* DASHBOARD */
 
-    .cards {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 12px;
+    .cards,
+    .order-cards,
+    .stats {
+        grid-template-columns: 1fr;
     }
 
-    .card {
-        padding: 17px;
-    }
-
-    .card h2 {
-        font-size: 22px;
-    }
-
-
-    /* Dashboard content */
 
     .content {
         grid-template-columns: 1fr;
-
-        gap: 15px;
     }
 
 
-    /* Order cards */
-
-    .order-cards {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 12px;
-    }
-
-    .order-card {
-        padding: 15px;
-
-        gap: 10px;
-    }
-
-    .order-icon {
-        width: 38px;
-        height: 38px;
-    }
-
-
-    /* Order heading */
+    /* HEADINGS */
 
     .orders-heading,
     .product-heading {
+        flex-direction: column;
+
         align-items: flex-start;
-
-        flex-direction: column;
-
-        gap: 10px;
     }
 
 
-    /* Filters */
+    /* FILTERS */
 
-    .order-filter {
-        flex-direction: column;
-    }
-
-    .order-filter input,
-    .order-filter select {
-        width: 100%;
-    }
-
-
+    .order-filter,
     .filters {
         flex-direction: column;
     }
 
+    .order-filter input,
+    .order-filter select,
     .filters input,
     .filters select {
         width: 100%;
     }
 
 
-    /* Stats */
+    /* TABLE SCROLL */
 
-    .stats {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 12px;
-    }
-
-    .box {
-        padding: 17px;
-    }
-
-
-    /* Sections */
-
-    .section {
-        padding: 15px;
-    }
-
-
-    /* Review */
-
-    .review-top {
-        align-items: flex-start;
-
-        flex-direction: column;
-
-        gap: 8px;
-    }
-
-
-    /* Settings */
-
-    .settings-box {
-        padding: 18px;
-    }
-
-
-    /* Dashboard tables */
+    /*
+       IMPORTANT:
+       Body scroll nahi karega.
+       Sirf ye table containers horizontally scroll honge.
+    */
 
     .orders,
-    .products {
-        padding: 15px;
+    .products,
+    .orders-table,
+    .product-table,
+    .section {
+        width: 100%;
 
-        overflow: hidden;
+        max-width: 100%;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    table {
+        min-width: 650px;
+    }
+
+
+    .orders-table table {
+        min-width: 950px;
+    }
+
+
+    .product-table table {
+        min-width: 700px;
+    }
+
+
+    .section table {
+        min-width: 700px;
+    }
+
+
+    /* DON'T BREAK WORDS */
+
+    th,
+    td {
+        white-space: nowrap;
+
+        word-break: normal;
+
+        overflow-wrap: normal;
+    }
+
+
+    /* REVIEW */
+
+    .review-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    /* SETTINGS */
+
+    .settings-box {
+        width: 100%;
+
+        padding: 18px;
     }
 
 }
@@ -1382,39 +1259,24 @@ table tr:hover {
 @media (max-width: 480px) {
 
     .main {
-        padding: 10px;
+        padding: 12px;
+
+        padding-top: 70px;
     }
 
     .page {
-        padding: 65px 10px 15px;
-    }
+        padding: 12px;
 
+        padding-top: 70px;
+    }
 
     .navbar {
         padding: 12px;
-
-        margin-bottom: 18px;
     }
-
 
     .navbar h2 {
-        font-size: 16px;
+        font-size: 18px;
     }
-
-
-    .navbar button {
-        font-size: 12px;
-
-        padding: 8px 10px;
-    }
-
-
-    .cards,
-    .order-cards,
-    .stats {
-        grid-template-columns: 1fr;
-    }
-
 
     .card,
     .box,
@@ -1422,47 +1284,22 @@ table tr:hover {
         padding: 16px;
     }
 
+    .section,
+    .orders,
+    .products {
+        padding: 15px;
+    }
 
     .section-title {
         align-items: flex-start;
     }
 
-
     .section-title h2 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
-
-    .section-title button {
-        font-size: 12px;
-
-        padding: 8px 10px;
-    }
-
-
-    .export-btn,
-    .add-btn {
-        width: 100%;
-    }
-
-
-    .product-heading {
-        width: 100%;
-    }
-
-
-    .product-heading .add-btn {
-        width: 100%;
-    }
-
-
-    .settings-box {
-        padding: 15px;
-    }
-
-
-    .review {
-        padding: 15px;
+    .admin-info span {
+        display: none;
     }
 
 }
