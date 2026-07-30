@@ -2,25 +2,31 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Analytics</title>
+    <title>Analytics - Fashion Store</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
 
+    <!-- HAMBURGER -->
+
     <input type="checkbox" id="menu-toggle">
 
     <label for="menu-toggle" class="hamburger">
-     <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars"></i>
     </label>
+
+
+    <!-- SIDEBAR -->
 
     <div class="sidebar">
 
@@ -53,7 +59,7 @@
             </li>
 
             <li>
-                <a href="analytics.html">
+                <a href="analytics.html" class="active">
                     <i class="fa-solid fa-chart-line"></i>
                     Analytics
                 </a>
@@ -96,13 +102,17 @@
 
     <div class="main">
 
+
         <!-- NAVBAR -->
 
         <div class="navbar">
 
             <h2>Analytics</h2>
 
-            <input type="text" placeholder="Search...">
+            <input
+                type="text"
+                placeholder="Search analytics..."
+            >
 
             <button>
                 <i class="fa-solid fa-user"></i>
@@ -112,7 +122,7 @@
         </div>
 
 
-        <!-- ANALYTICS CONTENT -->
+        <!-- PAGE -->
 
         <div class="page">
 
@@ -123,73 +133,252 @@
             </p>
 
 
-            <!-- CARDS -->
+            <!-- ANALYTICS CARDS -->
 
             <div class="stats">
 
+
+                <!-- REVENUE -->
+
                 <div class="box">
 
-                    <h3>Total Sales</h3>
+                    <div class="box-icon">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
 
-                    <h2>$12,500</h2>
+                    <h3>Total Revenue</h3>
+
+                    <h2>$25,000</h2>
+
+                    <p>+18% this month</p>
+
+                </div>
+
+
+                <!-- ORDERS -->
+
+                <div class="box">
+
+                    <div class="box-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+
+                    <h3>Total Orders</h3>
+
+                    <h2>1,250</h2>
 
                     <p>+12% this month</p>
 
                 </div>
 
 
+                <!-- AVERAGE ORDER -->
+
                 <div class="box">
 
-                    <h3>Total Orders</h3>
+                    <div class="box-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
 
-                    <h2>245</h2>
+                    <h3>Average Order</h3>
 
-                    <p>+8% this month</p>
+                    <h2>$120</h2>
+
+                    <p>Average order value</p>
 
                 </div>
 
 
-                <div class="box">
-
-                    <h3>Customers</h3>
-
-                    <h2>180</h2>
-
-                    <p>+15% this month</p>
-
-                </div>
-
+                <!-- CONVERSION -->
 
                 <div class="box">
 
-                    <h3>Products Sold</h3>
+                    <div class="box-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
 
-                    <h2>560</h2>
+                    <h3>Conversion Rate</h3>
 
-                    <p>+10% this month</p>
+                    <h2>4.8%</h2>
+
+                    <p>+0.6% this month</p>
 
                 </div>
 
             </div>
 
 
-            <!-- SALES OVERVIEW -->
+
+
+            <!-- TOP SELLING PRODUCTS -->
 
             <div class="section">
 
-                <h2>Sales Overview</h2>
+                <h2>Top Selling Products</h2>
 
-                <div class="chart-box">
+                <table>
 
-                    Sales Chart
+                    <tr>
+
+                        <th>Product</th>
+
+                        <th>Category</th>
+
+                        <th>Units Sold</th>
+
+                        <th>Revenue</th>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Oversized Hoodie</td>
+
+                        <td>Men</td>
+
+                        <td>85</td>
+
+                        <td>$10,200</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Wide Leg Jeans</td>
+
+                        <td>Women</td>
+
+                        <td>72</td>
+
+                        <td>$6,840</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Classic Sneakers</td>
+
+                        <td>Shoes</td>
+
+                        <td>61</td>
+
+                        <td>$9,150</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Shoulder Bag</td>
+
+                        <td>Accessories</td>
+
+                        <td>48</td>
+
+                        <td>$3,840</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Denim Jacket</td>
+
+                        <td>Men</td>
+
+                        <td>42</td>
+
+                        <td>$4,620</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- CUSTOMER OVERVIEW -->
+
+            <div class="section">
+
+                <h2>Customer Overview</h2>
+
+
+                <div class="stats">
+
+
+                    <div class="box">
+
+                        <div class="box-icon">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+                        <h3>New Customers</h3>
+
+                        <h2>35</h2>
+
+                        <p>Joined this month</p>
+
+                    </div>
+
+
+                    <div class="box">
+
+                        <div class="box-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <h3>Returning Customers</h3>
+
+                        <h2>95</h2>
+
+                        <p>Regular customers</p>
+
+                    </div>
+
+
+                    <div class="box">
+
+                        <div class="box-icon">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+
+                        <h3>Active Customers</h3>
+
+                        <h2>145</h2>
+
+                        <p>Currently active</p>
+
+                    </div>
+
+
+                    <div class="box">
+
+                        <div class="box-icon">
+                            <i class="fa-solid fa-user-clock"></i>
+                        </div>
+
+                        <h3>Inactive Customers</h3>
+
+                        <h2>35</h2>
+
+                        <p>Need attention</p>
+
+                    </div>
 
                 </div>
 
             </div>
+
 
         </div>
 
     </div>
+
 
 </body>
 
