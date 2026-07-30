@@ -162,7 +162,7 @@ textarea {
 }
 
 
-/* Hamburger */
+/* Hamburger inside navbar (unused old icon, kept for compatibility) */
 
 .menu-icon {
     display: none;
@@ -1057,12 +1057,18 @@ tr:hover td {
     margin-bottom: 12px;
 }
 
+/* Reviewer name + "Customer Reviews" style headings -> BLACK as requested */
 .review h3 {
-    color: #333;
+    color: #000000;
 
     font-size: 17px;
 
     margin-bottom: 5px;
+}
+
+.section-title h2.reviews-heading,
+.section h2.reviews-heading {
+    color: #000000;
 }
 
 .review small {
@@ -1207,7 +1213,7 @@ tr:hover td {
 
 
 /* =====================================================
-   HAMBURGER
+   HAMBURGER (checkbox trick)
 ===================================================== */
 
 #menu-toggle {
