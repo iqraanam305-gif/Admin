@@ -72,18 +72,17 @@ textarea {
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    transition: 0.3s;
-}
-
-.sidebar a i {
-    width: 20px;
-    text-align: center;
 }
 
 .sidebar a:hover,
 .sidebar a.active {
     background-color: #6d1b49;
     color: white;
+}
+
+.sidebar a i {
+    width: 20px;
+    text-align: center;
 }
 
 
@@ -128,13 +127,6 @@ textarea {
     font-size: 22px;
     color: #4b0f30;
     white-space: nowrap;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 21px;
-    color: #4b0f30;
-    cursor: pointer;
 }
 
 .navbar input {
@@ -191,6 +183,19 @@ textarea {
 
 
 /* =====================================================
+   HAMBURGER
+===================================================== */
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+/* =====================================================
    PAGE HEADINGS
 ===================================================== */
 
@@ -231,7 +236,6 @@ textarea {
     border-radius: 12px;
     border-left: 5px solid #6d1b49;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    transition: 0.3s;
 }
 
 .card:hover,
@@ -288,11 +292,6 @@ textarea {
     gap: 25px;
 }
 
-
-/* =====================================================
-   RECENT ORDERS + TOP SELLING
-===================================================== */
-
 .orders,
 .products {
     background-color: white;
@@ -300,7 +299,6 @@ textarea {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     min-width: 0;
-    overflow-x: auto;
 }
 
 .section-title {
@@ -323,11 +321,6 @@ textarea {
     padding: 9px 16px;
     border-radius: 7px;
     cursor: pointer;
-    white-space: nowrap;
-}
-
-.section-title button:hover {
-    background-color: #6d1b49;
 }
 
 
@@ -346,7 +339,7 @@ textarea {
 
 
 /* =====================================================
-   ALL TABLES
+   TABLE - DESKTOP
 ===================================================== */
 
 table {
@@ -432,40 +425,45 @@ tr:hover td {
     flex: 1;
 }
 
-.filters input:focus,
-.filters select:focus {
-    border-color: #6d1b49;
-}
-
 
 /* =====================================================
-   PRODUCT TABLE
+   TABLE WRAPPERS
 ===================================================== */
 
-.product-table {
+.product-table,
+.orders-table,
+.sales-table,
+.customers-table {
+    width: 100%;
     background-color: white;
-    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    overflow-x: auto;
+}
+
+.product-table,
+.sales-table,
+.customers-table {
+    padding: 20px;
+}
+
+.orders-table {
+    overflow: hidden;
 }
 
 .product-table table {
-    width: 100%;
     min-width: 650px;
 }
 
-.product-table th {
-    background-color: #4b0f30;
-    color: white;
+.orders-table table {
+    min-width: 950px;
 }
 
-.product-table td {
-    background-color: white;
+.sales-table table {
+    min-width: 650px;
 }
 
-.product-table tr:hover td {
-    background-color: #f3e5ed;
+.customers-table table {
+    min-width: 700px;
 }
 
 
@@ -481,6 +479,7 @@ tr:hover td {
     border-radius: 6px;
     cursor: pointer;
     margin-right: 5px;
+    white-space: nowrap;
 }
 
 .edit {
@@ -488,26 +487,14 @@ tr:hover td {
     color: white;
 }
 
-.edit:hover {
-    background-color: #4b0f30;
-}
-
 .delete {
     background-color: #8b0000;
     color: white;
 }
 
-.delete:hover {
-    background-color: #650000;
-}
-
 .view-btn {
     background-color: #4b0f30;
     color: white;
-}
-
-.view-btn:hover {
-    background-color: #6d1b49;
 }
 
 
@@ -540,10 +527,6 @@ tr:hover td {
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
-}
-
-.export-btn:hover {
-    background-color: #6d1b49;
 }
 
 
@@ -618,42 +601,6 @@ tr:hover td {
     outline: none;
 }
 
-.order-filter input:focus,
-.order-filter select:focus {
-    border-color: #6d1b49;
-}
-
-
-/* =====================================================
-   ORDERS TABLE
-===================================================== */
-
-.orders-table {
-    width: 100%;
-    overflow-x: auto;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-.orders-table table {
-    width: 100%;
-    min-width: 950px;
-}
-
-.orders-table th {
-    background-color: #4b0f30;
-    color: white;
-}
-
-.orders-table td {
-    background-color: white;
-}
-
-.orders-table tr:hover td {
-    background-color: #f3e5ed;
-}
-
 
 /* =====================================================
    STATUS BADGES
@@ -697,71 +644,7 @@ tr:hover td {
 
 
 /* =====================================================
-   SALES TABLE
-===================================================== */
-
-.sales-table {
-    width: 100%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    overflow-x: auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-.sales-table table {
-    width: 100%;
-    min-width: 650px;
-}
-
-.sales-table th {
-    background-color: #4b0f30;
-    color: white;
-}
-
-.sales-table td {
-    background-color: white;
-}
-
-.sales-table tr:hover td {
-    background-color: #f3e5ed;
-}
-
-
-/* =====================================================
-   CUSTOMERS TABLE
-===================================================== */
-
-.customers-table {
-    width: 100%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    overflow-x: auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-.customers-table table {
-    width: 100%;
-    min-width: 700px;
-}
-
-.customers-table th {
-    background-color: #4b0f30;
-    color: white;
-}
-
-.customers-table td {
-    background-color: white;
-}
-
-.customers-table tr:hover td {
-    background-color: #f3e5ed;
-}
-
-
-/* =====================================================
-   ANALYTICS / SALES CHART
+   ANALYTICS
 ===================================================== */
 
 .chart-box {
@@ -791,10 +674,6 @@ tr:hover td {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.review:last-child {
-    margin-bottom: 0;
-}
-
 .review-top {
     display: flex;
     align-items: flex-start;
@@ -804,14 +683,9 @@ tr:hover td {
 }
 
 .review h3 {
-    color: #000000;
+    color: #000;
     font-size: 17px;
     margin-bottom: 5px;
-}
-
-.section-title h2.reviews-heading,
-.section h2.reviews-heading {
-    color: #000000;
 }
 
 .review small {
@@ -893,11 +767,6 @@ tr:hover td {
     outline: none;
 }
 
-.settings-box input:focus,
-.settings-box textarea:focus {
-    border-color: #6d1b49;
-}
-
 .settings-box textarea {
     height: 100px;
     resize: vertical;
@@ -910,23 +779,6 @@ tr:hover td {
     padding: 12px 22px;
     border-radius: 6px;
     cursor: pointer;
-}
-
-.settings-box button:hover {
-    background-color: #4b0f30;
-}
-
-
-/* =====================================================
-   HAMBURGER
-===================================================== */
-
-#menu-toggle {
-    display: none;
-}
-
-.hamburger {
-    display: none;
 }
 
 
@@ -984,7 +836,7 @@ tr:hover td {
     }
 
 
-    /* MOBILE SIDEBAR */
+    /* SIDEBAR */
 
     .sidebar {
         position: fixed;
@@ -993,7 +845,6 @@ tr:hover td {
         width: 250px;
         min-width: 250px;
         height: 100vh;
-        min-height: 100vh;
         padding: 25px 20px;
         z-index: 1000;
         overflow-y: auto;
@@ -1031,7 +882,6 @@ tr:hover td {
 
     .navbar-left {
         width: 100%;
-        flex-shrink: 0;
     }
 
     .navbar-left h2,
@@ -1048,18 +898,24 @@ tr:hover td {
     .navbar-right {
         width: 100%;
         justify-content: flex-end;
-        gap: 15px;
+        gap: 14px;
         order: 3;
     }
 
-    /* Hide Admin information on mobile */
+    /* Admin stays visible */
     .admin-info {
-        display: none;
+        display: flex;
+        font-size: 12px;
     }
 
-    /* Hide Admin button if present */
+    .admin-info i {
+        font-size: 15px;
+    }
+
     .navbar button {
-        display: none;
+        display: block;
+        padding: 7px 12px;
+        font-size: 11px;
     }
 
 
@@ -1091,7 +947,7 @@ tr:hover td {
     }
 
 
-    /* DASHBOARD CONTENT */
+    /* CONTENT */
 
     .content {
         grid-template-columns: 1fr;
@@ -1099,31 +955,20 @@ tr:hover td {
     }
 
     .orders,
-    .products {
-        width: 100%;
-        padding: 18px;
-    }
-
-
-    /* GENERAL SECTION */
-
+    .products,
     .section {
         width: 100%;
         padding: 18px;
     }
 
 
-    /* PRODUCTS */
+    /* PRODUCT HEADING */
 
     .product-heading {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
         margin: 20px 0;
-    }
-
-    .product-heading h2 {
-        font-size: 22px;
     }
 
     .add-btn {
@@ -1148,68 +993,67 @@ tr:hover td {
     }
 
 
-    /* TABLE WRAPPERS */
+    /* =================================================
+       MOBILE TABLES
+       NO HORIZONTAL SCROLL
+       NO WORD BREAK
+    ================================================= */
 
-    /* =====================================================
-   MOBILE TABLES - FIT INSIDE SCREEN
-===================================================== */
+    .product-table,
+    .orders-table,
+    .sales-table,
+    .customers-table {
+        width: 100%;
+        overflow: hidden;
+        padding: 10px;
+    }
 
-.product-table,
-.orders-table,
-.sales-table,
-.customers-table {
-    width: 100%;
-    overflow-x: hidden;
-    padding: 10px;
-}
+    .product-table table,
+    .orders-table table,
+    .sales-table table,
+    .customers-table table {
+        width: 100%;
+        min-width: 0 !important;
+        table-layout: fixed;
+    }
 
-.product-table table,
-.orders-table table,
-.sales-table table,
-.customers-table table {
-    width: 100%;
-    min-width: 0 !important;
-    table-layout: fixed;
-}
+    th,
+    td {
+        padding: 7px 3px;
+        font-size: 9px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+    th {
+        font-size: 9px;
+    }
 
-th,
-td {
-    padding: 7px 4px;
-    font-size: 10px;
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: break-word;
-    text-align: left;
-}
+    .paid,
+    .pending-payment,
+    .pending,
+    .delivered,
+    .shipped,
+    .cancelled {
+        font-size: 8px;
+        padding: 3px 4px;
+        white-space: nowrap;
+    }
 
-/* Status badges */
-.paid,
-.pending-payment,
-.pending,
-.delivered,
-.shipped,
-.cancelled {
-    font-size: 9px;
-    padding: 4px 5px;
-    white-space: normal;
-}
+    .edit,
+    .delete,
+    .view-btn {
+        padding: 3px 4px;
+        font-size: 8px;
+        margin: 1px;
+        white-space: nowrap;
+    }
 
-/* Action buttons */
-.edit,
-.delete,
-.view-btn {
-    padding: 4px 5px;
-    font-size: 9px;
-    margin: 2px 1px;
-    white-space: normal;
-}
 
-    /* ORDERS HEADING */
+    /* ORDERS */
 
     .orders-heading {
         flex-direction: column;
@@ -1218,16 +1062,9 @@ td {
         margin: 20px 0;
     }
 
-    .orders-heading h2 {
-        font-size: 22px;
-    }
-
     .export-btn {
         width: 100%;
     }
-
-
-    /* ORDER CARDS */
 
     .order-cards {
         grid-template-columns: 1fr;
@@ -1322,9 +1159,6 @@ td {
         left: 205px;
     }
 
-
-    /* NAVBAR */
-
     .navbar {
         padding: 12px;
     }
@@ -1335,15 +1169,21 @@ td {
     }
 
     .navbar-right {
-        gap: 12px;
+        gap: 10px;
     }
 
     .navbar-right > i {
-        font-size: 16px;
+        font-size: 15px;
     }
 
+    .admin-info span {
+        font-size: 11px;
+    }
 
-    /* HEADINGS */
+    .navbar button {
+        padding: 6px 9px;
+        font-size: 10px;
+    }
 
     .page-header h1,
     .page > h1 {
@@ -1353,9 +1193,6 @@ td {
     .subtitle {
         font-size: 13px;
     }
-
-
-    /* CARDS */
 
     .card,
     .box {
@@ -1378,39 +1215,24 @@ td {
         font-size: 21px;
     }
 
-
-    /* SECTIONS */
-
     .orders,
     .products,
     .section {
         padding: 15px;
     }
 
-    .section-title {
-        align-items: flex-start;
-    }
-
-    .section-title h2 {
-        font-size: 18px;
-    }
-
-    .section-title button {
-        padding: 8px 12px;
-        font-size: 12px;
-    }
-
-
-    /* TABLES */
-
     th,
     td {
-        padding: 9px;
-        font-size: 11px;
+        padding: 6px 2px;
+        font-size: 8px;
     }
 
-
-    /* REVIEWS */
+    .edit,
+    .delete,
+    .view-btn {
+        padding: 3px;
+        font-size: 7px;
+    }
 
     .review {
         padding: 14px;
@@ -1423,9 +1245,6 @@ td {
     .review-text {
         font-size: 13px;
     }
-
-
-    /* SETTINGS */
 
     .settings-box {
         padding: 15px;
