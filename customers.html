@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customers - Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="hamburger">
+     <i class="fa-solid fa-bars"></i>
+    </label>
+
+
+    
+
+    <div class="sidebar">
+
+        <h1>
+            <i class="fa-solid fa-shirt"></i>
+            Fashion Store
+        </h1>
+
+
+        <ul>
+
+            <li>
+                <a href="admin.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+
+            <li>
+                <a href="products.html">
+                    <i class="fa-solid fa-box"></i>
+                    Products
+                </a>
+            </li>
+
+
+            <li>
+                <a href="orders.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Orders
+                </a>
+            </li>
+
+
+            <li>
+                <a href="analytics.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+
+
+            <li>
+                <a href="sales.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Sales
+                </a>
+            </li>
+
+
+            <li>
+                <a href="customers.html">
+                    <i class="fa-solid fa-users"></i>
+                    Customers
+                </a>
+            </li>
+
+
+            <li>
+                <a href="reviews.html">
+                    <i class="fa-solid fa-star"></i>
+                    Reviews
+                </a>
+            </li>
+
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <div class="main">
+
+
+        <!-- =========================
+             NAVBAR
+        ========================== -->
+
+        <div class="navbar">
+
+            <h2>Customers</h2>
+
+
+            <input
+                type="text"
+                placeholder="Search customers..."
+            >
+
+
+            <button>
+
+                <i class="fa-solid fa-user"></i>
+
+                Admin
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================
+             CUSTOMER CONTENT
+        ========================== -->
+
+        <div class="page">
+
+
+            <h1>Customers</h1>
+
+
+            <p class="subtitle">
+                Manage your store customers.
+            </p>
+
+
+
+            <!-- =========================
+                 CUSTOMER STATS
+            ========================== -->
+
+            <div class="stats">
+
+
+                <div class="box">
+
+                    <h3>Total Customers</h3>
+
+                    <h2>180</h2>
+
+                    <p>All registered customers</p>
+
+                </div>
+
+
+
+                <div class="box">
+
+                    <h3>New Customers</h3>
+
+                    <h2>35</h2>
+
+                    <p>Joined this month</p>
+
+                </div>
+
+
+
+                <div class="box">
+
+                    <h3>Active Customers</h3>
+
+                    <h2>145</h2>
+
+                    <p>Currently active</p>
+
+                </div>
+
+
+
+                <div class="box">
+
+                    <h3>Inactive Customers</h3>
+
+                    <h2>35</h2>
+
+                    <p>Need attention</p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 CUSTOMER LIST
+            ========================== -->
+
+            <div class="section">
+
+
+                <h2>Customer List</h2>
+
+
+                <table>
+
+
+                    <tr>
+
+                        <th>Customer ID</th>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Orders</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+
+
+                    <tr>
+
+                        <td>#C001</td>
+
+                        <td>Sara Ahmed</td>
+
+                        <td>sara@gmail.com</td>
+
+                        <td>8</td>
+
+                        <td>
+                            <span class="active">
+                                Active
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr>
+
+                        <td>#C002</td>
+
+                        <td>Ayesha Khan</td>
+
+                        <td>ayesha@gmail.com</td>
+
+                        <td>5</td>
+
+                        <td>
+                            <span class="active">
+                                Active
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr>
+
+                        <td>#C003</td>
+
+                        <td>Hira Malik</td>
+
+                        <td>hira@gmail.com</td>
+
+                        <td>2</td>
+
+                        <td>
+                            <span class="inactive">
+                                Inactive
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr>
+
+                        <td>#C004</td>
+
+                        <td>Ali Raza</td>
+
+                        <td>6</td>
+
+                        <td>3</td>
+
+                        <td>
+                            <span class="active">
+                                Active
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr>
+
+                        <td>#C005</td>
+
+                        <td>Maria Khan</td>
+
+                        <td>maria@gmail.com</td>
+
+                        <td>10</td>
+
+                        <td>
+                            <span class="active">
+                                Active
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

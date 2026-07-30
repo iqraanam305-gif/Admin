@@ -11,46 +11,90 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 
 <body>
 
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="hamburger">
+     <i class="fa-solid fa-bars"></i>
+    </label>
 
     <!-- SIDEBAR -->
 
     <div class="sidebar">
 
-        <h1>FashionLabs</h1>
+        <h1>
+            <i class="fa-solid fa-shirt"></i>
+            Fashion Store
+        </h1>
 
         <ul>
 
             <li>
-                <a href="index.html">Dashboard</a>
+                <a href="admin.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
             </li>
 
             <li>
-                <a href="products.html">Products</a>
+                <a href="products.html">
+                    <i class="fa-solid fa-box"></i>
+                    Products
+                </a>
             </li>
 
             <li>
-                <a href="orders.html">Orders</a>
+                <a href="orders.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Orders
+                </a>
             </li>
 
-            <li>Analytics</li>
+            <li>
+                <a href="analytics.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
 
-            <li>Sales</li>
+            <li>
+                <a href="sales.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Sales
+                </a>
+            </li>
 
-            <li>Customers</li>
+            <li>
+                <a href="customers.html">
+                    <i class="fa-solid fa-users"></i>
+                    Customers
+                </a>
+            </li>
 
-            <li>Reviews</li>
+            <li>
+                <a href="reviews.html">
+                    <i class="fa-solid fa-star"></i>
+                    Reviews
+                </a>
+            </li>
 
-            <li>Settings</li>
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
 
         </ul>
 
     </div>
-
 
 
     <!-- MAIN -->
@@ -90,95 +134,88 @@
 
         </div>
 
-
-
         <!-- ORDER CARDS -->
 
-        <div class="order-cards">
+<div class="order-cards">
 
 
-            <div class="order-card">
+    <!-- TOTAL ORDERS -->
 
-                <div class="order-icon">
-                    
-                </div>
+    <div class="order-card">
 
-                <div>
-
-                    <p>Total Orders</p>
-
-                    <h2>1,250</h2>
-
-                    <span>+12% this month</span>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="order-card">
-
-                <div class="order-icon">
-                    
-                </div>
-
-                <div>
-
-                    <p>Pending</p>
-
-                    <h2>86</h2>
-
-                    <span>Need attention</span>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="order-card">
-
-                <div class="order-icon">
-                    
-                </div>
-
-                <div>
-
-                    <p>Shipped</p>
-
-                    <h2>320</h2>
-
-                    <span>On the way</span>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="order-card">
-
-                <div class="order-icon">
-                    
-                </div>
-
-                <div>
-
-                    <p>Delivered</p>
-
-                    <h2>844</h2>
-
-                    <span>Successfully delivered</span>
-
-                </div>
-
-            </div>
-
-
+        <div class="order-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
         </div>
 
+        <div>
+            <p>Total Orders</p>
 
+            <h2>1,250</h2>
+
+            <span>+12% this month</span>
+        </div>
+
+    </div>
+
+
+    <!-- PENDING -->
+
+    <div class="order-card">
+
+        <div class="order-icon">
+            <i class="fa-solid fa-clock"></i>
+        </div>
+
+        <div>
+            <p>Pending</p>
+
+            <h2>86</h2>
+
+            <span>Need attention</span>
+        </div>
+
+    </div>
+
+
+    <!-- SHIPPED -->
+
+    <div class="order-card">
+
+        <div class="order-icon">
+            <i class="fa-solid fa-truck"></i>
+        </div>
+
+        <div>
+            <p>Shipped</p>
+
+            <h2>320</h2>
+
+            <span>On the way</span>
+        </div>
+
+    </div>
+
+
+    <!-- DELIVERED -->
+
+    <div class="order-card">
+
+        <div class="order-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div>
+            <p>Delivered</p>
+
+            <h2>844</h2>
+
+            <span>Successfully delivered</span>
+        </div>
+
+    </div>
+
+
+</div>
 
         <!-- FILTER BAR -->
 
