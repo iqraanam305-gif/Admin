@@ -1128,6 +1128,7 @@ tr:hover td {
     .product-table {
         width: 100%;
         padding: 15px;
+        overflow-x: visible;
     }
 
     /* ORDERS HEADING */
@@ -1157,21 +1158,24 @@ tr:hover td {
         padding: 18px;
     }
 
-    /* ORDERS TABLE WRAPPER */
+     /* ORDERS TABLE WRAPPER */
     .orders-table {
         width: 100%;
+        overflow-x: visible;
     }
 
     /* SALES TABLE WRAPPER */
     .sales-table {
         width: 100%;
         padding: 15px;
+        overflow-x: visible;
     }
 
     /* CUSTOMERS TABLE WRAPPER */
     .customers-table {
         width: 100%;
         padding: 15px;
+        overflow-x: visible;
     }
 
     /* REVIEWS */
