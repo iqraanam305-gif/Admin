@@ -1,3 +1,6 @@
+/* =========================================
+   RESET
+========================================= */
 
 * {
     margin: 0;
@@ -24,6 +27,11 @@ body {
    SIDEBAR
 ========================================= */
 
+body {
+    display: flex;
+    align-items: flex-start;
+}
+
 .sidebar {
     width: 250px;
     min-height: 100vh;
@@ -32,14 +40,6 @@ body {
     padding: 25px 18px;
     flex-shrink: 0;
 }
-
-body {
-    display: flex;
-    align-items: flex-start;
-}
-
-
-/* Sidebar Heading */
 
 .sidebar h1 {
     font-size: 22px;
@@ -51,9 +51,6 @@ body {
     margin-right: 8px;
 }
 
-
-/* Sidebar List */
-
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -63,9 +60,6 @@ body {
 .sidebar li {
     margin-bottom: 8px;
 }
-
-
-/* Sidebar Links */
 
 .sidebar a {
     display: flex;
@@ -83,26 +77,20 @@ body {
     font-size: 15px;
 
     transition: background-color 0.2s ease;
+
+    white-space: nowrap;
 }
-
-
-/* Icon */
 
 .sidebar a i {
     width: 20px;
+    min-width: 20px;
     text-align: center;
     flex-shrink: 0;
 }
 
-
-/* Hover */
-
 .sidebar a:hover {
     background-color: #64153f;
 }
-
-
-/* Active Link */
 
 .sidebar a.active {
     background-color: #64153f;
@@ -153,7 +141,9 @@ body {
     flex: 1;
     min-width: 0;
     min-height: 100vh;
+
     padding: 20px;
+
     background-color: #f8f0f5;
 }
 
@@ -164,7 +154,6 @@ body {
 
 .navbar {
     width: 100%;
-
     min-height: 70px;
 
     background-color: white;
@@ -172,27 +161,29 @@ body {
     padding: 15px 22px;
 
     display: grid;
-    grid-template-columns: auto minmax(150px, 1fr) auto;
+
+    grid-template-columns:
+        auto
+        minmax(150px, 1fr)
+        auto;
 
     align-items: center;
+
     gap: 20px;
 
     border-radius: 10px;
 
     margin-bottom: 25px;
+
+    min-width: 0;
 }
-
-
-/* Navbar Heading */
 
 .navbar h2 {
     font-size: 22px;
     color: #333;
+
     white-space: nowrap;
 }
-
-
-/* Navbar Search */
 
 .navbar input {
     width: 100%;
@@ -201,6 +192,7 @@ body {
     padding: 11px 14px;
 
     border: 1px solid #ddd;
+
     border-radius: 7px;
 
     outline: none;
@@ -211,9 +203,6 @@ body {
 .navbar input:focus {
     border-color: #4b0f30;
 }
-
-
-/* Navbar Admin Button */
 
 .navbar button {
     border: none;
@@ -234,7 +223,7 @@ body {
 
 
 /* =========================================
-   NAVBAR - REVIEWS PAGE
+   REVIEWS NAVBAR
 ========================================= */
 
 .navbar-left {
@@ -244,6 +233,7 @@ body {
 .navbar-right {
     display: flex;
     align-items: center;
+
     gap: 18px;
 
     white-space: nowrap;
@@ -257,10 +247,14 @@ body {
 .admin-info {
     display: flex;
     align-items: center;
+
     gap: 8px;
 
     color: #4b0f30;
+
     font-weight: bold;
+
+    white-space: nowrap;
 }
 
 .admin-info i {
@@ -296,19 +290,28 @@ body {
 
 .card h4 {
     color: #777;
+
     font-size: 14px;
+
     margin-bottom: 10px;
+
+    white-space: nowrap;
 }
 
 .card h2 {
     font-size: 26px;
+
     color: #4b0f30;
+
     margin-bottom: 8px;
 }
 
 .card p {
     color: #777;
+
     font-size: 13px;
+
+    white-space: nowrap;
 }
 
 
@@ -324,6 +327,8 @@ body {
     gap: 20px;
 
     width: 100%;
+
+    min-width: 0;
 }
 
 .orders,
@@ -335,14 +340,21 @@ body {
     border-radius: 10px;
 
     min-width: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 
-/* Section title */
+/* =========================================
+   SECTION TITLE
+========================================= */
 
 .section-title {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 15px;
@@ -352,6 +364,7 @@ body {
 
 .section-title h2 {
     font-size: 18px;
+
     white-space: nowrap;
 }
 
@@ -359,6 +372,7 @@ body {
     border: none;
 
     background-color: #4b0f30;
+
     color: white;
 
     padding: 9px 13px;
@@ -383,10 +397,9 @@ table {
     background-color: white;
 
     font-size: 14px;
+
+    min-width: 650px;
 }
-
-
-/* Table Header */
 
 th {
     background-color: #f4e8ef;
@@ -402,9 +415,6 @@ th {
     white-space: nowrap;
 }
 
-
-/* Table Data */
-
 td {
     padding: 13px 14px;
 
@@ -413,199 +423,12 @@ td {
     white-space: nowrap;
 }
 
-
-/* Last row */
-
 tr:last-child td {
     border-bottom: none;
 }
 
-
-/* Table hover */
-
-tbody tr:hover,
 table tr:hover {
     background-color: #faf6f8;
-}
-
-
-/* =========================================
-   MOBILE TABLE SCROLL
-   ONLY TABLE SCROLLS
-========================================= */
-
-@media (max-width: 768px) {
-
-    table {
-        display: block;
-
-        width: 100%;
-
-        min-width: 650px;
-
-        overflow-x: auto;
-
-        white-space: nowrap;
-
-        -webkit-overflow-scrolling: touch;
-    }
-
-    th,
-    td {
-        white-space: nowrap;
-    }
-
-}
-
-
-/* =========================================
-   ORDERS PAGE
-========================================= */
-
-.orders-heading {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 20px;
-
-    margin-bottom: 20px;
-}
-
-.orders-heading h2 {
-    color: #333;
-    margin-bottom: 6px;
-}
-
-.orders-heading p {
-    color: #777;
-    font-size: 14px;
-}
-
-
-.export-btn {
-    background-color: #4b0f30;
-    color: white;
-
-    border: none;
-
-    padding: 11px 17px;
-
-    border-radius: 7px;
-
-    cursor: pointer;
-
-    white-space: nowrap;
-}
-
-
-/* =========================================
-   ORDER CARDS
-========================================= */
-
-.order-cards {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 18px;
-
-    margin-bottom: 25px;
-}
-
-.order-card {
-    background-color: white;
-
-    padding: 20px;
-
-    border-radius: 10px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    min-width: 0;
-}
-
-.order-icon {
-    width: 45px;
-    height: 45px;
-
-    flex-shrink: 0;
-
-    background-color: #f4e8ef;
-
-    color: #4b0f30;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.order-card p {
-    color: #777;
-
-    font-size: 13px;
-
-    margin-bottom: 5px;
-}
-
-.order-card h2 {
-    color: #4b0f30;
-
-    margin-bottom: 5px;
-}
-
-.order-card span {
-    color: #777;
-
-    font-size: 12px;
-}
-
-
-/* =========================================
-   ORDER FILTER
-========================================= */
-
-.order-filter {
-    background-color: white;
-
-    padding: 15px;
-
-    border-radius: 10px;
-
-    display: flex;
-
-    gap: 12px;
-
-    margin-bottom: 20px;
-}
-
-.order-filter input,
-.order-filter select {
-    padding: 11px 12px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 7px;
-
-    outline: none;
-
-    font-size: 14px;
-}
-
-.order-filter input {
-    flex: 1;
-    min-width: 0;
-}
-
-.order-filter select {
-    width: 180px;
 }
 
 
@@ -624,11 +447,38 @@ table tr:hover {
 
     min-width: 0;
 
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .orders-table table {
     width: 100%;
+    min-width: 850px;
+}
+
+
+/* =========================================
+   PRODUCTS TABLE
+========================================= */
+
+.product-table {
+    width: 100%;
+
+    background-color: white;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    min-width: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.product-table table {
+    width: 100%;
+    min-width: 650px;
 }
 
 
@@ -710,13 +560,173 @@ table tr:hover {
 
 
 /* =========================================
-   PRODUCTS PAGE
+   ORDERS PAGE
+========================================= */
+
+.orders-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.orders-heading h2 {
+    color: #333;
+
+    margin-bottom: 6px;
+}
+
+.orders-heading p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+.export-btn {
+    background-color: #4b0f30;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 17px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   ORDER CARDS
+========================================= */
+
+.order-cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.order-card {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-width: 0;
+}
+
+.order-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    background-color: #f4e8ef;
+
+    color: #4b0f30;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.order-card p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.order-card h2 {
+    color: #4b0f30;
+
+    margin-bottom: 5px;
+}
+
+.order-card span {
+    color: #777;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   ORDER FILTER
+========================================= */
+
+.order-filter {
+    background-color: white;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.order-filter input,
+.order-filter select {
+    padding: 11px 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.order-filter input {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.order-filter select {
+    width: 180px;
+}
+
+
+/* =========================================
+   PRODUCT PAGE
 ========================================= */
 
 .product-heading {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 20px;
@@ -726,6 +736,8 @@ table tr:hover {
 
 .product-heading h2 {
     font-size: 22px;
+
+    white-space: nowrap;
 }
 
 .add-btn {
@@ -772,53 +784,12 @@ table tr:hover {
 
 .filters input {
     flex: 1;
+
     min-width: 0;
 }
 
 .filters select {
     width: 200px;
-}
-
-
-/* =========================================
-   PRODUCT TABLE
-========================================= */
-
-.product-table {
-    width: 100%;
-
-    background-color: white;
-
-    padding: 15px;
-
-    border-radius: 10px;
-
-    min-width: 0;
-
-    overflow: hidden;
-}
-
-.edit,
-.delete {
-    border: none;
-
-    padding: 7px 11px;
-
-    border-radius: 5px;
-
-    cursor: pointer;
-
-    white-space: nowrap;
-}
-
-.edit {
-    background-color: #eee4eb;
-    color: #4b0f30;
-}
-
-.delete {
-    background-color: #fde8e8;
-    color: #b42318;
 }
 
 
@@ -883,6 +854,8 @@ table tr:hover {
     color: #777;
 
     margin-bottom: 10px;
+
+    white-space: nowrap;
 }
 
 .box h2 {
@@ -899,19 +872,8 @@ table tr:hover {
 
 
 /* =========================================
-   REVIEWS PAGE
+   GENERAL SECTION
 ========================================= */
-
-.page-header {
-    margin-bottom: 25px;
-}
-
-.page-header h1 {
-    margin-bottom: 7px;
-}
-
-
-/* Review section */
 
 .section {
     width: 100%;
@@ -932,10 +894,37 @@ table tr:hover {
     font-size: 20px;
 
     margin-bottom: 20px;
+
+    white-space: nowrap;
 }
 
 
-/* Review */
+/* =========================================
+   TABLE INSIDE SECTION
+   SALES + CUSTOMERS
+========================================= */
+
+.section:has(table) {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.section:has(table) table {
+    min-width: 650px;
+}
+
+
+/* =========================================
+   REVIEWS
+========================================= */
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin-bottom: 7px;
+}
 
 .review {
     border: 1px solid #eee;
@@ -955,6 +944,7 @@ table tr:hover {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 15px;
@@ -988,7 +978,7 @@ table tr:hover {
 
 
 /* =========================================
-   REVIEW BOX ICON
+   REVIEW ICON
 ========================================= */
 
 .box-icon {
@@ -1004,6 +994,7 @@ table tr:hover {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     margin-bottom: 12px;
@@ -1109,7 +1100,6 @@ table tr:hover {
     .content {
         grid-template-columns: 1fr;
     }
-
 }
 
 
@@ -1121,17 +1111,19 @@ table tr:hover {
 
     body {
         display: block;
+
+        overflow-x: hidden;
     }
 
 
-    /* Hamburger */
+    /* HAMBURGER */
 
     .hamburger {
         display: flex;
     }
 
 
-    /* Sidebar */
+    /* SIDEBAR */
 
     .sidebar {
         position: fixed;
@@ -1142,6 +1134,8 @@ table tr:hover {
         width: 250px;
         height: 100vh;
 
+        min-height: 100vh;
+
         z-index: 999;
 
         transition: left 0.3s ease;
@@ -1149,15 +1143,12 @@ table tr:hover {
         overflow-y: auto;
     }
 
-
-    /* Open sidebar */
-
     #menu-toggle:checked ~ .sidebar {
         left: 0;
     }
 
 
-    /* Main */
+    /* MAIN */
 
     .main {
         width: 100%;
@@ -1165,19 +1156,23 @@ table tr:hover {
         padding: 15px;
 
         min-height: 100vh;
+
+        overflow-x: hidden;
     }
 
 
-    /* Page */
+    /* PAGE */
 
     .page {
         width: 100%;
 
         padding: 70px 15px 20px;
+
+        overflow-x: hidden;
     }
 
 
-    /* Navbar */
+    /* NAVBAR */
 
     .navbar {
         margin-top: 55px;
@@ -1191,13 +1186,13 @@ table tr:hover {
         padding: 15px;
 
         min-height: auto;
-    }
 
+        width: 100%;
+    }
 
     .navbar h2 {
         font-size: 18px;
     }
-
 
     .navbar input {
         grid-column: 1 / -1;
@@ -1206,7 +1201,6 @@ table tr:hover {
 
         width: 100%;
     }
-
 
     .navbar button {
         grid-column: 2;
@@ -1217,7 +1211,7 @@ table tr:hover {
     }
 
 
-    /* Reviews navbar */
+    /* REVIEWS NAVBAR */
 
     .navbar-left {
         grid-column: 1;
@@ -1242,7 +1236,7 @@ table tr:hover {
     }
 
 
-    /* Dashboard cards */
+    /* DASHBOARD CARDS */
 
     .cards {
         grid-template-columns: 1fr 1fr;
@@ -1252,6 +1246,8 @@ table tr:hover {
 
     .card {
         padding: 17px;
+
+        min-width: 0;
     }
 
     .card h2 {
@@ -1259,16 +1255,33 @@ table tr:hover {
     }
 
 
-    /* Dashboard content */
+    /* DASHBOARD CONTENT */
 
     .content {
         grid-template-columns: 1fr;
 
         gap: 15px;
+
+        width: 100%;
+    }
+
+    .orders,
+    .products {
+        width: 100%;
+
+        padding: 15px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .orders table,
+    .products table {
+        min-width: 650px;
     }
 
 
-    /* Order cards */
+    /* ORDER CARDS */
 
     .order-cards {
         grid-template-columns: 1fr 1fr;
@@ -1288,7 +1301,7 @@ table tr:hover {
     }
 
 
-    /* Order heading */
+    /* HEADINGS */
 
     .orders-heading,
     .product-heading {
@@ -1300,7 +1313,7 @@ table tr:hover {
     }
 
 
-    /* Filters */
+    /* FILTERS */
 
     .order-filter {
         flex-direction: column;
@@ -1310,7 +1323,6 @@ table tr:hover {
     .order-filter select {
         width: 100%;
     }
-
 
     .filters {
         flex-direction: column;
@@ -1322,7 +1334,7 @@ table tr:hover {
     }
 
 
-    /* Stats */
+    /* STATS */
 
     .stats {
         grid-template-columns: 1fr 1fr;
@@ -1335,14 +1347,27 @@ table tr:hover {
     }
 
 
-    /* Sections */
+    /* GENERAL SECTION */
 
     .section {
         padding: 15px;
+
+        width: 100%;
+    }
+
+    .section:has(table) {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .section:has(table) table {
+        min-width: 650px;
     }
 
 
-    /* Review */
+    /* REVIEWS */
 
     .review-top {
         align-items: flex-start;
@@ -1353,22 +1378,43 @@ table tr:hover {
     }
 
 
-    /* Settings */
+    /* SETTINGS */
 
     .settings-box {
         padding: 18px;
     }
 
 
-    /* Dashboard tables */
+    /* ORDERS TABLE */
 
-    .orders,
-    .products {
-        padding: 15px;
+    .orders-table {
+        width: 100%;
 
-        overflow: hidden;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
     }
 
+    .orders-table table {
+        min-width: 850px;
+    }
+
+
+    /* PRODUCTS TABLE */
+
+    .product-table {
+        width: 100%;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .product-table table {
+        min-width: 650px;
+    }
 }
 
 
@@ -1386,18 +1432,15 @@ table tr:hover {
         padding: 65px 10px 15px;
     }
 
-
     .navbar {
         padding: 12px;
 
         margin-bottom: 18px;
     }
 
-
     .navbar h2 {
         font-size: 16px;
     }
-
 
     .navbar button {
         font-size: 12px;
@@ -1406,12 +1449,13 @@ table tr:hover {
     }
 
 
+    /* CARDS */
+
     .cards,
     .order-cards,
     .stats {
         grid-template-columns: 1fr;
     }
-
 
     .card,
     .box,
@@ -1420,15 +1464,15 @@ table tr:hover {
     }
 
 
+    /* SECTION TITLE */
+
     .section-title {
         align-items: flex-start;
     }
 
-
     .section-title h2 {
         font-size: 16px;
     }
-
 
     .section-title button {
         font-size: 12px;
@@ -1437,29 +1481,43 @@ table tr:hover {
     }
 
 
+    /* BUTTONS */
+
     .export-btn,
     .add-btn {
         width: 100%;
     }
 
-
     .product-heading {
         width: 100%;
     }
-
 
     .product-heading .add-btn {
         width: 100%;
     }
 
 
+    /* SETTINGS */
+
     .settings-box {
         padding: 15px;
     }
 
 
+    /* REVIEWS */
+
     .review {
         padding: 15px;
     }
 
+
+    /* TABLES */
+
+    .orders table,
+    .products table,
+    .orders-table table,
+    .product-table table,
+    .section:has(table) table {
+        min-width: 650px;
+    }
 }
