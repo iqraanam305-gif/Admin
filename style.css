@@ -1178,6 +1178,40 @@ tr:hover td {
         overflow-x: visible;
     }
 
+    table {
+        width: 100%;
+        min-width: 0 !important;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        padding: 8px 5px;
+        font-size: 11px;
+        white-space: normal;
+    }
+
+    .paid,
+    .pending-payment,
+    .pending,
+    .delivered,
+    .shipped,
+    .cancelled {
+        font-size: 10px;
+        padding: 4px 6px;
+        white-space: nowrap;
+    }
+
+    .edit,
+    .delete,
+    .view-btn {
+        padding: 5px 7px;
+        font-size: 10px;
+        margin-right: 3px;
+        margin-bottom: 3px;
+        display: inline-block;
+    }
+
     /* REVIEWS */
     .review {
         width: 100%;
