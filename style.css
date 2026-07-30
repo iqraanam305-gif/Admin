@@ -339,7 +339,7 @@ textarea {
 
 
 /* =====================================================
-   TABLE - DESKTOP
+   GENERAL TABLE
 ===================================================== */
 
 table {
@@ -425,6 +425,11 @@ tr:hover td {
     flex: 1;
 }
 
+.filters input:focus,
+.filters select:focus {
+    border-color: #6d1b49;
+}
+
 
 /* =====================================================
    TABLE WRAPPERS
@@ -440,26 +445,55 @@ tr:hover td {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.product-table,
-.sales-table,
-.customers-table {
-    padding: 20px;
-}
 
-.orders-table {
-    overflow: hidden;
+/* =====================================================
+   PRODUCT TABLE
+===================================================== */
+
+.product-table {
+    padding: 20px;
+    overflow-x: auto;
 }
 
 .product-table table {
     min-width: 650px;
 }
 
+
+/* =====================================================
+   ORDERS TABLE
+===================================================== */
+
+.orders-table {
+    overflow-x: auto;
+}
+
 .orders-table table {
     min-width: 950px;
 }
 
+
+/* =====================================================
+   SALES TABLE
+===================================================== */
+
+.sales-table {
+    padding: 20px;
+    overflow-x: auto;
+}
+
 .sales-table table {
     min-width: 650px;
+}
+
+
+/* =====================================================
+   CUSTOMERS TABLE
+===================================================== */
+
+.customers-table {
+    padding: 20px;
+    overflow-x: auto;
 }
 
 .customers-table table {
@@ -487,14 +521,26 @@ tr:hover td {
     color: white;
 }
 
+.edit:hover {
+    background-color: #4b0f30;
+}
+
 .delete {
     background-color: #8b0000;
     color: white;
 }
 
+.delete:hover {
+    background-color: #650000;
+}
+
 .view-btn {
     background-color: #4b0f30;
     color: white;
+}
+
+.view-btn:hover {
+    background-color: #6d1b49;
 }
 
 
@@ -527,6 +573,10 @@ tr:hover td {
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
+}
+
+.export-btn:hover {
+    background-color: #6d1b49;
 }
 
 
@@ -601,6 +651,11 @@ tr:hover td {
     outline: none;
 }
 
+.order-filter input:focus,
+.order-filter select:focus {
+    border-color: #6d1b49;
+}
+
 
 /* =====================================================
    STATUS BADGES
@@ -644,7 +699,7 @@ tr:hover td {
 
 
 /* =====================================================
-   ANALYTICS
+   ANALYTICS / CHART
 ===================================================== */
 
 .chart-box {
@@ -674,6 +729,10 @@ tr:hover td {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
+.review:last-child {
+    margin-bottom: 0;
+}
+
 .review-top {
     display: flex;
     align-items: flex-start;
@@ -686,6 +745,11 @@ tr:hover td {
     color: #000;
     font-size: 17px;
     margin-bottom: 5px;
+}
+
+.section-title h2.reviews-heading,
+.section h2.reviews-heading {
+    color: #000;
 }
 
 .review small {
@@ -767,6 +831,11 @@ tr:hover td {
     outline: none;
 }
 
+.settings-box input:focus,
+.settings-box textarea:focus {
+    border-color: #6d1b49;
+}
+
 .settings-box textarea {
     height: 100px;
     resize: vertical;
@@ -779,6 +848,10 @@ tr:hover td {
     padding: 12px 22px;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.settings-box button:hover {
+    background-color: #4b0f30;
 }
 
 
@@ -816,7 +889,9 @@ tr:hover td {
     }
 
 
-    /* HAMBURGER */
+    /* =================================================
+       HAMBURGER
+    ================================================= */
 
     .hamburger {
         display: flex;
@@ -836,7 +911,9 @@ tr:hover td {
     }
 
 
-    /* SIDEBAR */
+    /* =================================================
+       MOBILE SIDEBAR
+    ================================================= */
 
     .sidebar {
         position: fixed;
@@ -845,6 +922,7 @@ tr:hover td {
         width: 250px;
         min-width: 250px;
         height: 100vh;
+        min-height: 100vh;
         padding: 25px 20px;
         z-index: 1000;
         overflow-y: auto;
@@ -860,7 +938,9 @@ tr:hover td {
     }
 
 
-    /* MAIN */
+    /* =================================================
+       MAIN
+    ================================================= */
 
     .main,
     .page {
@@ -870,7 +950,9 @@ tr:hover td {
     }
 
 
-    /* NAVBAR */
+    /* =================================================
+       MOBILE NAVBAR
+    ================================================= */
 
     .navbar {
         width: 100%;
@@ -902,7 +984,10 @@ tr:hover td {
         order: 3;
     }
 
-    /* Admin stays visible */
+    .navbar-right > i {
+        font-size: 16px;
+    }
+
     .admin-info {
         display: flex;
         font-size: 12px;
@@ -919,7 +1004,9 @@ tr:hover td {
     }
 
 
-    /* HEADINGS */
+    /* =================================================
+       HEADINGS
+    ================================================= */
 
     .page-header h1,
     .page > h1 {
@@ -932,7 +1019,9 @@ tr:hover td {
     }
 
 
-    /* CARDS */
+    /* =================================================
+       CARDS
+    ================================================= */
 
     .cards,
     .stats {
@@ -947,7 +1036,9 @@ tr:hover td {
     }
 
 
-    /* CONTENT */
+    /* =================================================
+       DASHBOARD CONTENT
+    ================================================= */
 
     .content {
         grid-template-columns: 1fr;
@@ -962,7 +1053,9 @@ tr:hover td {
     }
 
 
-    /* PRODUCT HEADING */
+    /* =================================================
+       PRODUCT HEADING
+    ================================================= */
 
     .product-heading {
         flex-direction: column;
@@ -971,12 +1064,18 @@ tr:hover td {
         margin: 20px 0;
     }
 
+    .product-heading h2 {
+        font-size: 22px;
+    }
+
     .add-btn {
         width: 100%;
     }
 
 
-    /* FILTERS */
+    /* =================================================
+       FILTERS
+    ================================================= */
 
     .filters,
     .order-filter {
@@ -995,8 +1094,7 @@ tr:hover td {
 
     /* =================================================
        MOBILE TABLES
-       NO HORIZONTAL SCROLL
-       NO WORD BREAK
+       ONLY TABLES SCROLL
     ================================================= */
 
     .product-table,
@@ -1004,33 +1102,48 @@ tr:hover td {
     .sales-table,
     .customers-table {
         width: 100%;
-        overflow: hidden;
-        padding: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 
-    .product-table table,
-    .orders-table table,
-    .sales-table table,
+    .product-table table {
+        min-width: 650px;
+        width: 650px;
+    }
+
+    .orders-table table {
+        min-width: 950px;
+        width: 950px;
+    }
+
+    .sales-table table {
+        min-width: 650px;
+        width: 650px;
+    }
+
     .customers-table table {
-        width: 100%;
-        min-width: 0 !important;
-        table-layout: fixed;
+        min-width: 700px;
+        width: 700px;
     }
 
     th,
     td {
-        padding: 7px 3px;
-        font-size: 9px;
+        padding: 8px 10px;
+        font-size: 11px;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         word-break: normal;
         overflow-wrap: normal;
     }
 
     th {
-        font-size: 9px;
+        font-size: 11px;
     }
+
+
+    /* =================================================
+       STATUS BADGES
+    ================================================= */
 
     .paid,
     .pending-payment,
@@ -1038,22 +1151,29 @@ tr:hover td {
     .delivered,
     .shipped,
     .cancelled {
-        font-size: 8px;
-        padding: 3px 4px;
+        font-size: 10px;
+        padding: 4px 7px;
         white-space: nowrap;
     }
+
+
+    /* =================================================
+       ACTION BUTTONS
+    ================================================= */
 
     .edit,
     .delete,
     .view-btn {
-        padding: 3px 4px;
-        font-size: 8px;
-        margin: 1px;
+        padding: 5px 8px;
+        font-size: 10px;
+        margin-right: 3px;
         white-space: nowrap;
     }
 
 
-    /* ORDERS */
+    /* =================================================
+       ORDERS HEADING
+    ================================================= */
 
     .orders-heading {
         flex-direction: column;
@@ -1062,9 +1182,18 @@ tr:hover td {
         margin: 20px 0;
     }
 
+    .orders-heading h2 {
+        font-size: 22px;
+    }
+
     .export-btn {
         width: 100%;
     }
+
+
+    /* =================================================
+       ORDER CARDS
+    ================================================= */
 
     .order-cards {
         grid-template-columns: 1fr;
@@ -1077,7 +1206,9 @@ tr:hover td {
     }
 
 
-    /* REVIEWS */
+    /* =================================================
+       REVIEWS
+    ================================================= */
 
     .review {
         width: 100%;
@@ -1106,7 +1237,9 @@ tr:hover td {
     }
 
 
-    /* SETTINGS */
+    /* =================================================
+       SETTINGS
+    ================================================= */
 
     .settings-box {
         width: 100%;
@@ -1123,7 +1256,9 @@ tr:hover td {
     }
 
 
-    /* CHART */
+    /* =================================================
+       CHART
+    ================================================= */
 
     .chart-box {
         height: 250px;
@@ -1176,7 +1311,7 @@ tr:hover td {
         font-size: 15px;
     }
 
-    .admin-info span {
+    .admin-info {
         font-size: 11px;
     }
 
@@ -1221,17 +1356,41 @@ tr:hover td {
         padding: 15px;
     }
 
-    th,
-    td {
-        padding: 6px 2px;
-        font-size: 8px;
+    .section-title h2 {
+        font-size: 18px;
     }
 
-    .edit,
-    .delete,
-    .view-btn {
-        padding: 3px;
-        font-size: 7px;
+    .section-title button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    /* TABLE FONT */
+    th,
+    td {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+
+    /* TABLE WIDTHS */
+    .product-table table {
+        min-width: 600px;
+        width: 600px;
+    }
+
+    .orders-table table {
+        min-width: 900px;
+        width: 900px;
+    }
+
+    .sales-table table {
+        min-width: 600px;
+        width: 600px;
+    }
+
+    .customers-table table {
+        min-width: 650px;
+        width: 650px;
     }
 
     .review {
