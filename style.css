@@ -1231,8 +1231,7 @@ tr:hover td {
     }
 
     /* =================================================
-       RESPONSIVE TABLES — NO HORIZONTAL SCROLL
-       Every table becomes a stacked card list on mobile
+       RESPONSIVE TABLES — stays a real table, no scroll
     ================================================= */
 
     .orders,
@@ -1246,66 +1245,41 @@ tr:hover td {
     }
 
     table {
-        min-width: 0 !important;
-        border: none;
-    }
-
-    table thead {
-        display: none;
-    }
-
-    table,
-    table tbody,
-    table tr,
-    table td {
-        display: block;
         width: 100%;
+        min-width: 0 !important;
+        table-layout: fixed;
     }
 
-    table tr {
-        background-color: white;
-        border: 1px solid #eee;
-        border-radius: 10px;
-        margin-bottom: 15px;
-        padding: 10px 15px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    }
-
-    table td {
-        border: none;
-        border-bottom: 1px solid #f2f2f2;
-        padding: 10px 0;
-        text-align: right;
-        position: relative;
-        padding-left: 45%;
+    th,
+    td {
+        padding: 8px 6px;
+        font-size: 11.5px;
         white-space: normal;
-        word-break: break-word;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    table td:last-child {
-        border-bottom: none;
+    /* Status badges / buttons should still fit inside a squeezed cell */
+    .paid,
+    .pending-payment,
+    .pending,
+    .delivered,
+    .shipped,
+    .cancelled {
+        font-size: 10.5px;
+        padding: 4px 8px;
+        white-space: nowrap;
     }
 
-    table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        top: 10px;
-        width: 40%;
-        text-align: left;
-        font-weight: bold;
-        color: #4b0f30;
+    .edit,
+    .delete,
+    .view-btn {
+        padding: 5px 8px;
+        font-size: 10.5px;
+        margin-right: 3px;
+        margin-bottom: 3px;
+        display: inline-block;
     }
-
-    table td:has(button) {
-        text-align: left;
-        padding-left: 0;
-    }
-
-    table td:has(button)::before {
-        display: none;
-    }
-}
 
 
 /* =====================================================
