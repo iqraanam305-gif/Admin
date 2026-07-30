@@ -80,11 +80,7 @@ textarea {
     text-align: center;
 }
 
-.sidebar a:hover {
-    background-color: #6d1b49;
-    color: white;
-}
-
+.sidebar a:hover,
 .sidebar a.active {
     background-color: #6d1b49;
     color: white;
@@ -124,6 +120,7 @@ textarea {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-shrink: 0;
 }
 
 .navbar h2,
@@ -156,7 +153,8 @@ textarea {
 .navbar-right {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
+    flex-shrink: 0;
 }
 
 .navbar-right > i {
@@ -171,6 +169,7 @@ textarea {
     gap: 8px;
     color: #4b0f30;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .admin-info i {
@@ -368,6 +367,7 @@ td {
     background-color: white;
     padding: 14px;
     border-bottom: 1px solid #eee;
+    white-space: nowrap;
 }
 
 tr:hover td {
@@ -453,7 +453,6 @@ tr:hover td {
 .product-table table {
     width: 100%;
     min-width: 650px;
-    background-color: white;
 }
 
 .product-table th {
@@ -640,7 +639,6 @@ tr:hover td {
 .orders-table table {
     width: 100%;
     min-width: 950px;
-    background-color: white;
 }
 
 .orders-table th {
@@ -714,7 +712,6 @@ tr:hover td {
 .sales-table table {
     width: 100%;
     min-width: 650px;
-    background-color: white;
 }
 
 .sales-table th {
@@ -747,7 +744,6 @@ tr:hover td {
 .customers-table table {
     width: 100%;
     min-width: 700px;
-    background-color: white;
 }
 
 .customers-table th {
@@ -922,7 +918,7 @@ tr:hover td {
 
 
 /* =====================================================
-   HAMBURGER (checkbox trick)
+   HAMBURGER
 ===================================================== */
 
 #menu-toggle {
@@ -967,7 +963,9 @@ tr:hover td {
         overflow-x: hidden;
     }
 
-    /* HAMBURGER BUTTON */
+
+    /* HAMBURGER */
+
     .hamburger {
         display: flex;
         position: fixed;
@@ -985,7 +983,9 @@ tr:hover td {
         font-size: 20px;
     }
 
+
     /* MOBILE SIDEBAR */
+
     .sidebar {
         position: fixed;
         top: 0;
@@ -1008,7 +1008,9 @@ tr:hover td {
         left: 215px;
     }
 
+
     /* MAIN */
+
     .main,
     .page {
         width: 100%;
@@ -1016,7 +1018,9 @@ tr:hover td {
         padding: 75px 15px 25px;
     }
 
+
     /* NAVBAR */
+
     .navbar {
         width: 100%;
         padding: 12px 15px;
@@ -1027,6 +1031,7 @@ tr:hover td {
 
     .navbar-left {
         width: 100%;
+        flex-shrink: 0;
     }
 
     .navbar-left h2,
@@ -1047,11 +1052,19 @@ tr:hover td {
         order: 3;
     }
 
-    .admin-info span {
+    /* Hide Admin information on mobile */
+    .admin-info {
         display: none;
     }
 
+    /* Hide Admin button if present */
+    .navbar button {
+        display: none;
+    }
+
+
     /* HEADINGS */
+
     .page-header h1,
     .page > h1 {
         font-size: 25px;
@@ -1062,7 +1075,9 @@ tr:hover td {
         margin-bottom: 20px;
     }
 
+
     /* CARDS */
+
     .cards,
     .stats {
         grid-template-columns: 1fr;
@@ -1075,7 +1090,9 @@ tr:hover td {
         padding: 18px;
     }
 
+
     /* DASHBOARD CONTENT */
+
     .content {
         grid-template-columns: 1fr;
         gap: 18px;
@@ -1087,13 +1104,17 @@ tr:hover td {
         padding: 18px;
     }
 
+
     /* GENERAL SECTION */
+
     .section {
         width: 100%;
         padding: 18px;
     }
 
+
     /* PRODUCTS */
+
     .product-heading {
         flex-direction: column;
         align-items: flex-start;
@@ -1109,7 +1130,9 @@ tr:hover td {
         width: 100%;
     }
 
+
     /* FILTERS */
+
     .filters,
     .order-filter {
         width: 100%;
@@ -1124,14 +1147,70 @@ tr:hover td {
         width: 100%;
     }
 
-    /* PRODUCT TABLE WRAPPER */
-    .product-table {
-        width: 100%;
-        padding: 15px;
-        overflow-x: visible;
-    }
+
+    /* TABLE WRAPPERS */
+
+    /* =====================================================
+   MOBILE TABLES - FIT INSIDE SCREEN
+===================================================== */
+
+.product-table,
+.orders-table,
+.sales-table,
+.customers-table {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+.product-table table,
+.orders-table table,
+.sales-table table,
+.customers-table table {
+    width: 100%;
+    min-width: 0 !important;
+    table-layout: fixed;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 7px 4px;
+    font-size: 10px;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
+/* Status badges */
+.paid,
+.pending-payment,
+.pending,
+.delivered,
+.shipped,
+.cancelled {
+    font-size: 9px;
+    padding: 4px 5px;
+    white-space: normal;
+}
+
+/* Action buttons */
+.edit,
+.delete,
+.view-btn {
+    padding: 4px 5px;
+    font-size: 9px;
+    margin: 2px 1px;
+    white-space: normal;
+}
 
     /* ORDERS HEADING */
+
     .orders-heading {
         flex-direction: column;
         align-items: flex-start;
@@ -1147,7 +1226,9 @@ tr:hover td {
         width: 100%;
     }
 
+
     /* ORDER CARDS */
+
     .order-cards {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -1158,61 +1239,9 @@ tr:hover td {
         padding: 18px;
     }
 
-     /* ORDERS TABLE WRAPPER */
-    .orders-table {
-        width: 100%;
-        overflow-x: visible;
-    }
-
-    /* SALES TABLE WRAPPER */
-    .sales-table {
-        width: 100%;
-        padding: 15px;
-        overflow-x: visible;
-    }
-
-    /* CUSTOMERS TABLE WRAPPER */
-    .customers-table {
-        width: 100%;
-        padding: 15px;
-        overflow-x: visible;
-    }
-
-    table {
-        width: 100%;
-        min-width: 0 !important;
-        table-layout: fixed;
-    }
-
-    th,
-    td {
-        padding: 8px 5px;
-        font-size: 11px;
-        white-space: normal;
-    }
-
-    .paid,
-    .pending-payment,
-    .pending,
-    .delivered,
-    .shipped,
-    .cancelled {
-        font-size: 10px;
-        padding: 4px 6px;
-        white-space: nowrap;
-    }
-
-    .edit,
-    .delete,
-    .view-btn {
-        padding: 5px 7px;
-        font-size: 10px;
-        margin-right: 3px;
-        margin-bottom: 3px;
-        display: inline-block;
-    }
 
     /* REVIEWS */
+
     .review {
         width: 100%;
         padding: 16px;
@@ -1239,7 +1268,9 @@ tr:hover td {
         flex: 1;
     }
 
+
     /* SETTINGS */
+
     .settings-box {
         width: 100%;
         padding: 18px;
@@ -1254,70 +1285,14 @@ tr:hover td {
         width: 100%;
     }
 
+
     /* CHART */
+
     .chart-box {
         height: 250px;
         font-size: 16px;
     }
-
-    /* BUTTONS */
-    .edit,
-    .delete,
-    .view-btn {
-        padding: 7px 12px;
-        font-size: 12px;
-    }
-
-    /* =================================================
-       RESPONSIVE TABLES — stays a real table, no scroll
-    ================================================= */
-
-    .orders,
-    .products,
-    .section,
-    .product-table,
-    .orders-table,
-    .sales-table,
-    .customers-table {
-        overflow-x: visible;
-    }
-
-    table {
-        width: 100%;
-        min-width: 0 !important;
-        table-layout: fixed;
-    }
-
-    th,
-    td {
-        padding: 8px 6px;
-        font-size: 11.5px;
-        white-space: normal;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    /* Status badges / buttons should still fit inside a squeezed cell */
-    .paid,
-    .pending-payment,
-    .pending,
-    .delivered,
-    .shipped,
-    .cancelled {
-        font-size: 10.5px;
-        padding: 4px 8px;
-        white-space: nowrap;
-    }
-
-    .edit,
-    .delete,
-    .view-btn {
-        padding: 5px 8px;
-        font-size: 10.5px;
-        margin-right: 3px;
-        margin-bottom: 3px;
-        display: inline-block;
-    }
+}
 
 
 /* =====================================================
@@ -1347,6 +1322,9 @@ tr:hover td {
         left: 205px;
     }
 
+
+    /* NAVBAR */
+
     .navbar {
         padding: 12px;
     }
@@ -1356,6 +1334,17 @@ tr:hover td {
         font-size: 17px;
     }
 
+    .navbar-right {
+        gap: 12px;
+    }
+
+    .navbar-right > i {
+        font-size: 16px;
+    }
+
+
+    /* HEADINGS */
+
     .page-header h1,
     .page > h1 {
         font-size: 23px;
@@ -1364,6 +1353,9 @@ tr:hover td {
     .subtitle {
         font-size: 13px;
     }
+
+
+    /* CARDS */
 
     .card,
     .box {
@@ -1386,6 +1378,9 @@ tr:hover td {
         font-size: 21px;
     }
 
+
+    /* SECTIONS */
+
     .orders,
     .products,
     .section {
@@ -1405,6 +1400,18 @@ tr:hover td {
         font-size: 12px;
     }
 
+
+    /* TABLES */
+
+    th,
+    td {
+        padding: 9px;
+        font-size: 11px;
+    }
+
+
+    /* REVIEWS */
+
     .review {
         padding: 14px;
     }
@@ -1416,6 +1423,9 @@ tr:hover td {
     .review-text {
         font-size: 13px;
     }
+
+
+    /* SETTINGS */
 
     .settings-box {
         padding: 15px;

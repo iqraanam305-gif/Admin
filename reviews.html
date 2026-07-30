@@ -15,6 +15,12 @@
 </head>
 
 <body>
+     <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
@@ -91,27 +97,28 @@
     <main class="page">
 
         <!-- NAVBAR -->
-        <nav class="navbar">
+        <div class="navbar">
 
-            <div class="navbar-left">
-                <label for="menu-toggle" class="menu-icon">
-                 <i class="fa-solid fa-bars"></i>
-                </label>
-                
-                <h2>Reviews</h2>
-            </div>
+    <div class="navbar-left">
+        <h2>Reviews</h2>
+    </div>
 
-            <div class="navbar-right">
-                <i class="fa-solid fa-bell"></i>
+    <input type="text" placeholder="Search reviews...">
 
-                <div class="admin-info">
-                    <i class="fa-solid fa-user"></i>
-                    <span>Admin</span>
-                </div>
-            </div>
+    <div class="navbar-right">
 
-        </nav>
+        <i class="fa-solid fa-bell"></i>
 
+        <i class="fa-solid fa-envelope"></i>
+
+        <div class="admin-info">
+            <i class="fa-solid fa-user"></i>
+            <span>Admin</span>
+        </div>
+
+    </div>
+
+</div>
 
         <!-- PAGE HEADER -->
         <section class="page-header">
