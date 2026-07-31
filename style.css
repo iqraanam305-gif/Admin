@@ -1106,6 +1106,16 @@ table tr:hover {
         left: 0;
     }
 
+ .sidebar.active {
+        left: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+
     /* HAMBURGER BUTTON */
 
 .menu-btn {
