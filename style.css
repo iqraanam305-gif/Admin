@@ -577,10 +577,6 @@ table tr:hover {
 }
 
 
-/* =========================================
-   ORDER CARDS
-========================================= */
-
 .order-cards {
     display: grid;
 
@@ -649,10 +645,6 @@ table tr:hover {
 }
 
 
-/* =========================================
-   ORDER FILTER
-========================================= */
-
 .order-filter {
     background-color: white;
 
@@ -691,9 +683,6 @@ table tr:hover {
 }
 
 
-/* =========================================
-   PRODUCT PAGE
-========================================= */
 
 .product-heading {
     display: flex;
@@ -730,10 +719,6 @@ table tr:hover {
 }
 
 
-/* =========================================
-   PRODUCT FILTER
-========================================= */
-
 .filters {
     display: flex;
 
@@ -766,9 +751,6 @@ table tr:hover {
 }
 
 
-/* =========================================
-   PAGE
-========================================= */
 
 .page {
     flex: 1;
@@ -795,9 +777,6 @@ table tr:hover {
 }
 
 
-/* =========================================
-   STATS
-========================================= */
 
 .stats {
     display: grid;
@@ -844,10 +823,6 @@ table tr:hover {
 }
 
 
-/* =========================================
-   GENERAL SECTION
-========================================= */
-
 .section {
     width: 100%;
 
@@ -872,10 +847,6 @@ table tr:hover {
 }
 
 
-/* =========================================
-   TABLE INSIDE SECTION
-   SALES + CUSTOMERS
-========================================= */
 
 .section:has(table) {
     overflow-x: auto;
@@ -887,9 +858,6 @@ table tr:hover {
 }
 
 
-/* =========================================
-   REVIEWS
-========================================= */
 
 .page-header {
     margin-bottom: 25px;
@@ -950,10 +918,6 @@ table tr:hover {
 }
 
 
-/* =========================================
-   REVIEW ICON
-========================================= */
-
 .box-icon {
     width: 42px;
     height: 42px;
@@ -972,11 +936,6 @@ table tr:hover {
 
     margin-bottom: 12px;
 }
-
-
-/* =========================================
-   SETTINGS
-========================================= */
 
 .settings-box {
     width: 100%;
@@ -1051,6 +1010,33 @@ table tr:hover {
 }
 
 
+/* HAMBURGER BUTTON */
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4b0f30;
+}
+
+/* CLOSE BUTTON */
+
+.close-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+
 /* =========================================
    TABLET
 ========================================= */
@@ -1120,6 +1106,70 @@ table tr:hover {
         left: 0;
     }
 
+    /* HAMBURGER BUTTON */
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4b0f30;
+}
+
+
+/* CLOSE BUTTON */
+
+.close-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -260px;
+
+        width: 250px;
+        height: 100vh;
+
+        z-index: 1000;
+
+        transition: left 0.3s ease;
+    }
+
+    /* OPEN SIDEBAR */
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* SHOW HAMBURGER */
+
+    .menu-btn {
+        display: block;
+    }
+
+    /* SHOW CROSS */
+
+    .close-btn {
+        display: block;
+    }
+
+}
 
     /* MAIN */
 
@@ -1389,6 +1439,8 @@ table tr:hover {
         min-width: 650px;
     }
 }
+
+
 
 
 /* =========================================
