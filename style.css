@@ -1061,6 +1061,33 @@ table tr:hover {
     }
 }
 
+    /* HAMBURGER BUTTON */
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4b0f30;
+}
+
+
+/* CLOSE BUTTON */
+
+.close-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
 
 /* =========================================
    MOBILE
@@ -1106,43 +1133,42 @@ table tr:hover {
         left: 0;
     }
 
- .sidebar.active {
+    @media (max-width: 768px) {
+
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        width: 260px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    /* OPEN SIDEBAR */
+    .sidebar.active {
         left: 0;
     }
 
-    .menu-icon {
+    /* SHOW HAMBURGER */
+    .menu-btn {
         display: block;
-        cursor: pointer;
     }
 
+    /* SHOW CROSS */
+    .close-btn {
+        display: block;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
 
-    /* HAMBURGER BUTTON */
+    .navbar-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
 
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #4b0f30;
 }
-
-
-/* CLOSE BUTTON */
-
-.close-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-
-    position: absolute;
-    top: 15px;
-    right: 15px;
-}
-
 
 /* MOBILE */
 
