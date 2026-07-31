@@ -32,6 +32,8 @@ body {
     color: white;
     padding: 25px 18px;
     flex-shrink: 0;
+
+    position: relative;
 }
 
 .sidebar h1 {
@@ -124,7 +126,7 @@ body {
 
     cursor: pointer;
 
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .hamburger i,
@@ -133,7 +135,38 @@ body {
     color: white;
 }
 
+/* =========================================
+   CLOSE BUTTON
+========================================= */
 
+.close-btn {
+    display: none;
+
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    background-color: #4b0f30;
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 2001;
+}
+
+.close-btn i {
+    font-size: 20px;
+    color: white;
+}
 
 .main {
     flex: 1;
@@ -144,7 +177,6 @@ body {
 
     background-color: #f8f0f5;
 }
-
 
 .navbar {
     width: 100%;
@@ -328,9 +360,6 @@ body {
     overflow-y: hidden;
 }
 
-
-
-
 .section-title {
     display: flex;
 
@@ -364,8 +393,6 @@ body {
 
     white-space: nowrap;
 }
-
-
 
 table {
     width: 100%;
@@ -409,8 +436,6 @@ table tr:hover {
     background-color: #faf6f8;
 }
 
-
-
 .orders-table {
     width: 100%;
 
@@ -430,8 +455,6 @@ table tr:hover {
     width: 100%;
     min-width: 850px;
 }
-
-
 
 .product-table {
     width: 100%;
@@ -693,8 +716,6 @@ table tr:hover {
     width: 180px;
 }
 
-
-
 .product-heading {
     display: flex;
 
@@ -761,8 +782,6 @@ table tr:hover {
     width: 200px;
 }
 
-
-
 .page {
     flex: 1;
 
@@ -786,8 +805,6 @@ table tr:hover {
 
     font-size: 14px;
 }
-
-
 
 .stats {
     display: grid;
@@ -1068,20 +1085,50 @@ table tr:hover {
 
     body {
         display: block;
-
         overflow-x: hidden;
     }
 
 
-    /* HAMBURGER */
+    /* =====================================
+       HAMBURGER
+    ===================================== */
 
     .hamburger,
     .menu-btn {
         display: flex;
+
+        position: fixed;
+
+        top: 15px;
+        left: 15px;
+
+        width: 42px;
+        height: 42px;
+
+        background-color: #4b0f30;
+        color: white;
+
+        border: none;
+        border-radius: 8px;
+
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        z-index: 2000;
+    }
+
+    .hamburger i,
+    .menu-btn i {
+        color: white;
+        font-size: 20px;
     }
 
 
-    /* SIDEBAR */
+    /* =====================================
+       SIDEBAR
+    ===================================== */
 
     .sidebar {
         position: fixed;
@@ -1091,37 +1138,65 @@ table tr:hover {
 
         width: 260px;
         height: 100vh;
-
         min-height: 100vh;
 
-        z-index: 1000;
+        background-color: #4b0f30;
+
+        z-index: 1500;
 
         transition: left 0.3s ease;
+
+        overflow-y: auto;
     }
 
-    #menu-toggle:checked ~ .sidebar {
-        left: 0;
-    }
 
     /* OPEN SIDEBAR */
+
     .sidebar.active {
         left: 0;
     }
 
-    /* SHOW CROSS */
+
+    /* =====================================
+       CLOSE / CROSS BUTTON
+    ===================================== */
+
     .close-btn {
-        display: block;
-    }
-
-    .navbar-left {
         display: flex;
+
+        position: absolute;
+
+        top: 15px;
+        right: 15px;
+
+        width: 38px;
+        height: 38px;
+
+        background-color: #4b0f30;
+
+        color: white;
+
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+        border-radius: 8px;
+
         align-items: center;
-        gap: 15px;
+        justify-content: center;
+
+        cursor: pointer;
+
+        z-index: 2001;
     }
 
-}
+    .close-btn i {
+        color: white;
+        font-size: 20px;
+    }
 
-    /* MAIN */
+
+    /* =====================================
+       MAIN
+    ===================================== */
 
     .main {
         width: 100%;
@@ -1134,7 +1209,9 @@ table tr:hover {
     }
 
 
-    /* PAGE */
+    /* =====================================
+       PAGE
+    ===================================== */
 
     .page {
         width: 100%;
@@ -1145,10 +1222,15 @@ table tr:hover {
     }
 
 
-    /* NAVBAR */
+    /* =====================================
+       NAVBAR
+    ===================================== */
 
     .navbar {
-        margin-top: 55px;
+        width: 100%;
+
+        margin-top: 0;
+        margin-bottom: 20px;
 
         display: grid;
 
@@ -1159,45 +1241,44 @@ table tr:hover {
         padding: 15px;
 
         min-height: auto;
-
-        width: 100%;
     }
 
     .navbar h2 {
         font-size: 18px;
     }
 
-    .navbar input {
-        grid-column: 1 / -1;
 
-        grid-row: 2;
-
-        width: 100%;
-    }
-
-    .navbar button {
-        grid-column: 2;
-
-        grid-row: 1;
-
-        padding: 9px 12px;
-    }
-
-
-    /* REVIEWS NAVBAR */
+    /* =====================================
+       NAVBAR LEFT
+    ===================================== */
 
     .navbar-left {
-        grid-column: 1;
+        display: flex;
 
+        align-items: center;
+
+        gap: 15px;
+
+        min-width: 0;
+
+        grid-column: 1;
         grid-row: 1;
     }
 
-    .navbar-right {
-        grid-column: 2;
 
-        grid-row: 1;
+    /* =====================================
+       NAVBAR RIGHT
+    ===================================== */
+
+    .navbar-right {
+        display: flex;
+
+        align-items: center;
 
         gap: 10px;
+
+        grid-column: 2;
+        grid-row: 1;
     }
 
     .navbar-right > i {
@@ -1209,7 +1290,9 @@ table tr:hover {
     }
 
 
-    /* DASHBOARD CARDS */
+    /* =====================================
+       DASHBOARD CARDS
+    ===================================== */
 
     .cards {
         grid-template-columns: 1fr 1fr;
@@ -1228,7 +1311,9 @@ table tr:hover {
     }
 
 
-    /* DASHBOARD CONTENT */
+    /* =====================================
+       DASHBOARD CONTENT
+    ===================================== */
 
     .content {
         grid-template-columns: 1fr;
@@ -1254,7 +1339,9 @@ table tr:hover {
     }
 
 
-    /* ORDER CARDS */
+    /* =====================================
+       ORDER CARDS
+    ===================================== */
 
     .order-cards {
         grid-template-columns: 1fr 1fr;
@@ -1274,7 +1361,9 @@ table tr:hover {
     }
 
 
-    /* HEADINGS */
+    /* =====================================
+       HEADINGS
+    ===================================== */
 
     .orders-heading,
     .product-heading {
@@ -1286,7 +1375,9 @@ table tr:hover {
     }
 
 
-    /* FILTERS */
+    /* =====================================
+       FILTERS
+    ===================================== */
 
     .order-filter {
         flex-direction: column;
@@ -1307,7 +1398,9 @@ table tr:hover {
     }
 
 
-    /* STATS */
+    /* =====================================
+       STATS
+    ===================================== */
 
     .stats {
         grid-template-columns: 1fr 1fr;
@@ -1320,7 +1413,9 @@ table tr:hover {
     }
 
 
-    /* GENERAL SECTION */
+    /* =====================================
+       GENERAL SECTION
+    ===================================== */
 
     .section {
         padding: 15px;
@@ -1340,7 +1435,9 @@ table tr:hover {
     }
 
 
-    /* REVIEWS */
+    /* =====================================
+       REVIEWS
+    ===================================== */
 
     .review-top {
         align-items: flex-start;
@@ -1351,14 +1448,18 @@ table tr:hover {
     }
 
 
-    /* SETTINGS */
+    /* =====================================
+       SETTINGS
+    ===================================== */
 
     .settings-box {
         padding: 18px;
     }
 
 
-    /* ORDERS TABLE */
+    /* =====================================
+       ORDERS TABLE
+    ===================================== */
 
     .orders-table {
         width: 100%;
@@ -1374,7 +1475,9 @@ table tr:hover {
     }
 
 
-    /* PRODUCTS TABLE */
+    /* =====================================
+       PRODUCTS TABLE
+    ===================================== */
 
     .product-table {
         width: 100%;
@@ -1388,6 +1491,8 @@ table tr:hover {
     .product-table table {
         min-width: 650px;
     }
+
+}
   
 
 /* =========================================
