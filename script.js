@@ -1,7 +1,15 @@
 function openSidebar() {
-    document.querySelector(".sidebar").classList.add("active");
+    const sidebar = document.querySelector(".sidebar");
+
+    if (sidebar) {
+        sidebar.classList.add("active");
+    }
 }
 
 function closeSidebar() {
-    document.querySelector(".sidebar").classList.remove("active");
+    const sidebar = document.querySelector(".sidebar");
+
+    if (sidebar) {
+        sidebar.classList.remove("active");
+    }
 }

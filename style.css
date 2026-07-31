@@ -47,7 +47,7 @@ body {
 
     position: relative;
 
-    z-index: 3000;
+    z-index: 100;
 }
 
 .sidebar h1 {
@@ -112,6 +112,48 @@ body {
 
 
 /* =========================================
+   MENU BUTTON / HAMBURGER
+========================================= */
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger,
+.menu-btn {
+    display: none;
+
+    position: fixed;
+
+    top: 15px;
+    left: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    background-color: #4b0f30;
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 1000;
+}
+
+.hamburger i,
+.menu-btn i {
+    font-size: 20px;
+    color: white;
+}
+
+
+/* =========================================
    CLOSE BUTTON
 ========================================= */
 
@@ -139,71 +181,21 @@ body {
 
     cursor: pointer;
 
-    z-index: 4000;
-}
-
-.close-btn i {
-    color: white;
-    font-size: 20px;
-}
-
-
-/* =========================================
-   MENU BUTTON / HAMBURGER
-========================================= */
-
-.menu-btn,
-.hamburger {
-    display: none;
-
-    position: fixed;
-
-    top: 15px;
-    left: 15px;
-
-    width: 42px;
-    height: 42px;
-
-    background-color: #4b0f30;
-
-    color: white;
-
-    border: none;
-
-    border-radius: 8px;
-
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-
     z-index: 2000;
 }
 
-.menu-btn i,
-.hamburger i {
-    color: white;
+.close-btn i {
     font-size: 20px;
+    color: white;
 }
 
 
 /* =========================================
-   HIDE HAMBURGER WHEN SIDEBAR IS OPEN
-========================================= */
-
-.sidebar.active ~ .page .menu-btn {
-    display: none !important;
-}
-
-
-/* =========================================
-   PAGE / MAIN CONTENT
+   PAGE
 ========================================= */
 
 .page {
     flex: 1;
-
-    width: calc(100% - 250px);
 
     min-width: 0;
     min-height: 100vh;
@@ -211,8 +203,6 @@ body {
     padding: 25px;
 
     background-color: #f8f0f5;
-
-    overflow-x: hidden;
 }
 
 
@@ -230,7 +220,10 @@ body {
 
     display: grid;
 
-    grid-template-columns: 1fr auto;
+    grid-template-columns:
+        auto
+        minmax(150px, 1fr)
+        auto;
 
     align-items: center;
 
@@ -241,23 +234,53 @@ body {
     margin-bottom: 25px;
 
     min-width: 0;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .navbar h2 {
     font-size: 22px;
-
     color: #333;
+
+    white-space: nowrap;
+}
+
+.navbar input {
+    width: 100%;
+    min-width: 0;
+
+    padding: 11px 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.navbar input:focus {
+    border-color: #4b0f30;
+}
+
+.navbar button {
+    border: none;
+
+    background-color: #4b0f30;
+    color: white;
+
+    padding: 11px 18px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    cursor: pointer;
 
     white-space: nowrap;
 }
 
 .navbar-left {
     min-width: 0;
-
-    display: flex;
-    align-items: center;
 }
 
 .navbar-right {
@@ -293,180 +316,7 @@ body {
 
 
 /* =========================================
-   PAGE HEADER
-========================================= */
-
-.page-header {
-    margin-bottom: 25px;
-}
-
-.page-header h1 {
-    color: #333;
-
-    margin-bottom: 7px;
-}
-
-.subtitle {
-    color: #777;
-
-    margin-top: 7px;
-    margin-bottom: 25px;
-
-    font-size: 14px;
-}
-
-
-/* =========================================
-   STATS
-========================================= */
-
-.stats {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-
-    margin-bottom: 25px;
-}
-
-.box {
-    background-color: white;
-
-    padding: 22px;
-
-    border-radius: 10px;
-
-    min-width: 0;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-.box-icon {
-    width: 42px;
-    height: 42px;
-
-    background-color: #f4e8ef;
-
-    color: #4b0f30;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 12px;
-}
-
-.box h3 {
-    font-size: 14px;
-
-    color: #777;
-
-    margin-bottom: 10px;
-
-    white-space: nowrap;
-}
-
-.box h2 {
-    color: #4b0f30;
-
-    margin-bottom: 7px;
-}
-
-.box p {
-    color: #777;
-
-    font-size: 13px;
-}
-
-
-/* =========================================
-   GENERAL SECTION
-========================================= */
-
-.section {
-    width: 100%;
-
-    background-color: white;
-
-    padding: 22px;
-
-    border-radius: 10px;
-
-    margin-bottom: 25px;
-
-    min-width: 0;
-}
-
-.section-header h2 {
-    font-size: 20px;
-
-    margin-bottom: 20px;
-
-    white-space: nowrap;
-}
-
-
-/* =========================================
-   REVIEWS
-========================================= */
-
-.review {
-    border: 1px solid #eee;
-
-    border-radius: 8px;
-
-    padding: 18px;
-
-    margin-bottom: 15px;
-}
-
-.review:last-child {
-    margin-bottom: 0;
-}
-
-.review-top {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 15px;
-
-    margin-bottom: 12px;
-}
-
-.review-top h3 {
-    font-size: 16px;
-
-    margin-bottom: 5px;
-}
-
-.review-top small {
-    color: #777;
-}
-
-.stars {
-    color: #e5a400;
-
-    white-space: nowrap;
-}
-
-.review-text {
-    color: #555;
-
-    line-height: 1.6;
-
-    font-size: 14px;
-}
-
-
-/* =========================================
-   OTHER COMMON STYLES
+   CARDS
 ========================================= */
 
 .cards {
@@ -518,6 +368,10 @@ body {
 }
 
 
+/* =========================================
+   CONTENT
+========================================= */
+
 .content {
     display: grid;
 
@@ -530,7 +384,6 @@ body {
     min-width: 0;
 }
 
-
 .orders,
 .products {
     background-color: white;
@@ -542,6 +395,7 @@ body {
     min-width: 0;
 
     overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .section-title {
@@ -562,10 +416,7 @@ body {
     white-space: nowrap;
 }
 
-.section-title button,
-.view-btn,
-.add-btn,
-.export-btn {
+.section-title button {
     border: none;
 
     background-color: #4b0f30;
@@ -630,6 +481,56 @@ table tr:hover {
 
 
 /* =========================================
+   ORDERS TABLE
+========================================= */
+
+.orders-table {
+    width: 100%;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    min-width: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.orders-table table {
+    width: 100%;
+    min-width: 850px;
+}
+
+
+/* =========================================
+   PRODUCT TABLE
+========================================= */
+
+.product-table {
+    width: 100%;
+
+    background-color: white;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    min-width: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.product-table table {
+    width: 100%;
+    min-width: 650px;
+}
+
+
+/* =========================================
    STATUS
 ========================================= */
 
@@ -652,15 +553,18 @@ table tr:hover {
     white-space: nowrap;
 }
 
-.paid,
+.paid {
+    background-color: #e7f7ed;
+    color: #168344;
+}
+
 .delivered,
 .active {
     background-color: #e7f7ed;
     color: #168344;
 }
 
-.pending,
-.pending-payment {
+.pending {
     background-color: #fff4d6;
     color: #9a7000;
 }
@@ -676,10 +580,31 @@ table tr:hover {
     color: #b42318;
 }
 
+.pending-payment {
+    background-color: #fff4d6;
+    color: #9a7000;
+}
+
 
 /* =========================================
-   EDIT / DELETE
+   BUTTONS
 ========================================= */
+
+.view-btn {
+    background-color: #4b0f30;
+
+    color: white;
+
+    border: none;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
 
 .edit {
     background-color: #6f2c5f;
@@ -707,8 +632,48 @@ table tr:hover {
 
 
 /* =========================================
-   ORDER CARDS
+   ORDERS PAGE
 ========================================= */
+
+.orders-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.orders-heading h2 {
+    color: #333;
+
+    margin-bottom: 6px;
+}
+
+.orders-heading p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+.export-btn {
+    background-color: #4b0f30;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 17px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
 
 .order-cards {
     display: grid;
@@ -751,6 +716,7 @@ table tr:hover {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 }
 
@@ -778,11 +744,10 @@ table tr:hover {
 
 
 /* =========================================
-   FILTERS
+   ORDER FILTER
 ========================================= */
 
-.order-filter,
-.filters {
+.order-filter {
     background-color: white;
 
     padding: 15px;
@@ -797,9 +762,7 @@ table tr:hover {
 }
 
 .order-filter input,
-.order-filter select,
-.filters input,
-.filters select {
+.order-filter select {
     padding: 11px 12px;
 
     border: 1px solid #ddd;
@@ -811,16 +774,271 @@ table tr:hover {
     font-size: 14px;
 }
 
-.order-filter input,
+.order-filter input {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.order-filter select {
+    width: 180px;
+}
+
+
+/* =========================================
+   PRODUCTS
+========================================= */
+
+.product-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.product-heading h2 {
+    font-size: 22px;
+
+    white-space: nowrap;
+}
+
+.add-btn {
+    background-color: #4b0f30;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 16px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.filters {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+    padding: 11px 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
 .filters input {
     flex: 1;
 
     min-width: 0;
 }
 
-.order-filter select,
 .filters select {
-    width: 180px;
+    width: 200px;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page h1 {
+    color: #333;
+}
+
+.subtitle {
+    color: #777;
+
+    margin-top: 7px;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+}
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin-bottom: 7px;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.box {
+    background-color: white;
+
+    padding: 22px;
+
+    border-radius: 10px;
+
+    min-width: 0;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.box h3 {
+    font-size: 14px;
+
+    color: #777;
+
+    margin-bottom: 10px;
+
+    white-space: nowrap;
+}
+
+.box h2 {
+    color: #4b0f30;
+
+    margin-bottom: 7px;
+}
+
+.box p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.box-icon {
+    width: 42px;
+    height: 42px;
+
+    background-color: #f4e8ef;
+
+    color: #4b0f30;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   GENERAL SECTION
+========================================= */
+
+.section {
+    width: 100%;
+
+    background-color: white;
+
+    padding: 22px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    min-width: 0;
+}
+
+.section > h2,
+.section-header h2 {
+    font-size: 20px;
+
+    margin-bottom: 20px;
+
+    white-space: nowrap;
+}
+
+.section:has(table) {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.section:has(table) table {
+    min-width: 650px;
+}
+
+
+/* =========================================
+   REVIEWS
+========================================= */
+
+.review {
+    border: 1px solid #eee;
+
+    border-radius: 8px;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+}
+
+.review:last-child {
+    margin-bottom: 0;
+}
+
+.review-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+}
+
+.review-top h3 {
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.review-top small {
+    color: #777;
+}
+
+.stars {
+    color: #e5a400;
+
+    white-space: nowrap;
+}
+
+.review-text {
+    color: #555;
+
+    line-height: 1.6;
+
+    font-size: 14px;
 }
 
 
@@ -886,6 +1104,20 @@ table tr:hover {
     border-color: #4b0f30;
 }
 
+.settings-box button {
+    background-color: #4b0f30;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 17px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
 
 /* =========================================
    TABLET
@@ -896,10 +1128,6 @@ table tr:hover {
     .sidebar {
         width: 220px;
         min-width: 220px;
-    }
-
-    .page {
-        width: calc(100% - 220px);
     }
 
     .cards,
@@ -932,165 +1160,197 @@ table tr:hover {
     }
 
 
-    /* -----------------------------------------
-       SIDEBAR
-    ----------------------------------------- */
-
-    .sidebar {
-        position: fixed;
-
-        top: 0;
-        left: -270px;
-
-        width: 260px;
-        min-width: 260px;
-
-        height: 100vh;
-        min-height: 100vh;
-
-        padding: 25px 18px;
-
-        background-color: #4b0f30;
-
-        z-index: 3000;
-
-        overflow-y: auto;
-
-        transition: left 0.3s ease;
-    }
-
-
-    /* SIDEBAR OPEN */
-
-    .sidebar.active {
-        left: 0;
-    }
-
-
-    /* -----------------------------------------
-       CLOSE BUTTON
-    ----------------------------------------- */
-
-    .close-btn {
-        display: flex;
-
-        position: absolute;
-
-        top: 15px;
-        right: 15px;
-
-        width: 38px;
-        height: 38px;
-
-        background-color: #64153f;
-
-        color: white;
-
-        border: 1px solid rgba(255, 255, 255, 0.3);
-
-        border-radius: 8px;
-
-        align-items: center;
-        justify-content: center;
-
-        cursor: pointer;
-
-        z-index: 4000;
-    }
-
-
-    /* -----------------------------------------
-       HAMBURGER
-    ----------------------------------------- */
-
-    .menu-btn {
-        display: flex;
-
-        position: fixed;
-
-        top: 15px;
-        left: 15px;
-
-        width: 42px;
-        height: 42px;
-
-        background-color: #4b0f30;
-
-        color: white;
-
-        border: none;
-
-        border-radius: 8px;
-
-        align-items: center;
-        justify-content: center;
-
-        cursor: pointer;
-
-        z-index: 2000;
-    }
-
-
-    /* HIDE HAMBURGER WHEN SIDEBAR OPEN */
-
-    .sidebar.active ~ .page .menu-btn {
-        display: none !important;
-    }
-
-
-    /* -----------------------------------------
+    /* =====================================
        PAGE
-    ----------------------------------------- */
+    ===================================== */
 
     .page {
         width: 100%;
 
         min-height: 100vh;
 
+        /*
+           IMPORTANT:
+           Hamburger ke liye upar space
+        */
         padding: 75px 15px 20px;
 
         overflow-x: hidden;
     }
 
 
-    /* -----------------------------------------
+    /* =====================================
+       HAMBURGER
+    ===================================== */
+
+    .menu-btn {
+        display: flex !important;
+
+        position: fixed !important;
+
+        top: 15px !important;
+        left: 15px !important;
+
+        width: 42px !important;
+        height: 42px !important;
+
+        background-color: #4b0f30 !important;
+
+        color: white !important;
+
+        border: none !important;
+
+        border-radius: 8px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        cursor: pointer;
+
+        z-index: 1000 !important;
+    }
+
+    .menu-btn i {
+        color: white !important;
+
+        font-size: 20px !important;
+    }
+
+
+    /* =====================================
+       SIDEBAR CLOSED
+    ===================================== */
+
+    .sidebar {
+        position: fixed !important;
+
+        top: 0 !important;
+
+        left: -270px !important;
+
+        width: 260px !important;
+        min-width: 260px !important;
+
+        height: 100vh !important;
+        min-height: 100vh !important;
+
+        padding: 25px 18px !important;
+
+        background-color: #4b0f30 !important;
+
+        color: white !important;
+
+        z-index: 2000 !important;
+
+        overflow-y: auto;
+
+        transition: left 0.3s ease !important;
+    }
+
+
+    /* =====================================
+       SIDEBAR OPEN
+    ===================================== */
+
+    .sidebar.active {
+        left: 0 !important;
+    }
+
+
+    /* =====================================
+       CLOSE / X BUTTON
+    ===================================== */
+
+    .close-btn {
+        display: flex !important;
+
+        position: absolute !important;
+
+        top: 15px !important;
+        right: 15px !important;
+
+        width: 38px !important;
+        height: 38px !important;
+
+        background-color: #64153f !important;
+
+        color: white !important;
+
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+
+        border-radius: 8px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        cursor: pointer;
+
+        z-index: 2100 !important;
+    }
+
+    .close-btn i {
+        color: white !important;
+
+        font-size: 20px !important;
+    }
+
+
+    /* =====================================
        NAVBAR
-    ----------------------------------------- */
+    ===================================== */
 
     .navbar {
         width: 100%;
-
-        min-height: 60px;
 
         margin-top: 0;
 
         margin-bottom: 20px;
 
-        padding: 14px 15px;
-
         display: grid;
 
         grid-template-columns: 1fr auto;
 
-        gap: 10px;
+        gap: 12px;
 
-        border-radius: 10px;
+        padding: 15px;
+
+        min-height: 60px;
+
+        position: relative;
+
+        z-index: 1;
     }
 
     .navbar h2 {
         font-size: 18px;
     }
 
+
     .navbar-left {
-        grid-column: 1;
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
 
         min-width: 0;
+
+        grid-column: 1;
+
+        grid-row: 1;
     }
 
+
     .navbar-right {
-        grid-column: 2;
+        display: flex;
+
+        align-items: center;
 
         gap: 10px;
+
+        grid-column: 2;
+
+        grid-row: 1;
     }
 
     .navbar-right > i {
@@ -1102,40 +1362,118 @@ table tr:hover {
     }
 
 
-    /* -----------------------------------------
-       PAGE HEADER
-    ----------------------------------------- */
-
-    .page-header {
-        margin-bottom: 20px;
-    }
-
-    .page-header h1 {
-        font-size: 24px;
-    }
-
-
-    /* -----------------------------------------
+    /* =====================================
        CARDS
-    ----------------------------------------- */
+    ===================================== */
 
-    .cards,
+    .cards {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+    .card {
+        padding: 17px;
+
+        min-width: 0;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
+    .content {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        width: 100%;
+    }
+
+    .orders,
+    .products {
+        width: 100%;
+
+        padding: 15px;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+    }
+
+    .orders table,
+    .products table {
+        min-width: 650px;
+    }
+
+
+    /* =====================================
+       ORDER CARDS
+    ===================================== */
+
     .order-cards {
         grid-template-columns: 1fr 1fr;
 
         gap: 12px;
     }
 
-    .card,
-    .box,
     .order-card {
-        padding: 16px;
+        padding: 15px;
+
+        gap: 10px;
+    }
+
+    .order-icon {
+        width: 38px;
+        height: 38px;
     }
 
 
-    /* -----------------------------------------
+    /* =====================================
+       HEADINGS
+    ===================================== */
+
+    .orders-heading,
+    .product-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    /* =====================================
+       FILTERS
+    ===================================== */
+
+    .order-filter {
+        flex-direction: column;
+    }
+
+    .order-filter input,
+    .order-filter select {
+        width: 100%;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters input,
+    .filters select {
+        width: 100%;
+    }
+
+
+    /* =====================================
        STATS
-    ----------------------------------------- */
+    ===================================== */
 
     .stats {
         grid-template-columns: 1fr 1fr;
@@ -1143,35 +1481,37 @@ table tr:hover {
         gap: 12px;
     }
 
-    .box h3 {
-        font-size: 13px;
+    .box {
+        padding: 17px;
     }
 
 
-    /* -----------------------------------------
-       CONTENT
-    ----------------------------------------- */
-
-    .content {
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-    }
-
-
-    /* -----------------------------------------
-       REVIEWS
-    ----------------------------------------- */
+    /* =====================================
+       SECTION
+    ===================================== */
 
     .section {
+        padding: 15px;
+
         width: 100%;
-
-        padding: 15px;
     }
 
-    .review {
-        padding: 15px;
+    .section:has(table) {
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
     }
+
+    .section:has(table) table {
+        min-width: 650px;
+    }
+
+
+    /* =====================================
+       REVIEWS
+    ===================================== */
 
     .review-top {
         align-items: flex-start;
@@ -1182,40 +1522,54 @@ table tr:hover {
     }
 
 
-    /* -----------------------------------------
-       TABLES
-    ----------------------------------------- */
+    /* =====================================
+       SETTINGS
+    ===================================== */
 
-    .orders,
-    .products,
-    .orders-table,
+    .settings-box {
+        padding: 18px;
+    }
+
+
+    /* =====================================
+       TABLES
+    ===================================== */
+
+    .orders-table {
+        width: 100%;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .orders-table table {
+        min-width: 850px;
+    }
+
     .product-table {
         width: 100%;
 
         overflow-x: auto;
 
+        overflow-y: hidden;
+
         -webkit-overflow-scrolling: touch;
     }
 
-    table {
+    .product-table table {
         min-width: 650px;
     }
 
 
-    /* -----------------------------------------
-       FILTERS
-    ----------------------------------------- */
+    /* =====================================
+       HIDE HAMBURGER WHEN SIDEBAR OPEN
+    ===================================== */
 
-    .order-filter,
-    .filters {
-        flex-direction: column;
-    }
-
-    .order-filter input,
-    .order-filter select,
-    .filters input,
-    .filters select {
-        width: 100%;
+    .sidebar.active ~ .page .menu-btn {
+        display: none !important;
     }
 }
 
@@ -1227,24 +1581,27 @@ table tr:hover {
 @media (max-width: 480px) {
 
     .page {
-        padding: 72px 10px 15px;
+        padding: 70px 10px 15px;
     }
 
     .navbar {
         padding: 12px;
+
+        margin-bottom: 18px;
     }
 
     .navbar h2 {
         font-size: 16px;
     }
 
-    .navbar-right {
-        gap: 7px;
+    .navbar button {
+        font-size: 12px;
+
+        padding: 8px 10px;
     }
 
-    .admin-info {
-        font-size: 13px;
-    }
+
+    /* CARDS */
 
     .cards,
     .order-cards,
@@ -1252,11 +1609,67 @@ table tr:hover {
         grid-template-columns: 1fr;
     }
 
-    .section {
+    .card,
+    .box,
+    .order-card {
+        padding: 16px;
+    }
+
+
+    /* SECTION TITLE */
+
+    .section-title {
+        align-items: flex-start;
+    }
+
+    .section-title h2 {
+        font-size: 16px;
+    }
+
+    .section-title button {
+        font-size: 12px;
+
+        padding: 8px 10px;
+    }
+
+
+    /* BUTTONS */
+
+    .export-btn,
+    .add-btn {
+        width: 100%;
+    }
+
+    .product-heading {
+        width: 100%;
+    }
+
+    .product-heading .add-btn {
+        width: 100%;
+    }
+
+
+    /* SETTINGS */
+
+    .settings-box {
         padding: 15px;
     }
 
+
+    /* REVIEWS */
+
     .review {
         padding: 15px;
+    }
+
+
+    /* TABLES */
+
+    .orders table,
+    .products table,
+    .orders-table table,
+    .product-table table,
+    .section:has(table) table {
+        min-width: 650px;
     }
 }
