@@ -95,7 +95,14 @@ body {
     display: none;
 }
 
-.hamburger {
+/* =========================================
+   HAMBURGER / MENU BUTTON
+   (unified so .hamburger and .menu-btn
+   both render identically everywhere)
+========================================= */
+
+.hamburger,
+.menu-btn {
     display: none;
 
     position: fixed;
@@ -108,6 +115,8 @@ body {
     background-color: #4b0f30;
     color: white;
 
+    border: none;
+
     border-radius: 8px;
 
     align-items: center;
@@ -118,8 +127,10 @@ body {
     z-index: 1000;
 }
 
-.hamburger i {
+.hamburger i,
+.menu-btn i {
     font-size: 20px;
+    color: white;
 }
 
 
@@ -1010,18 +1021,7 @@ table tr:hover {
 }
 
 
-/* HAMBURGER BUTTON */
-
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #4b0f30;
-}
-
-/* CLOSE BUTTON */
+/* CLOSE BUTTON (inside sidebar, mobile only) */
 
 .close-btn {
     display: none;
@@ -1031,9 +1031,8 @@ table tr:hover {
     font-size: 24px;
     cursor: pointer;
 
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    margin-left: auto;
+    margin-bottom: 20px;
 }
 
 
@@ -1076,7 +1075,8 @@ table tr:hover {
 
     /* HAMBURGER */
 
-    .hamburger {
+    .hamburger,
+    .menu-btn {
         display: flex;
     }
 
@@ -1108,16 +1108,9 @@ table tr:hover {
         left: 0;
     }
 
-    /* SHOW HAMBURGER */
-    .menu-btn {
-        display: block;
-    }
-
     /* SHOW CROSS */
     .close-btn {
         display: block;
-        margin-left: auto;
-        margin-bottom: 20px;
     }
 
     .navbar-left {
@@ -1395,10 +1388,7 @@ table tr:hover {
     .product-table table {
         min-width: 650px;
     }
-}
-
-
-
+  
 
 /* =========================================
    SMALL MOBILE
