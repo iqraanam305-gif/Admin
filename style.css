@@ -1493,6 +1493,93 @@ table tr:hover {
     }
 
 }
+
+@media (max-width: 768px) {
+
+   .sidebar {
+        position: fixed !important;
+        top: 0;
+        left: -260px !important;
+
+        width: 260px;
+        height: 100vh;
+
+        background-color: #4b0f30 !important;
+        color: white;
+
+        z-index: 9999;
+
+        transition: left 0.3s ease;
+
+        overflow-y: auto;
+    }
+
+    /* SIDEBAR OPEN */
+    .sidebar.active {
+        left: 0 !important;
+    }
+
+    /* HAMBURGER */
+    .menu-btn {
+        display: flex !important;
+
+        position: fixed;
+        top: 15px;
+        left: 15px;
+
+        width: 42px;
+        height: 42px;
+
+        background-color: #4b0f30 !important;
+        color: white !important;
+
+        border: none;
+        border-radius: 8px;
+
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        z-index: 10000;
+    }
+
+    .menu-btn i {
+        color: white !important;
+        font-size: 20px;
+    }
+
+    /* CROSS */
+    .close-btn {
+        display: flex !important;
+
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        width: 38px;
+        height: 38px;
+
+        background-color: #64153f !important;
+        color: white !important;
+
+        border: none;
+        border-radius: 8px;
+
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        z-index: 10001;
+    }
+
+    .close-btn i {
+        color: white !important;
+        font-size: 20px;
+    }
+
+}
   
 
 /* =========================================
