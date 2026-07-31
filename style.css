@@ -1014,7 +1014,7 @@ table tr:hover {
 
 .menu-btn {
     display: none;
-    background: none;
+    background: #4b0f30 ;
     border: none;
     font-size: 24px;
     cursor: pointer;
