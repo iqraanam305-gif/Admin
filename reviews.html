@@ -15,12 +15,6 @@
 </head>
 
 <body>
-     <input type="checkbox" id="menu-toggle">
-
-    <label for="menu-toggle" class="hamburger">
-        <i class="fa-solid fa-bars"></i>
-    </label>
-
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
@@ -30,6 +24,7 @@
         <i class="fa-solid fa-xmark"></i>
     </button>
 
+
         <h1>
             <i class="fa-solid fa-shirt"></i>
             Fashion Store
@@ -38,7 +33,7 @@
         <ul>
 
             <li>
-                <a href="index.html">
+                <a href="admin.html">
                     <i class="fa-solid fa-house"></i>
                     <span>Dashboard</span>
                 </a>
@@ -102,30 +97,23 @@
     <main class="page">
 
         <!-- NAVBAR -->
-        <div class="navbar">
+        <nav class="navbar">
 
-    <div class="navbar-left">
+            <div class="navbar-left">
+                <h2>Reviews</h2>
+            </div>
 
+            <div class="navbar-right">
+                <i class="fa-solid fa-bell"></i>
 
-        <h2>Reviews</h2>
-    </div>
+                <div class="admin-info">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Admin</span>
+                </div>
+            </div>
 
-    <input type="text" placeholder="Search reviews...">
+        </nav>
 
-    <div class="navbar-right">
-
-        <i class="fa-solid fa-bell"></i>
-
-        <i class="fa-solid fa-envelope"></i>
-
-        <div class="admin-info">
-            <i class="fa-solid fa-user"></i>
-            <span>Admin</span>
-        </div>
-
-    </div>
-
-</div>
 
         <!-- PAGE HEADER -->
         <section class="page-header">
@@ -255,10 +243,8 @@
 
     </main>
 
-    <script src="script.js"></script>
-
-
+       <script src="script.js"></script>
+    
 </body>
 
 </html>
-
