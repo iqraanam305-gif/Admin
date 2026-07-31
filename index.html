@@ -1,241 +1,293 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Dashboard</title>
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
-<body>  
-    <input type="checkbox" id="menu-toggle">
 
-    <label for="menu-toggle" class="hamburger">
-      <i class="fa-solid fa-bars"></i>
-    </label>
+<body>
 
-    
-    <div class="sidebar">
+<!-- =========================================
+     HAMBURGER BUTTON
+========================================== -->
 
-
-        <h1>
-            <i class="fa-solid fa-shirt"></i>
-            Fashion Store
-        </h1>
-
-        <ul>
-
-            <li>
-                <a href="index.html">
-                    <i class="fa-solid fa-house"></i>
-                    Dashboard
-                </a>
-            </li>
-
-            <li>
-                <a href="products.html">
-                    <i class="fa-solid fa-box"></i>
-                    Products
-                </a>
-            </li>
-
-            <li>
-                <a href="orders.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Orders
-                </a>
-            </li>
-
-            <li>
-                <a href="analytics.html">
-                    <i class="fa-solid fa-chart-line"></i>
-                    Analytics
-                </a>
-            </li>
-
-            <li>
-                <a href="sales.html">
-                    <i class="fa-solid fa-chart-column"></i>
-                    Sales
-                </a>
-            </li>
-
-            <li>
-                <a href="customers.html">
-                    <i class="fa-solid fa-users"></i>
-                    Customers
-                </a>
-            </li>
-
-            <li>
-                <a href="reviews.html">
-                    <i class="fa-solid fa-star"></i>
-                    Reviews
-                </a>
-            </li>
-
-            <li>
-                <a href="settings.html">
-                    <i class="fa-solid fa-gear"></i>
-                    Settings
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
-
-    
-    <div class="main">
+<button class="menu-btn" id="menuBtn" type="button">
+    <i class="fa-solid fa-bars"></i>
+</button>
 
 
-        <div class="navbar">
+<!-- =========================================
+     SIDEBAR
+========================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <!-- CLOSE BUTTON -->
+    <button class="close-btn" id="closeBtn" type="button">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+
+    <!-- STORE NAME -->
+    <h1>
+        <i class="fa-solid fa-shirt"></i>
+        Fashion Store
+    </h1>
+
+
+    <!-- NAVIGATION -->
+    <ul>
+
+        <li>
+            <a href="admin.html" class="active">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="products.html">
+                <i class="fa-solid fa-box"></i>
+                <span>Products</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="orders.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Orders</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Analytics</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="sales.html">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Sales</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="reviews.html">
+                <i class="fa-solid fa-star"></i>
+                <span>Reviews</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================== -->
+
+<main class="main">
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="navbar-left">
             <h2>Dashboard</h2>
+        </div>
 
-            <input type="text" placeholder="Search bar  ">
+        <div class="navbar-center">
+            <input type="text" placeholder="Search bar">
+        </div>
 
-            <button>Admin</button>
+        <div class="navbar-right">
+            <button type="button">Admin</button>
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================
+         DASHBOARD CARDS
+    ========================================== -->
+
+    <section class="cards">
+
+        <div class="card">
+            <h4>Total Orders</h4>
+            <h2>1200</h2>
+            <p>10% this month</p>
+        </div>
+
+        <div class="card">
+            <h4>Total Sales</h4>
+            <h2>25,000</h2>
+            <p>30% this month</p>
+        </div>
+
+        <div class="card">
+            <h4>Total Profits</h4>
+            <h2>35,000</h2>
+            <p>8% this month</p>
+        </div>
+
+        <div class="card">
+            <h4>Returns</h4>
+            <h2>120</h2>
+            <p>3% today</p>
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTENT
+    ========================================== -->
+
+    <section class="content">
+
+
+        <!-- RECENT ORDERS -->
+        <div class="orders">
+
+            <div class="section-title">
+                <h2>Recent Orders</h2>
+                <button type="button">See All</button>
+            </div>
+
+            <table>
+
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Product</th>
+                    <th>Status</th>
+                    <th>Price</th>
+                </tr>
+
+                <tr>
+                    <td>#1025</td>
+                    <td>Sara</td>
+                    <td>Oversized Hoodie</td>
+                    <td>Delivered</td>
+                    <td>$120</td>
+                </tr>
+
+                <tr>
+                    <td>#1024</td>
+                    <td>Ayesha</td>
+                    <td>Wide Leg Jeans</td>
+                    <td>Pending</td>
+                    <td>$95</td>
+                </tr>
+
+                <tr>
+                    <td>#1023</td>
+                    <td>Hira</td>
+                    <td>Shoulder Bag</td>
+                    <td>Shipped</td>
+                    <td>$80</td>
+                </tr>
+
+                <tr>
+                    <td>#1022</td>
+                    <td>Ali</td>
+                    <td>Denim Jacket</td>
+                    <td>Returned</td>
+                    <td>$110</td>
+                </tr>
+
+            </table>
 
         </div>
 
-<div class="cards">
 
-    <div class="card">
-        <h4>Total Orders</h4>
-        <h2>1200</h2>
-        <p>10% this month</p>
-    </div>
+        <!-- TOP SELLING PRODUCTS -->
+        <div class="products">
 
-    <div class="card">
-        <h4>Total Sales</h4>
-        <h2>25,000</h2>
-        <p>30% this month</p>
-    </div>
+            <div class="section-title">
+                <h2>Top Selling</h2>
+                <button type="button">View All</button>
+            </div>
 
-    <div class="card">
-        <h4>Total Profits</h4>
-        <h2>35,000</h2>
-        <p>8% this month</p>
-    </div>
+            <table>
 
-    <div class="card">
-        <h4>Returns</h4>
-        <h2>120</h2>
-        <p>3% today</p>
-    </div>
+                <tr>
+                    <th>#</th>
+                    <th>Product</th>
+                    <th>Sold</th>
+                    <th>Price</th>
+                </tr>
 
-</div> 
+                <tr>
+                    <td>01</td>
+                    <td>Hoodie</td>
+                    <td>85</td>
+                    <td>$120</td>
+                </tr>
 
-<div class="content">
+                <tr>
+                    <td>02</td>
+                    <td>Jeans</td>
+                    <td>72</td>
+                    <td>$95</td>
+                </tr>
 
+                <tr>
+                    <td>03</td>
+                    <td>Sneakers</td>
+                    <td>61</td>
+                    <td>$150</td>
+                </tr>
 
-    <div class="orders">
+                <tr>
+                    <td>04</td>
+                    <td>Hand Bag</td>
+                    <td>48</td>
+                    <td>$80</td>
+                </tr>
 
-        <div class="section-title">
-            <h2>Recent Orders</h2>
-            <button>See All</button>
+            </table>
+
         </div>
 
-        <table>
+    </section>
 
-            <tr>
-                <th>Order ID</th>
-                <th>Customer</th>
-                <th>Product</th>
-                <th>Status</th>
-                <th>Price</th>
-            </tr>
-
-            <tr>
-                <td>#1025</td>
-                <td>Sara</td>
-                <td>Oversized Hoodie</td>
-                <td>Delivered</td>
-                <td>$120</td>
-            </tr>
-
-            <tr>
-                <td>#1024</td>
-                <td>Ayesha</td>
-                <td>Wide Leg Jeans</td>
-                <td>Pending</td>
-                <td>$95</td>
-            </tr>
-
-            <tr>
-                <td>#1023</td>
-                <td>Hira</td>
-                <td>Shoulder Bag</td>
-                <td>Shipped</td>
-                <td>$80</td>
-            </tr>
-
-            <tr>
-                <td>#1022</td>
-                <td>Ali</td>
-                <td>Denim Jacket</td>
-                <td>Returned</td>
-                <td>$110</td>
-            </tr>
-
-        </table>
-
-    </div>
+</main>
 
 
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
 
-    <div class="products">
-
-        <div class="section-title">
-            <h2>Top Selling</h2>
-            <button>View All</button>
-        </div>
-
-        <table>
-
-            <tr>
-                <th>#</th>
-                <th>Product</th>
-                <th>Sold</th>
-                <th>Price</th>
-            </tr>
-
-            <tr>
-                <td>01</td>
-                <td>Hoodie</td>
-                <td>85</td>
-                <td>$120</td>
-            </tr>
-
-            <tr>
-                <td>02</td>
-                <td>Jeans</td>
-                <td>72</td>
-                <td>$95</td>
-            </tr>
-
-            <tr>
-                <td>03</td>
-                <td>Sneakers</td>
-                <td>61</td>
-                <td>$150</td>
-            </tr>
-
-            <tr>
-                <td>04</td>
-                <td>Hand Bag</td>
-                <td>48</td>
-                <td>$80</td>
-            </tr>
-
-        </table>
-
-    </div>
-
-</div>
-
-    
 </body>
+
 </html>

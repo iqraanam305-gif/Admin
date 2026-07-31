@@ -1,247 +1,368 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Products - FashionLabs</title>
+<title>Products - Fashion Store</title>
 
-    <link rel="stylesheet" href="style.css">
+<!-- Main CSS -->
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 </head>
 
-
 <body>
 
-    <input type="checkbox" id="menu-toggle">
+<!-- =========================================
+     HAMBURGER BUTTON
+========================================== -->
 
-    <label for="menu-toggle" class="hamburger">
-     <i class="fa-solid fa-bars"></i>
-    </label>
-
-    <!-- SIDEBAR -->
-
-    <div class="sidebar">
-
-        <h1>
-            <i class="fa-solid fa-shirt"></i>
-            Fashion Store
-        </h1>
-
-        <ul>
-
-            <li>
-                <a href="index.html">
-                    <i class="fa-solid fa-house"></i>
-                    Dashboard
-                </a>
-            </li>
-
-            <li>
-                <a href="products.html">
-                    <i class="fa-solid fa-box"></i>
-                    Products
-                </a>
-            </li>
-
-            <li>
-                <a href="orders.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Orders
-                </a>
-            </li>
-
-            <li>
-                <a href="analytics.html">
-                    <i class="fa-solid fa-chart-line"></i>
-                    Analytics
-                </a>
-            </li>
-
-            <li>
-                <a href="sales.html">
-                    <i class="fa-solid fa-chart-column"></i>
-                    Sales
-                </a>
-            </li>
-
-            <li>
-                <a href="customers.html">
-                    <i class="fa-solid fa-users"></i>
-                    Customers
-                </a>
-            </li>
-
-            <li>
-                <a href="reviews.html">
-                    <i class="fa-solid fa-star"></i>
-                    Reviews
-                </a>
-            </li>
-
-            <li>
-                <a href="settings.html">
-                    <i class="fa-solid fa-gear"></i>
-                    Settings
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
+<button class="menu-btn" id="menuBtn" type="button">
+    <i class="fa-solid fa-bars"></i>
+</button>
 
 
-    <div class="main">
+
+<!-- =========================================
+     SIDEBAR
+========================================== -->
+
+<aside class="sidebar" id="sidebar">
 
 
-    
+    <!-- CLOSE BUTTON -->
 
-        <div class="navbar">
+    <button class="close-btn" id="closeBtn" type="button">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+
+
+    <!-- STORE NAME -->
+
+    <h1>
+        <i class="fa-solid fa-shirt"></i>
+        Fashion Store
+    </h1>
+
+
+
+    <!-- NAVIGATION -->
+
+    <ul>
+
+
+        <li>
+            <a href="admin.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="products.html" class="active">
+                <i class="fa-solid fa-box"></i>
+                <span>Products</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="orders.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Orders</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Analytics</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="sales.html">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Sales</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="reviews.html">
+                <i class="fa-solid fa-star"></i>
+                <span>Reviews</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+
+
+    </ul>
+
+</aside>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================== -->
+
+<main class="main">
+
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+
+        <div class="navbar-left">
 
             <h2>Products</h2>
 
+        </div>
+
+
+
+        <div class="navbar-center">
+
             <input type="text" placeholder="Search Product">
 
-            <button>Admin</button>
-
         </div>
 
 
 
-    
+        <div class="navbar-right">
 
-        <div class="product-heading">
-
-            <h2>All Products</h2>
-
-            <button class="add-btn">+ Add Product</button>
+            <button type="button">Admin</button>
 
         </div>
 
 
-
-        
-
-        <div class="filters">
-
-            <input type="text" placeholder="Search product">
-
-            <select>
-
-                <option>All Categories</option>
-
-                <option>Men</option>
-
-                <option>Women</option>
-
-                <option>Shoes</option>
-
-                <option>Accessories</option>
-
-            </select>
-
-        </div>
+    </nav>
 
 
 
-       
+    <!-- =========================================
+         PRODUCT HEADING
+    ========================================== -->
 
-        <div class="product-table">
-
-            <table>
-
-                <tr>
-
-                    <th>Product</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th>Stock</th>
-                    <th>Action</th>
-
-                </tr>
+    <section class="product-heading">
 
 
-                <tr>
+        <h2>All Products</h2>
 
 
-                    <td>Oversized Hoodie</td>
-
-                    <td>Men</td>
-
-                    <td>$120</td>
-
-                    <td>25</td>
-
-                    <td>
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                    </td>
-
-                </tr>
+        <button class="add-btn" type="button">
+            + Add Product
+        </button>
 
 
-                <tr>
-
-                    <td>Wide Leg Jeans</td>
-
-                    <td>Women</td>
-
-                    <td>$95</td>
-
-                    <td>40</td>
-
-                    <td>
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                    </td>
-
-                </tr>
+    </section>
 
 
-                <tr>
 
-                    <td>Classic Sneakers</td>
+    <!-- =========================================
+         FILTERS
+    ========================================== -->
 
-                    <td>Shoes</td>
-
-                    <td>$150</td>
-
-                    <td>12</td>
-
-                    <td>
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                    </td>
-
-                </tr>
+    <section class="filters">
 
 
-                <tr>
+        <input
+            type="text"
+            placeholder="Search product"
+        >
 
-                    <td>Shoulder Bag</td>
 
-                    <td>Accessories</td>
+        <select>
 
-                    <td>$80</td>
+            <option>All Categories</option>
 
-                    <td>30</td>
+            <option>Men</option>
 
-                    <td>
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                    </td>
+            <option>Women</option>
 
-                </tr>
+            <option>Shoes</option>
 
-            </table>
+            <option>Accessories</option>
 
-        </div>
+        </select>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         PRODUCT TABLE
+    ========================================== -->
+
+    <section class="product-table">
+
+
+        <table>
+
+
+            <tr>
+
+                <th>Product</th>
+
+                <th>Category</th>
+
+                <th>Price</th>
+
+                <th>Stock</th>
+
+                <th>Action</th>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>Oversized Hoodie</td>
+
+                <td>Men</td>
+
+                <td>$120</td>
+
+                <td>25</td>
+
+                <td>
+
+                    <button class="edit" type="button">
+                        Edit
+                    </button>
+
+                    <button class="delete" type="button">
+                        Delete
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>Wide Leg Jeans</td>
+
+                <td>Women</td>
+
+                <td>$95</td>
+
+                <td>40</td>
+
+                <td>
+
+                    <button class="edit" type="button">
+                        Edit
+                    </button>
+
+                    <button class="delete" type="button">
+                        Delete
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>Classic Sneakers</td>
+
+                <td>Shoes</td>
+
+                <td>$150</td>
+
+                <td>12</td>
+
+                <td>
+
+                    <button class="edit" type="button">
+                        Edit
+                    </button>
+
+                    <button class="delete" type="button">
+                        Delete
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>Shoulder Bag</td>
+
+                <td>Accessories</td>
+
+                <td>$80</td>
+
+                <td>30</td>
+
+                <td>
+
+                    <button class="edit" type="button">
+                        Edit
+                    </button>
+
+                    <button class="delete" type="button">
+                        Delete
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+        </table>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
 
 </body>
 

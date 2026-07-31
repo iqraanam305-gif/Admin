@@ -1,130 +1,424 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
-    <link rel="stylesheet" href="style.css">
 
-     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Settings - Fashion Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 
 <body>
 
-    <input type="checkbox" id="menu-toggle">
 
-    <label for="menu-toggle" class="hamburger">
-     <i class="fa-solid fa-bars"></i>
-    </label>
+<!-- =========================
+     SIDEBAR
+========================== -->
 
-    <div class="sidebar">
-
-        <h1>
-            <i class="fa-solid fa-shirt"></i>
-            Fashion Store
-        </h1>
-
-        <ul>
-
-            <li>
-                <a href="index.html">
-                    <i class="fa-solid fa-house"></i>
-                    Dashboard
-                </a>
-            </li>
-
-            <li>
-                <a href="products.html">
-                    <i class="fa-solid fa-box"></i>
-                    Products
-                </a>
-            </li>
-
-            <li>
-                <a href="orders.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Orders
-                </a>
-            </li>
-
-            <li>
-                <a href="analytics.html">
-                    <i class="fa-solid fa-chart-line"></i>
-                    Analytics
-                </a>
-            </li>
-
-            <li>
-                <a href="sales.html">
-                    <i class="fa-solid fa-chart-column"></i>
-                    Sales
-                </a>
-            </li>
-
-            <li>
-                <a href="customers.html">
-                    <i class="fa-solid fa-users"></i>
-                    Customers
-                </a>
-            </li>
-
-            <li>
-                <a href="reviews.html">
-                    <i class="fa-solid fa-star"></i>
-                    Reviews
-                </a>
-            </li>
-
-            <li>
-                <a href="settings.html">
-                    <i class="fa-solid fa-gear"></i>
-                    Settings
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
+<aside class="sidebar" id="sidebar">
 
 
-    <div class="page">
+    <!-- CLOSE BUTTON -->
 
-        <h1>Settings</h1>
+    <button class="close-btn" id="close-btn" type="button">
 
-        <p class="subtitle">Manage your store settings.</p>
+        <i class="fa-solid fa-xmark"></i>
 
-        <div class="settings-box">
+    </button>
 
-            <h2>Store Information</h2><br>
 
-            <label>Store Name</label><br>
-            <input type="text" value="Fashion Store"><br><br>
 
-            <label>Email</label><br>
-            <input type="email" value="fashion@gmail.com"><br><br>
+    <!-- STORE NAME -->
 
-            <label>Phone Number</label><br>
-            <input type="text" value="+92 300 1234567"><br><br>
+    <h1>
 
-            <label>Store Address</label><br>
-            <textarea>Pakistan</textarea><br><br>
+        <i class="fa-solid fa-shirt"></i>
 
-            <button>Save Changes</button><br><br>
+        Fashion Store
+
+    </h1>
+
+
+
+    <!-- SIDEBAR MENU -->
+
+    <ul>
+
+
+        <!-- DASHBOARD -->
+
+        <li>
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+        </li>
+
+
+
+        <!-- PRODUCTS -->
+
+        <li>
+
+            <a href="products.html">
+
+                <i class="fa-solid fa-box"></i>
+
+                <span>Products</span>
+
+            </a>
+
+        </li>
+
+
+
+        <!-- ORDERS -->
+
+        <li>
+
+            <a href="orders.html">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span>Orders</span>
+
+            </a>
+
+        </li>
+
+
+
+        <!-- ANALYTICS -->
+
+        <li>
+
+            <a href="analytics.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Analytics</span>
+
+            </a>
+
+        </li>
+
+
+
+        <!-- SALES -->
+
+        <li>
+
+            <a href="sales.html">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <span>Sales</span>
+
+            </a>
+
+        </li>
+
+
+
+        <!-- CUSTOMERS -->
+
+        <li>
+
+            <a href="customers.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Customers</span>
+
+            </a>
+
+        </li>
+
+
+
+        <!-- REVIEWS -->
+
+        <li>
+
+            <a href="reviews.html">
+
+                <i class="fa-solid fa-star"></i>
+
+                <span>Reviews</span>
+
+            </a>
+
+        </li>
+
+
+
+        <!-- SETTINGS -->
+
+        <li>
+
+            <a href="settings.html" class="active">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+
+</aside>
+
+
+
+
+<!-- =========================
+     MAIN CONTENT
+========================== -->
+
+<main class="main">
+
+
+    <!-- =========================
+         MOBILE HAMBURGER
+    ========================== -->
+
+    <button class="menu-btn" id="menu-btn" type="button">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+
+        <div class="navbar-left">
+
+            <h2>Settings</h2>
 
         </div>
 
-        <div class="settings-box">
-    <h2>Account Settings</h2>
 
-    <label>Username</label><br>
-    <input type="text" value="admin">
-    <br><br>
-    <label>Password</label><br>
-    <input type="password" value="12345678">
-    <br><br>
-    <button>Update Account</button>
+
+        <div class="navbar-right">
+
+
+            <i class="fa-solid fa-bell"></i>
+
+
+            <div class="admin-info">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Admin</span>
+
+            </div>
+
+
+        </div>
+
+
+    </nav>
+
+
+
+
+    <!-- =========================
+         PAGE CONTENT
+    ========================== -->
+
+    <div class="page">
+
+
+        <h1>Settings</h1>
+
+
+        <p class="subtitle">
+
+            Manage your store settings.
+
+        </p>
+
+
+
+
+        <!-- =========================
+             STORE INFORMATION
+        ========================== -->
+
+        <div class="settings-box">
+
+
+            <h2>Store Information</h2>
+
+
+            <div class="setting-field">
+
+                <label for="store-name">
+                    Store Name
+                </label>
+
+                <input
+                    type="text"
+                    id="store-name"
+                    value="Fashion Store"
+                >
+
+            </div>
+
+
+
+            <div class="setting-field">
+
+                <label for="store-email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="store-email"
+                    value="fashion@gmail.com"
+                >
+
+            </div>
+
+
+
+            <div class="setting-field">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="text"
+                    id="phone"
+                    value="+92 300 1234567"
+                >
+
+            </div>
+
+
+
+            <div class="setting-field">
+
+                <label for="address">
+                    Store Address
+                </label>
+
+                <textarea
+                    id="address"
+                    rows="4"
+                >Pakistan</textarea>
+
+            </div>
+
+
+
+            <button class="save-btn" type="button">
+
+                Save Changes
+
+            </button>
+
+
+        </div>
+
+
+
+
+        <!-- =========================
+             ACCOUNT SETTINGS
+        ========================== -->
+
+        <div class="settings-box">
+
+
+            <h2>Account Settings</h2>
+
+
+            <div class="setting-field">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    value="admin"
+                >
+
+            </div>
+
+
+
+            <div class="setting-field">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    value="12345678"
+                >
+
+            </div>
+
+
+
+            <button class="save-btn" type="button">
+
+                Update Account
+
+            </button>
+
+
+        </div>
+
+
     </div>
 
+
+</main>
+
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script src="script.js"></script>
+
+
 </body>
+
 </html>

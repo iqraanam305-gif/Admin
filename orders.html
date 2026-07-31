@@ -1,458 +1,569 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Orders - FashionLabs</title>
+<title>Orders - Fashion Store</title>
 
-    <link rel="stylesheet" href="style.css">
+<!-- Main CSS -->
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
-
 <body>
 
-    <input type="checkbox" id="menu-toggle">
+<!-- =========================================
+     HAMBURGER BUTTON
+========================================== -->
 
-    <label for="menu-toggle" class="hamburger">
-     <i class="fa-solid fa-bars"></i>
-    </label>
-
-    <!-- SIDEBAR -->
-
-    <div class="sidebar">
-
-        <h1>
-            <i class="fa-solid fa-shirt"></i>
-            Fashion Store
-        </h1>
-
-        <ul>
-
-            <li>
-                <a href="index.html">
-                    <i class="fa-solid fa-house"></i>
-                    Dashboard
-                </a>
-            </li>
-
-            <li>
-                <a href="products.html">
-                    <i class="fa-solid fa-box"></i>
-                    Products
-                </a>
-            </li>
-
-            <li>
-                <a href="orders.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Orders
-                </a>
-            </li>
-
-            <li>
-                <a href="analytics.html">
-                    <i class="fa-solid fa-chart-line"></i>
-                    Analytics
-                </a>
-            </li>
-
-            <li>
-                <a href="sales.html">
-                    <i class="fa-solid fa-chart-column"></i>
-                    Sales
-                </a>
-            </li>
-
-            <li>
-                <a href="customers.html">
-                    <i class="fa-solid fa-users"></i>
-                    Customers
-                </a>
-            </li>
-
-            <li>
-                <a href="reviews.html">
-                    <i class="fa-solid fa-star"></i>
-                    Reviews
-                </a>
-            </li>
-
-            <li>
-                <a href="settings.html">
-                    <i class="fa-solid fa-gear"></i>
-                    Settings
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
+<button class="menu-btn" id="menuBtn" type="button">
+    <i class="fa-solid fa-bars"></i>
+</button>
 
 
-    <!-- MAIN -->
 
-    <div class="main">
+<!-- =========================================
+     SIDEBAR
+========================================== -->
+
+<aside class="sidebar" id="sidebar">
 
 
-        <!-- NAVBAR -->
+    <!-- CLOSE BUTTON -->
 
-        <div class="navbar">
+    <button class="close-btn" id="closeBtn" type="button">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+
+
+    <!-- STORE NAME -->
+
+    <h1>
+        <i class="fa-solid fa-shirt"></i>
+        Fashion Store
+    </h1>
+
+
+
+    <!-- NAVIGATION -->
+
+    <ul>
+
+
+        <li>
+            <a href="admin.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="products.html">
+                <i class="fa-solid fa-box"></i>
+                <span>Products</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="orders.html" class="active">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Orders</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Analytics</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="sales.html">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Sales</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="customers.html">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="reviews.html">
+                <i class="fa-solid fa-star"></i>
+                <span>Reviews</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+
+
+    </ul>
+
+</aside>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================== -->
+
+<main class="main">
+
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+
+        <div class="navbar-left">
 
             <h2>Orders</h2>
-
-            <input type="text" placeholder="Search order">
-
-            <button>Admin</button>
 
         </div>
 
 
 
-        <!-- PAGE HEADING -->
+        <div class="navbar-center">
 
-        <div class="orders-heading">
+            <input type="text" placeholder="Search order">
 
-            <div>
-                <br>
-                <h2>Order Management</h2>
+        </div>
 
-                <p>Manage and track your customer orders</p><br>
 
-            </div>
 
-            <button class="export-btn">
-                Export Orders
+        <div class="navbar-right">
+
+            <button type="button">
+                Admin
             </button>
 
         </div>
 
-        <!-- ORDER CARDS -->
 
-<div class="order-cards">
+    </nav>
 
 
-    <!-- TOTAL ORDERS -->
 
-    <div class="order-card">
+    <!-- =========================================
+         PAGE HEADING
+    ========================================== -->
 
-        <div class="order-icon">
-            <i class="fa-solid fa-cart-shopping"></i>
-        </div>
+    <section class="orders-heading">
+
 
         <div>
-            <p>Total Orders</p>
 
-            <h2>1,250</h2>
+            <h2>Order Management</h2>
 
-            <span>+12% this month</span>
+            <p>Manage and track your customer orders</p>
+
         </div>
 
-    </div>
+
+        <button class="export-btn" type="button">
+            Export Orders
+        </button>
 
 
-    <!-- PENDING -->
-
-    <div class="order-card">
-
-        <div class="order-icon">
-            <i class="fa-solid fa-clock"></i>
-        </div>
-
-        <div>
-            <p>Pending</p>
-
-            <h2>86</h2>
-
-            <span>Need attention</span>
-        </div>
-
-    </div>
+    </section>
 
 
-    <!-- SHIPPED -->
 
-    <div class="order-card">
+    <!-- =========================================
+         ORDER CARDS
+    ========================================== -->
 
-        <div class="order-icon">
-            <i class="fa-solid fa-truck"></i>
-        </div>
-
-        <div>
-            <p>Shipped</p>
-
-            <h2>320</h2>
-
-            <span>On the way</span>
-        </div>
-
-    </div>
+    <section class="order-cards">
 
 
-    <!-- DELIVERED -->
+        <!-- TOTAL ORDERS -->
 
-    <div class="order-card">
+        <div class="order-card">
 
-        <div class="order-icon">
-            <i class="fa-solid fa-circle-check"></i>
-        </div>
+            <div class="order-icon">
 
-        <div>
-            <p>Delivered</p>
+                <i class="fa-solid fa-cart-shopping"></i>
 
-            <h2>844</h2>
-
-            <span>Successfully delivered</span>
-        </div>
-
-    </div>
+            </div>
 
 
-</div>
+            <div>
 
-        <!-- FILTER BAR -->
+                <p>Total Orders</p>
 
-        <div class="order-filter">
+                <h2>1,250</h2>
 
-            <input
-                type="text"
-                placeholder="Search by Order ID or Customer"
-            >
+                <span>+12% this month</span>
 
-
-            <select>
-
-                <option>All Orders</option>
-
-                <option>Pending</option>
-
-                <option>Shipped</option>
-
-                <option>Delivered</option>
-
-                <option>Cancelled</option>
-
-            </select>
-
-
-            <select>
-
-                <option>All Payments</option>
-
-                <option>Paid</option>
-
-                <option>Pending</option>
-
-            </select>
+            </div>
 
         </div>
 
 
 
-        <!-- ORDERS TABLE -->
+        <!-- PENDING -->
 
-        <div class="orders-table">
+        <div class="order-card">
 
-            <table>
+            <div class="order-icon">
 
-                <tr>
+                <i class="fa-solid fa-clock"></i>
 
-                    <th>Order ID</th>
+            </div>
 
-                    <th>Customer</th>
 
-                    <th>Product</th>
+            <div>
 
-                    <th>Date</th>
+                <p>Pending</p>
 
-                    <th>Price</th>
+                <h2>86</h2>
 
-                    <th>Payment</th>
+                <span>Need attention</span>
 
-                    <th>Status</th>
-
-                    <th>Action</th>
-
-                </tr>
-
-
-
-                <tr>
-
-                    <td>#FL1025</td>
-
-                    <td>Sara Ahmed</td>
-
-                    <td>Oversized Hoodie</td>
-
-                    <td>27 Jul 2026</td>
-
-                    <td>$120</td>
-
-                    <td>
-                        <span class="paid">Paid</span>
-                    </td>
-
-                    <td>
-                        <span class="delivered">
-                            Delivered
-                        </span>
-                    </td>
-
-                    <td>
-                        <button class="view-btn">
-                            View
-                        </button>
-                    </td>
-
-                </tr>
-
-
-
-                <tr>
-
-                    <td>#FL1024</td>
-
-                    <td>Ayesha Khan</td>
-
-                    <td>Wide Leg Jeans</td>
-
-                    <td>26 Jul 2026</td>
-
-                    <td>$95</td>
-
-                    <td>
-                        <span class="paid">Paid</span>
-                    </td>
-
-                    <td>
-                        <span class="pending">
-                            Pending
-                        </span>
-                    </td>
-
-                    <td>
-                        <button class="view-btn">
-                            View
-                        </button>
-                    </td>
-
-                </tr>
-
-
-
-                <tr>
-
-                    <td>#FL1023</td>
-
-                    <td>Hira Malik</td>
-
-                    <td>Shoulder Bag</td>
-
-                    <td>25 Jul 2026</td>
-
-                    <td>$80</td>
-
-                    <td>
-                        <span class="paid">Paid</span>
-                    </td>
-
-                    <td>
-                        <span class="shipped">
-                            Shipped
-                        </span>
-                    </td>
-
-                    <td>
-                        <button class="view-btn">
-                            View
-                        </button>
-                    </td>
-
-                </tr>
-
-
-
-                <tr>
-
-                    <td>#FL1022</td>
-
-                    <td>Ali Raza</td>
-
-                    <td>Denim Jacket</td>
-
-                    <td>24 Jul 2026</td>
-
-                    <td>$110</td>
-
-                    <td>
-                        <span class="pending-payment">
-                            Pending
-                        </span>
-                    </td>
-
-                    <td>
-                        <span class="cancelled">
-                            Cancelled
-                        </span>
-                    </td>
-
-                    <td>
-                        <button class="view-btn">
-                            View
-                        </button>
-                    </td>
-
-                </tr>
-
-
-
-                <tr>
-
-                    <td>#FL1021</td>
-
-                    <td>Maria Khan</td>
-
-                    <td>Classic Sneakers</td>
-
-                    <td>23 Jul 2026</td>
-
-                    <td>$150</td>
-
-                    <td>
-                        <span class="paid">Paid</span>
-                    </td>
-
-                    <td>
-                        <span class="delivered">
-                            Delivered
-                        </span>
-                    </td>
-
-                    <td>
-                        <button class="view-btn">
-                            View
-                        </button>
-                    </td>
-
-                </tr>
-
-            </table>
+            </div>
 
         </div>
 
 
-    </div>
 
+        <!-- SHIPPED -->
+
+        <div class="order-card">
+
+            <div class="order-icon">
+
+                <i class="fa-solid fa-truck"></i>
+
+            </div>
+
+
+            <div>
+
+                <p>Shipped</p>
+
+                <h2>320</h2>
+
+                <span>On the way</span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DELIVERED -->
+
+        <div class="order-card">
+
+            <div class="order-icon">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+
+            <div>
+
+                <p>Delivered</p>
+
+                <h2>844</h2>
+
+                <span>Successfully delivered</span>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         FILTER BAR
+    ========================================== -->
+
+    <section class="order-filter">
+
+
+        <input
+            type="text"
+            placeholder="Search by Order ID or Customer"
+        >
+
+
+        <select>
+
+            <option>All Orders</option>
+
+            <option>Pending</option>
+
+            <option>Shipped</option>
+
+            <option>Delivered</option>
+
+            <option>Cancelled</option>
+
+        </select>
+
+
+        <select>
+
+            <option>All Payments</option>
+
+            <option>Paid</option>
+
+            <option>Pending</option>
+
+        </select>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         ORDERS TABLE
+    ========================================== -->
+
+    <section class="orders-table">
+
+
+        <table>
+
+
+            <tr>
+
+                <th>Order ID</th>
+
+                <th>Customer</th>
+
+                <th>Product</th>
+
+                <th>Date</th>
+
+                <th>Price</th>
+
+                <th>Payment</th>
+
+                <th>Status</th>
+
+                <th>Action</th>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>#FL1025</td>
+
+                <td>Sara Ahmed</td>
+
+                <td>Oversized Hoodie</td>
+
+                <td>27 Jul 2026</td>
+
+                <td>$120</td>
+
+                <td>
+                    <span class="paid">
+                        Paid
+                    </span>
+                </td>
+
+                <td>
+                    <span class="delivered">
+                        Delivered
+                    </span>
+                </td>
+
+                <td>
+                    <button class="view-btn" type="button">
+                        View
+                    </button>
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>#FL1024</td>
+
+                <td>Ayesha Khan</td>
+
+                <td>Wide Leg Jeans</td>
+
+                <td>26 Jul 2026</td>
+
+                <td>$95</td>
+
+                <td>
+                    <span class="paid">
+                        Paid
+                    </span>
+                </td>
+
+                <td>
+                    <span class="pending">
+                        Pending
+                    </span>
+                </td>
+
+                <td>
+                    <button class="view-btn" type="button">
+                        View
+                    </button>
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>#FL1023</td>
+
+                <td>Hira Malik</td>
+
+                <td>Shoulder Bag</td>
+
+                <td>25 Jul 2026</td>
+
+                <td>$80</td>
+
+                <td>
+                    <span class="paid">
+                        Paid
+                    </span>
+                </td>
+
+                <td>
+                    <span class="shipped">
+                        Shipped
+                    </span>
+                </td>
+
+                <td>
+                    <button class="view-btn" type="button">
+                        View
+                    </button>
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>#FL1022</td>
+
+                <td>Ali Raza</td>
+
+                <td>Denim Jacket</td>
+
+                <td>24 Jul 2026</td>
+
+                <td>$110</td>
+
+                <td>
+                    <span class="pending-payment">
+                        Pending
+                    </span>
+                </td>
+
+                <td>
+                    <span class="cancelled">
+                        Cancelled
+                    </span>
+                </td>
+
+                <td>
+                    <button class="view-btn" type="button">
+                        View
+                    </button>
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>#FL1021</td>
+
+                <td>Maria Khan</td>
+
+                <td>Classic Sneakers</td>
+
+                <td>23 Jul 2026</td>
+
+                <td>$150</td>
+
+                <td>
+                    <span class="paid">
+                        Paid
+                    </span>
+                </td>
+
+                <td>
+                    <span class="delivered">
+                        Delivered
+                    </span>
+                </td>
+
+                <td>
+                    <button class="view-btn" type="button">
+                        View
+                    </button>
+                </td>
+
+            </tr>
+
+
+        </table>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
 
 </body>
 
 </html>
-```

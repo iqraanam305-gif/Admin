@@ -1,384 +1,562 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Analytics - Fashion Store</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Analytics - Fashion Store</title>
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-    <!-- HAMBURGER -->
 
-    <input type="checkbox" id="menu-toggle">
+<!-- =========================================
+     HAMBURGER BUTTON
+========================================== -->
 
-    <label for="menu-toggle" class="hamburger">
-        <i class="fa-solid fa-bars"></i>
-    </label>
+<button class="menu-btn" id="menuBtn" type="button">
 
+    <i class="fa-solid fa-bars"></i>
 
-    <!-- SIDEBAR -->
-
-    <div class="sidebar">
-
-        <h1>
-            <i class="fa-solid fa-shirt"></i>
-            Fashion Store
-        </h1>
-
-        <ul>
-
-            <li>
-                <a href="index.html">
-                    <i class="fa-solid fa-house"></i>
-                    Dashboard
-                </a>
-            </li>
-
-            <li>
-                <a href="products.html">
-                    <i class="fa-solid fa-box"></i>
-                    Products
-                </a>
-            </li>
-
-            <li>
-                <a href="orders.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Orders
-                </a>
-            </li>
-
-            <li>
-                <a href="analytics.html" class="active">
-                    <i class="fa-solid fa-chart-line"></i>
-                    Analytics
-                </a>
-            </li>
-
-            <li>
-                <a href="sales.html">
-                    <i class="fa-solid fa-chart-column"></i>
-                    Sales
-                </a>
-            </li>
-
-            <li>
-                <a href="customers.html">
-                    <i class="fa-solid fa-users"></i>
-                    Customers
-                </a>
-            </li>
-
-            <li>
-                <a href="reviews.html">
-                    <i class="fa-solid fa-star"></i>
-                    Reviews
-                </a>
-            </li>
-
-            <li>
-                <a href="settings.html">
-                    <i class="fa-solid fa-gear"></i>
-                    Settings
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
+</button>
 
 
-    <!-- MAIN -->
 
-    <div class="main">
+<!-- =========================================
+     SIDEBAR
+========================================== -->
+
+<aside class="sidebar" id="sidebar">
 
 
-        <!-- NAVBAR -->
+    <!-- CLOSE BUTTON -->
 
-        <div class="navbar">
+    <button class="close-btn" id="closeBtn" type="button">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <!-- STORE NAME -->
+
+    <h1>
+
+        <i class="fa-solid fa-shirt"></i>
+
+        Fashion Store
+
+    </h1>
+
+
+
+    <!-- NAVIGATION -->
+
+    <ul>
+
+
+        <li>
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+        </li>
+
+
+
+        <li>
+
+            <a href="products.html">
+
+                <i class="fa-solid fa-box"></i>
+
+                <span>Products</span>
+
+            </a>
+
+        </li>
+
+
+
+        <li>
+
+            <a href="orders.html">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span>Orders</span>
+
+            </a>
+
+        </li>
+
+
+
+        <li>
+
+            <a href="analytics.html" class="active">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Analytics</span>
+
+            </a>
+
+        </li>
+
+
+
+        <li>
+
+            <a href="sales.html">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <span>Sales</span>
+
+            </a>
+
+        </li>
+
+
+
+        <li>
+
+            <a href="customers.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Customers</span>
+
+            </a>
+
+        </li>
+
+
+
+        <li>
+
+            <a href="reviews.html">
+
+                <i class="fa-solid fa-star"></i>
+
+                <span>Reviews</span>
+
+            </a>
+
+        </li>
+
+
+
+        <li>
+
+            <a href="settings.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+
+</aside>
+
+
+
+<!-- =========================================
+     MAIN
+========================================== -->
+
+<main class="main">
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <nav class="navbar">
+
+
+        <div class="navbar-left">
 
             <h2>Analytics</h2>
+
+        </div>
+
+
+
+        <div class="navbar-center">
 
             <input
                 type="text"
                 placeholder="Search analytics..."
             >
 
-            <button>
+        </div>
+
+
+
+        <div class="navbar-right">
+
+            <button type="button">
+
                 <i class="fa-solid fa-user"></i>
+
                 Admin
+
             </button>
 
         </div>
 
 
-        <!-- PAGE -->
-
-        <div class="page">
-
-            <h1>Analytics</h1>
-
-            <p class="subtitle">
-                Track your store performance and sales analytics.
-            </p>
+    </nav>
 
 
-            <!-- ANALYTICS CARDS -->
 
-            <div class="stats">
+    <!-- =========================================
+         PAGE CONTENT
+    ========================================== -->
 
-
-                <!-- REVENUE -->
-
-                <div class="box">
-
-                    <div class="box-icon">
-                        <i class="fa-solid fa-dollar-sign"></i>
-                    </div>
-
-                    <h3>Total Revenue</h3>
-
-                    <h2>$25,000</h2>
-
-                    <p>+18% this month</p>
-
-                </div>
+    <div class="page">
 
 
-                <!-- ORDERS -->
+        <h1>Analytics</h1>
 
-                <div class="box">
 
-                    <div class="box-icon">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
+        <p class="subtitle">
 
-                    <h3>Total Orders</h3>
+            Track your store performance and sales analytics.
 
-                    <h2>1,250</h2>
+        </p>
 
-                    <p>+12% this month</p>
+
+
+        <!-- =========================================
+             ANALYTICS CARDS
+        ========================================== -->
+
+        <div class="stats">
+
+
+            <!-- REVENUE -->
+
+            <div class="box">
+
+                <div class="box-icon">
+
+                    <i class="fa-solid fa-dollar-sign"></i>
 
                 </div>
 
+                <h3>Total Revenue</h3>
 
-                <!-- AVERAGE ORDER -->
+                <h2>$25,000</h2>
 
-                <div class="box">
-
-                    <div class="box-icon">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                    </div>
-
-                    <h3>Average Order</h3>
-
-                    <h2>$120</h2>
-
-                    <p>Average order value</p>
-
-                </div>
-
-
-                <!-- CONVERSION -->
-
-                <div class="box">
-
-                    <div class="box-icon">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-
-                    <h3>Conversion Rate</h3>
-
-                    <h2>4.8%</h2>
-
-                    <p>+0.6% this month</p>
-
-                </div>
+                <p>+18% this month</p>
 
             </div>
 
 
 
+            <!-- ORDERS -->
 
-            <!-- TOP SELLING PRODUCTS -->
+            <div class="box">
 
-            <div class="section">
+                <div class="box-icon">
 
-                <h2>Top Selling Products</h2>
+                    <i class="fa-solid fa-cart-shopping"></i>
 
-                <table>
+                </div>
 
-                    <tr>
+                <h3>Total Orders</h3>
 
-                        <th>Product</th>
+                <h2>1,250</h2>
 
-                        <th>Category</th>
-
-                        <th>Units Sold</th>
-
-                        <th>Revenue</th>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>Oversized Hoodie</td>
-
-                        <td>Men</td>
-
-                        <td>85</td>
-
-                        <td>$10,200</td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>Wide Leg Jeans</td>
-
-                        <td>Women</td>
-
-                        <td>72</td>
-
-                        <td>$6,840</td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>Classic Sneakers</td>
-
-                        <td>Shoes</td>
-
-                        <td>61</td>
-
-                        <td>$9,150</td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>Shoulder Bag</td>
-
-                        <td>Accessories</td>
-
-                        <td>48</td>
-
-                        <td>$3,840</td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>Denim Jacket</td>
-
-                        <td>Men</td>
-
-                        <td>42</td>
-
-                        <td>$4,620</td>
-
-                    </tr>
-
-                </table>
+                <p>+12% this month</p>
 
             </div>
 
 
 
-            <!-- CUSTOMER OVERVIEW -->
+            <!-- AVERAGE ORDER -->
 
-            <div class="section">
+            <div class="box">
 
-                <h2>Customer Overview</h2>
+                <div class="box-icon">
 
-
-                <div class="stats">
-
-
-                    <div class="box">
-
-                        <div class="box-icon">
-                            <i class="fa-solid fa-user-plus"></i>
-                        </div>
-
-                        <h3>New Customers</h3>
-
-                        <h2>35</h2>
-
-                        <p>Joined this month</p>
-
-                    </div>
-
-
-                    <div class="box">
-
-                        <div class="box-icon">
-                            <i class="fa-solid fa-users"></i>
-                        </div>
-
-                        <h3>Returning Customers</h3>
-
-                        <h2>95</h2>
-
-                        <p>Regular customers</p>
-
-                    </div>
-
-
-                    <div class="box">
-
-                        <div class="box-icon">
-                            <i class="fa-solid fa-user-check"></i>
-                        </div>
-
-                        <h3>Active Customers</h3>
-
-                        <h2>145</h2>
-
-                        <p>Currently active</p>
-
-                    </div>
-
-
-                    <div class="box">
-
-                        <div class="box-icon">
-                            <i class="fa-solid fa-user-clock"></i>
-                        </div>
-
-                        <h3>Inactive Customers</h3>
-
-                        <h2>35</h2>
-
-                        <p>Need attention</p>
-
-                    </div>
+                    <i class="fa-solid fa-bag-shopping"></i>
 
                 </div>
+
+                <h3>Average Order</h3>
+
+                <h2>$120</h2>
+
+                <p>Average order value</p>
+
+            </div>
+
+
+
+            <!-- CONVERSION -->
+
+            <div class="box">
+
+                <div class="box-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3>Conversion Rate</h3>
+
+                <h2>4.8%</h2>
+
+                <p>+0.6% this month</p>
 
             </div>
 
 
         </div>
 
+
+
+        <!-- =========================================
+             TOP SELLING PRODUCTS
+        ========================================== -->
+
+        <section class="section">
+
+
+            <h2>Top Selling Products</h2>
+
+
+            <table>
+
+
+                <tr>
+
+                    <th>Product</th>
+
+                    <th>Category</th>
+
+                    <th>Units Sold</th>
+
+                    <th>Revenue</th>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>Oversized Hoodie</td>
+
+                    <td>Men</td>
+
+                    <td>85</td>
+
+                    <td>$10,200</td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>Wide Leg Jeans</td>
+
+                    <td>Women</td>
+
+                    <td>72</td>
+
+                    <td>$6,840</td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>Classic Sneakers</td>
+
+                    <td>Shoes</td>
+
+                    <td>61</td>
+
+                    <td>$9,150</td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>Shoulder Bag</td>
+
+                    <td>Accessories</td>
+
+                    <td>48</td>
+
+                    <td>$3,840</td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>Denim Jacket</td>
+
+                    <td>Men</td>
+
+                    <td>42</td>
+
+                    <td>$4,620</td>
+
+                </tr>
+
+
+            </table>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             CUSTOMER OVERVIEW
+        ========================================== -->
+
+        <section class="section">
+
+
+            <h2>Customer Overview</h2>
+
+
+            <div class="stats">
+
+
+                <!-- NEW CUSTOMERS -->
+
+                <div class="box">
+
+                    <div class="box-icon">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+                    <h3>New Customers</h3>
+
+                    <h2>35</h2>
+
+                    <p>Joined this month</p>
+
+                </div>
+
+
+
+                <!-- RETURNING CUSTOMERS -->
+
+                <div class="box">
+
+                    <div class="box-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <h3>Returning Customers</h3>
+
+                    <h2>95</h2>
+
+                    <p>Regular customers</p>
+
+                </div>
+
+
+
+                <!-- ACTIVE CUSTOMERS -->
+
+                <div class="box">
+
+                    <div class="box-icon">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                    </div>
+
+                    <h3>Active Customers</h3>
+
+                    <h2>145</h2>
+
+                    <p>Currently active</p>
+
+                </div>
+
+
+
+                <!-- INACTIVE CUSTOMERS -->
+
+                <div class="box">
+
+                    <div class="box-icon">
+
+                        <i class="fa-solid fa-user-clock"></i>
+
+                    </div>
+
+                    <h3>Inactive Customers</h3>
+
+                    <h2>35</h2>
+
+                    <p>Need attention</p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
     </div>
 
+
+</main>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="script.js"></script>
 
 </body>
 
